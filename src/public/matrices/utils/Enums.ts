@@ -2,6 +2,7 @@ export enum EncodingType {
   Bivariate = 'Bivariate',
   MarkSize = 'Mark Size',
   BarChart = 'Bar Chart',
+  BarChartColor = 'Bar Chart + Color Scale',
   MarkAngle45 = 'Angle(0-45)',
   MarkAngle90 = 'Angle(0-90)',
   ColorAngle45 = 'Color+Angle(0-45)',

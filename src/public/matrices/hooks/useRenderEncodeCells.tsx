@@ -5,8 +5,8 @@ import { EncodingType } from '../utils/Enums';
 import { Link } from '../utils/Interfaces';
 import { meanAccessor, snrAccessor, stdAccessor } from '../utils/Accessors';
 
-const barMeanColor = '#7b3294';
-const barStdColor = '#008837';
+const barMeanColor = '#008837';
+const barStdColor = '#7b3294';
 
 function contrastGray(color: string, contrast: number): string {
   const { l } = lab(color);
@@ -31,11 +31,12 @@ export function useCellRenderer(
   isSnr: boolean,
   meanScale: d3.ScaleQuantize<string | number, never>,
   devScale: d3.ScaleQuantize<string | number, never> | (() => number),
-  cellSize: number,
+  alternateScale: d3.ScaleQuantize<string | number, never>,
 ) {
   const renderEncodedCells = useCallback(
     (
       gCells: d3.Selection<SVGGElement, Link, SVGGElement | null, unknown>,
+      cellSize: number,
       showMean: boolean = true,
       showDev: boolean = true,
     ) => {
@@ -91,6 +92,61 @@ export function useCellRenderer(
             gCells
               .append('rect')
               .attr('fill', barStdColor)
+              .attr('width', size * (1 - proportion))
+              .attr('height', (d: Link) => +devScale(devAccesor(d)))
+              .attr('x', (cellSize - size) / 2 + size * proportion)
+              .attr('y', (d: Link) => cellSize - +devScale(devAccesor(d)));
+          }
+
+          if (showMean && showDev) {
+            addMeanBar();
+            addStdBar();
+          } else if (showMean) {
+            addMeanBar(true);
+          } else if (showDev) {
+            addStdBar(true);
+          }
+
+          break;
+        }
+        case EncodingType.BarChartColor: {
+          const proportion = 0.5;
+          const cellProportion = 0.8;
+          const size = cellSize * cellProportion;
+
+          function addMeanBar(showBorder: boolean = false) {
+            if (showBorder) {
+              gCells
+                .append('rect')
+                .attr('fill', 'transparent')
+                .attr('width', cellSize)
+                .attr('height', cellSize)
+                .attr('stroke', 'black')
+                .attr('stroke-width', 1.5);
+            }
+
+            gCells
+              .append('rect')
+              .attr('fill', (d: Link) => alternateScale(meanAccessor(d)))
+              .attr('width', size * proportion)
+              .attr('height', (d: Link) => +meanScale(meanAccessor(d)))
+              .attr('y', (d: Link) => cellSize - +meanScale(meanAccessor(d)))
+              .attr('x', (cellSize - size) / 2);
+          }
+
+          function addStdBar(showBorder: boolean = false) {
+            if (showBorder) {
+              gCells
+                .append('rect')
+                .attr('fill', 'transparent')
+                .attr('width', cellSize)
+                .attr('height', cellSize)
+                .attr('stroke', 'black')
+                .attr('stroke-width', 1.5);
+            }
+            gCells
+              .append('rect')
+              .attr('fill', 'grey')
               .attr('width', size * (1 - proportion))
               .attr('height', (d: Link) => +devScale(devAccesor(d)))
               .attr('x', (cellSize - size) / 2 + size * proportion)
@@ -264,7 +320,7 @@ export function useCellRenderer(
         }
       }
     },
-    [meanScale, devScale, cellSize, isSnr, encoding, markContrast],
+    [meanScale, devScale, isSnr, encoding, markContrast],
   );
 
   return renderEncodedCells;

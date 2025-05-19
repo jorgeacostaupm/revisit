@@ -16,6 +16,7 @@ interface MatrixContextType {
   destinationScale: d3.ScaleBand<string>;
   meanScale: d3.ScaleQuantize<string | number, never>;
   devScale: d3.ScaleQuantize<string | number, never>;
+  alternateScale: d3.ScaleQuantize<string | number, never>;
 
   configProps: ConfigProps;
 
@@ -40,6 +41,7 @@ interface MatrixContextType {
 
   cellRenderer: (
     gCells: d3.Selection<SVGGElement, Link, SVGGElement | null, unknown>,
+    cellSize: number,
     showMean?: boolean,
     showDev?: boolean
   ) => void;

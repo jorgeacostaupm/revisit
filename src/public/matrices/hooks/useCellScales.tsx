@@ -54,16 +54,29 @@ export function useCellScales(
   nMeans: number,
   nDevs: number,
 ) {
-  const meanScale = useMemo(() => {
-    const barsScheme = createLinearScale(5, cellSize * 0.2, cellSize * 0.9);
+  const { meanScale, alternateScale } = useMemo(() => {
+    const barsScheme = createLinearScale(nMeans, cellSize * 0.2, cellSize * 0.9);
     const colorScheme = getColorScale(colorScale, nMeans);
-    const scheme = encoding === EncodingType.BarChart ? barsScheme : colorScheme;
-    return d3.scaleQuantize<number | string>().domain([meanMin, meanMax]).range(scheme);
+    const scheme = encoding === EncodingType.BarChart || encoding === EncodingType.BarChartColor
+      ? barsScheme
+      : colorScheme;
+    const alternateScheme = encoding === EncodingType.BarChart || encoding === EncodingType.BarChartColor
+      ? colorScheme
+      : barsScheme;
+
+    return {
+      meanScale: d3.scaleQuantize<number | string>().domain([meanMin, meanMax]).range(scheme),
+      alternateScale: d3
+        .scaleQuantize<number | string>()
+        .domain([meanMin, meanMax])
+        .range(alternateScheme),
+    };
   }, [meanMin, meanMax, nMeans, colorScale, encoding, cellSize]);
 
   const devScale = useMemo(() => {
     let steps = [1];
     switch (encoding) {
+      case EncodingType.BarChartColor:
       case EncodingType.BarChart: {
         steps = createLinearScale(nDevs, cellSize * 0.2, cellSize * 0.9);
         if (isSnr) steps = steps.reverse();
@@ -103,5 +116,5 @@ export function useCellScales(
     return d3.scaleQuantize<number | string>().domain([devMin, devMax]).range(steps);
   }, [devMin, devMax, nDevs, encoding, cellSize, isSnr]);
 
-  return { meanScale, devScale };
+  return { meanScale, devScale, alternateScale };
 }

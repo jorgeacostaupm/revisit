@@ -980,7 +980,7 @@
             ],
             "type": "react-component"
         },
-        "ranking": {
+        "classification": {
             "correctAnswer": [],
             "instruction": "CLASSIFICATION. Rank nodes depending on their link attribute average values.<br>GOAL: Assess the accuracy of encodings for estimating and comparing overall node link attribute values between nodes.<br>QUESTION. Assign each state to a category.<br>ANSWER: Multiple selection (matrix radio buttons).",
             "nextButtonLocation": "sidebar",
@@ -1121,7 +1121,7 @@
             ],
             "type": "react-component"
         },
-        "ranking_extra": {
+        "classification_extra": {
             "correctAnswer": [],
             "instruction": "CLASSIFICATION. Rank nodes depending on their link attribute average values.<br>GOAL: Assess the accuracy of encodings for estimating and comparing overall node link attribute values between nodes.<br>QUESTION. Assign each state to a category.<br>ANSWER: Multiple selection (matrix radio buttons).",
             "nextButtonLocation": "sidebar",
@@ -1315,10 +1315,10 @@
                     "path_mean_extra",
                     "path_var_extra",
                     "path_estimation_extra",
-                    "ranking",
+                    "classification",
                     "cluster_mean",
                     "cluster_var",
-                    "ranking_extra",
+                    "classification_extra",
                     "cluster_mean_extra",
                     "cluster_var_extra"
                 ],

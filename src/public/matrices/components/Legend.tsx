@@ -8,6 +8,7 @@ import { Link } from '../utils/Interfaces';
 import { EncodingType } from '../utils/Enums';
 
 const margin = 110;
+const marginBivariate = 80;
 const meanText = 'Price Ranges:';
 const devText = 'Price Deviation Ranges:';
 
@@ -64,7 +65,7 @@ export function Legend() {
           return `$${min.toFixed(0)} - ${+max.toFixed(0) - 0.01}`;
         });
 
-      cellRenderer(group.selectAll('.cell'), showMean, showDev);
+      cellRenderer(group.selectAll('.cell'), cellSize, showMean, showDev);
     },
     [cellRenderer, cellSize],
   );
@@ -108,6 +109,8 @@ export function Legend() {
       const g = ref.current;
       if (!g) return;
 
+      const cellSizeL = cellSize + 30;
+
       const group = d3.select(g);
       group.selectAll('*').remove();
 
@@ -118,9 +121,7 @@ export function Legend() {
         .attr('class', 'cell')
         .attr(
           'transform',
-          (d) => `translate(${(cellSize + margin / 2) * +d.origin}, ${
-            cellSize * +d.destination + margin
-          })`,
+          (d) => `translate(${cellSizeL * +d.origin}, ${cellSizeL * +d.destination + marginBivariate})`,
         );
 
       group
@@ -129,12 +130,12 @@ export function Legend() {
         .join('text')
         .attr(
           'transform',
-          (d, i) => `translate(${(cellSize + margin / 2) * i + cellSize * 0.5}, ${margin / 2})`,
+          (d, i) => `translate(${cellSizeL * i + 15}, ${marginBivariate - 5})rotate(-45)`,
         )
-        .attr('text-anchor', 'middle')
+        .attr('text-anchor', 'start')
         .text((d) => {
           const [min, max] = mScale.invertExtent(d);
-          return `$${min.toFixed(0)} - $${max.toFixed(0)}`;
+          return `$${min.toFixed(0)} - ${max.toFixed(0)}`;
         });
 
       group
@@ -143,17 +144,17 @@ export function Legend() {
         .join('text')
         .attr(
           'transform',
-          (d, i) => `translate(${mScale.range().length * (cellSize + margin / 2)},${
-            cellSize * i + margin + cellSize / 2
+          (d, i) => `translate(${mScale.range().length * cellSizeL + 5},${
+            cellSizeL * i + marginBivariate + cellSizeL / 2 + 5
           })`,
         )
         .attr('text-anchor', 'start')
         .text((d) => {
           const [min, max] = dScale.invertExtent(d);
-          return `$${min.toFixed(0)} - $${max.toFixed(0)}`;
+          return `$${min.toFixed(0)} - ${max.toFixed(0)}`;
         });
 
-      cellRenderer(group.selectAll('.cell'), showMean, showDev);
+      cellRenderer(group.selectAll('.cell'), cellSizeL, showMean, showDev);
     },
     [cellSize, cellRenderer],
   );

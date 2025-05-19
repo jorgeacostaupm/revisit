@@ -64,6 +64,8 @@ export function DestinationAxis({ showLines = true }: { showLines?: boolean }) {
     [setDestinationHighlight, setOriginHighlight],
   );
 
+  const labelHeight = Math.round(destinationScale.bandwidth());
+
   return (
     <>
       {showLines ? (
@@ -84,7 +86,7 @@ export function DestinationAxis({ showLines = true }: { showLines?: boolean }) {
             x={-margin.left}
             y={-tickLineOffset}
             width={margin.left}
-            height={destinationScale.bandwidth()}
+            height={labelHeight}
             style={{ cursor: 'pointer' }}
             onClick={() => (setAnswer ? onClick(value, answerNodes) : {})}
             onMouseOver={() => onMouseOver(value, orderingNode)}
@@ -95,7 +97,7 @@ export function DestinationAxis({ showLines = true }: { showLines?: boolean }) {
                 justifyContent: 'flex-end',
                 borderRadius: '5px',
                 background: answerNodes.includes(value) ? ' #ff6e4a' : 'transparent',
-                height: destinationScale.bandwidth(),
+                height: labelHeight,
               }}
             >
               <Tooltip
@@ -109,9 +111,7 @@ export function DestinationAxis({ showLines = true }: { showLines?: boolean }) {
                   style={{
                     textAlign: 'start',
                   }}
-                  size="s"
                 >
-                  {' '}
                   {value}
                 </Text>
               </Tooltip>

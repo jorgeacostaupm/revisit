@@ -111,7 +111,7 @@ export function Matrix({
   );
 
   // ---------------------------- Scales ----------------------------
-  const { meanScale, devScale } = useCellScales(
+  const { meanScale, devScale, alternateScale } = useCellScales(
     configProps.encoding,
     configProps.colorScheme,
     cellSize,
@@ -131,7 +131,7 @@ export function Matrix({
     configProps.isSnr,
     meanScale,
     devScale,
-    cellSize,
+    alternateScale,
   );
 
   // ---------------------------- Context Value ----------------------------
@@ -149,6 +149,7 @@ export function Matrix({
       devMax,
       meanScale,
       devScale,
+      alternateScale,
       originScale,
       destinationScale,
       cellRenderer,
@@ -189,6 +190,7 @@ export function Matrix({
     <MatrixProvider value={contextValue}>
       <div className="container">
         <ControlPanel configProps={configProps} dataname={dataname} setDataname={setDataname} />
+        {' '}
         <svg ref={ref} className="matrix-svg">
           {shouldRender && (
             <g
@@ -211,7 +213,6 @@ export function Matrix({
             </g>
           )}
         </svg>
-
         {shouldRender && (
           <Stack gap="5vh">
             <InteractionButtons />

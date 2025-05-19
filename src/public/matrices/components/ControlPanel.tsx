@@ -42,18 +42,15 @@ export default function ControlPanel({
   const [opened, setOpened] = useState(false);
 
   return (
-    <Box>
+    <Box
+      style={{
+        position: 'absolute',
+        top: 80,
+        left: 500,
+      }}
+    >
       {!showConfigurationPanel && !opened && (
-        <Burger
-          opened={opened}
-          onClick={() => setOpened((o) => !o)}
-          size="lg"
-          style={{
-            position: 'fixed',
-            top: 80,
-            left: 500,
-          }}
-        />
+        <Burger opened={opened} onClick={() => setOpened((o) => !o)} size="lg" />
       )}
 
       <Drawer

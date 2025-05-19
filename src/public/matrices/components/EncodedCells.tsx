@@ -11,6 +11,7 @@ export function EncodedCells() {
   const {
     data,
 
+    cellSize,
     cellRenderer,
 
     originScale,
@@ -51,8 +52,8 @@ export function EncodedCells() {
         (exit) => exit.remove(),
       );
 
-    cellRenderer(g);
-  }, [data, originScale, destinationScale, cellRenderer, ref]);
+    cellRenderer(g, cellSize);
+  }, [data, originScale, destinationScale, cellRenderer, ref, cellSize]);
 
   return <g ref={ref} />;
 }
