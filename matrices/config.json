@@ -235,7 +235,7 @@
         },
         "encoding_description": {
             "correctAnswer": [],
-            "path": "matrices/assets/mark_description.md",
+            "path": "matrices/assets/encoding_descriptions/mark_size.md",
             "response": [],
             "type": "markdown"
         },
@@ -1347,7 +1347,7 @@
     },
     "uiConfig": {
         "contactEmail": "jorge.acosta@upm.es",
-        "helpTextPath": "matrices/assets/mark_description.md",
+        "helpTextPath": "matrices/assets/encoding_descriptions/mark_size.md",
         "logoPath": "revisitAssets/revisitLogoSquare.svg",
         "sidebar": true,
         "sidebarWidth": 500.0,
