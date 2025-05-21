@@ -1,11 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import {
-  Button, Group, Radio, RangeSlider, Stack, Text,
-} from '@mantine/core';
-import { useEffect, useState } from 'react';
+import { Button, Stack } from '@mantine/core';
 import { UserActionType } from '../utils/Enums';
 import { useMatrixContext } from '../utils/MatrixContext';
-import { ClusterMark } from '../utils/Interfaces';
 
 function ClearAndResetButtons() {
   const {

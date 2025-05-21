@@ -18,6 +18,8 @@ export function Legend() {
   } = useMatrixContext();
   const { encoding } = configProps;
 
+  const legendCellSize = cellSize;
+
   const meanRef = useRef<SVGGElement | null>(null);
   const devRef = useRef<SVGGElement | null>(null);
   const makeLegendData = useCallback(
@@ -57,7 +59,7 @@ export function Legend() {
 
       cells
         .append('text')
-        .attr('transform', `translate(${cellSize / 2}, ${cellSize + 20})`)
+        .attr('transform', `translate(${legendCellSize / 2}, ${legendCellSize + 20})`)
         .attr('text-anchor', 'middle')
         .text((_, i) => {
           const [min, max] = scale.invertExtent(scale.range()[i]);
@@ -65,9 +67,9 @@ export function Legend() {
           return `$${min.toFixed(0)} - ${+max.toFixed(0) - 0.01}`;
         });
 
-      cellRenderer(group.selectAll('.cell'), cellSize, showMean, showDev);
+      cellRenderer(group.selectAll('.cell'), legendCellSize, showMean, showDev);
     },
-    [cellRenderer, cellSize],
+    [cellRenderer, legendCellSize],
   );
 
   const makeLightnessLegendData = useCallback(
@@ -109,7 +111,7 @@ export function Legend() {
       const g = ref.current;
       if (!g) return;
 
-      const cellSizeL = cellSize + 30;
+      const cellSizeL = legendCellSize + 30;
 
       const group = d3.select(g);
       group.selectAll('*').remove();
@@ -133,9 +135,10 @@ export function Legend() {
           (d, i) => `translate(${cellSizeL * i + 15}, ${marginBivariate - 5})rotate(-45)`,
         )
         .attr('text-anchor', 'start')
-        .text((d) => {
+        .text((d, i) => {
           const [min, max] = mScale.invertExtent(d);
-          return `$${min.toFixed(0)} - ${max.toFixed(0)}`;
+          if (i + 1 === mScale.range().length) return `$${min.toFixed(0)} - ${+max.toFixed(0)}`;
+          return `$${min.toFixed(0)} - ${+max.toFixed(0) - 0.01}`;
         });
 
       group
@@ -149,14 +152,15 @@ export function Legend() {
           })`,
         )
         .attr('text-anchor', 'start')
-        .text((d) => {
+        .text((d, i) => {
           const [min, max] = dScale.invertExtent(d);
-          return `$${min.toFixed(0)} - ${max.toFixed(0)}`;
+          if (i + 1 === dScale.range().length) return `$${min.toFixed(0)} - ${+max.toFixed(0)}`;
+          return `$${min.toFixed(0)} - ${+max.toFixed(0) - 0.01}`;
         });
 
       cellRenderer(group.selectAll('.cell'), cellSizeL, showMean, showDev);
     },
-    [cellSize, cellRenderer],
+    [legendCellSize, cellRenderer],
   );
 
   useEffect(() => {
@@ -187,9 +191,8 @@ export function Legend() {
           {meanText}
         </Text>
         <svg
-          height={encoding !== EncodingType.Bivariate ? cellSize : '40vh'}
-          width="0vw"
-          style={{ overflow: 'visible', background: 'green' }}
+          height={encoding !== EncodingType.Bivariate ? legendCellSize : '40vh'}
+          style={{ overflow: 'visible' }}
         >
           <g ref={meanRef} />
         </svg>
@@ -200,7 +203,7 @@ export function Legend() {
           <Text size="xl" fw={700}>
             {devText}
           </Text>
-          <svg height={cellSize} width="0vw" style={{ overflow: 'visible' }}>
+          <svg height={legendCellSize} style={{ overflow: 'visible' }}>
             <g ref={devRef} />
           </svg>
         </div>

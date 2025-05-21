@@ -1,14 +1,14 @@
 export enum EncodingType {
   Bivariate = 'Bivariate',
   MarkSize = 'Mark Size',
+  CellSize = 'Cell Size',
   BarChart = 'Bar Chart',
   BarChartColor = 'Bar Chart + Color Scale',
-  MarkAngle45 = 'Angle(0-45)',
-  MarkAngle90 = 'Angle(0-90)',
-  ColorAngle45 = 'Color+Angle(0-45)',
-  ColorAngle90 = 'Color+Angle(0-90)',
-  MarkAngle45_90 = 'Angle(45-90)',
-  CellSize = 'Cell Size',
+  MarkAngle45 = 'Mark Angle (0-45)',
+  MarkAngle45_90 = 'Mark Angle (45-90)',
+  MarkAngle90 = 'Mark Angle (0-90)',
+  ColorAngle45 = 'Color+Angle (0-45)',
+  ColorAngle90 = 'Color+Angle (0-90)',
   Mean = 'Just the mean',
 }
 
