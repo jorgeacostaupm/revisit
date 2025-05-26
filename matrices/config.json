@@ -47,7 +47,7 @@
         },
         "data_description": {
             "correctAnswer": [],
-            "path": "matrices/assets/data_description.md",
+            "path": "matrices/assets/data.md",
             "response": [],
             "type": "markdown"
         },
@@ -141,7 +141,7 @@
         },
         "connectivity_description": {
             "correctAnswer": [],
-            "path": "matrices/assets/connectivity_description.md",
+            "path": "matrices/assets/connectivity.md",
             "response": [],
             "type": "markdown"
         },
@@ -155,7 +155,7 @@
             ],
             "instruction": "Which graph corresponds to the matrix?",
             "nextButtonLocation": "sidebar",
-            "path": "matrices/assets/images/matrix2graph_.svg",
+            "path": "matrices/assets/images/matrix2graph.svg",
             "provideFeedback": true,
             "response": [
                 {
