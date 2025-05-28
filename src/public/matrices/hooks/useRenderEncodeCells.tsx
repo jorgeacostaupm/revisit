@@ -11,7 +11,7 @@ const barStdColor = '#7b3294';
 function contrastGray(color: string, contrast: number): string {
   const { l } = lab(color);
   const invL = 100 - l;
-  const scaledL = 100 - contrast + (invL * contrast) / 100;
+  const scaledL = 80 - contrast + (invL * contrast) / 100;
   return lab(scaledL, 0, 0).formatHex();
 }
 

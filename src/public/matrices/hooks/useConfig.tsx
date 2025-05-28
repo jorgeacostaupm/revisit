@@ -7,7 +7,7 @@ import type { ChartConfiguration, ConfigProps, ExternalParameters } from '../uti
 const DEFAULTS: ChartConfiguration = {
   showConfigurationPanel: false,
   colorScheme: ColorScheme.Viridis,
-  markContrast: 25,
+  markContrast: 0,
   encoding: EncodingType.Mean,
   showTooltip: false,
   isSnr: false,
