@@ -48,7 +48,7 @@ export function Legend() {
       const group = d3.select(g);
       group.selectAll('*').remove();
 
-      const margin = Math.min(110, legendCellSize * 4);
+      const margin = Math.min(90, legendCellSize * 4);
 
       const cells = group
         .selectAll<SVGGElement, Link>('.cell')

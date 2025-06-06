@@ -47,8 +47,8 @@
 }
 
 .matrix-svg {
-  background-color: #ff3300;
   display: block;
   aspect-ratio: 1;
-  width: 60%;
+  width: 65%;
+  height: 89vh;
 }
