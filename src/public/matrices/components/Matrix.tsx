@@ -4,7 +4,6 @@ import { useMemo } from 'react';
 import * as d3 from 'd3';
 
 import { useResizeObserver } from '@mantine/hooks';
-import { Stack } from '@mantine/core';
 
 import { Trrack } from '@trrack/core';
 
@@ -214,10 +213,18 @@ export function Matrix({
           )}
         </svg>
         {shouldRender && (
-          <Stack gap="5vh">
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              width: '35%',
+              height: '100%',
+              gap: '3vh',
+            }}
+          >
             <InteractionButtons />
             <Legend />
-          </Stack>
+          </div>
         )}
       </div>
     </MatrixProvider>

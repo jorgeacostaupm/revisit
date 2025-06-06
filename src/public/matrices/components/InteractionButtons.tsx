@@ -9,7 +9,7 @@ function ClearAndResetButtons() {
 
   return (
     <Button
-      size="s"
+      style={{ width: '50%' }}
       onClick={() => {
         setAnswerNodes([]);
         trrack?.apply('Set Answer', actions?.setAnswerNodes([]));
@@ -28,22 +28,20 @@ function ClearAndResetButtons() {
 function PathSelection() {
   const { setLinkMarks } = useMatrixContext();
   return (
-    <Stack gap="5vh">
-      <Button
-        size="s"
-        onClick={() => {
-          setLinkMarks([]);
-        }}
-      >
-        {UserActionType.ClearLinkSelection}
-      </Button>
-    </Stack>
+    <Button
+      style={{ width: '50%' }}
+      onClick={() => {
+        setLinkMarks([]);
+      }}
+    >
+      {UserActionType.ClearLinkSelection}
+    </Button>
   );
 }
 
 export function InteractionButtons() {
   return (
-    <Stack>
+    <Stack style={{ display: 'flex', justifyContent: 'center' }}>
       <PathSelection />
       <ClearAndResetButtons />
     </Stack>

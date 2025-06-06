@@ -1,13 +1,12 @@
 import { useEffect, useRef, useCallback } from 'react';
 import * as d3 from 'd3';
-import { Stack, Text } from '@mantine/core';
+import { Text } from '@mantine/core';
 
 import { meanAccessor, stdAccessor } from '../utils/Accessors';
 import { useMatrixContext } from '../utils/MatrixContext';
 import { Link } from '../utils/Interfaces';
 import { EncodingType } from '../utils/Enums';
 
-const margin = 110;
 const marginBivariate = 80;
 const meanText = 'Price Ranges:';
 const devText = 'Price Deviation Ranges:';
@@ -49,6 +48,8 @@ export function Legend() {
       const group = d3.select(g);
       group.selectAll('*').remove();
 
+      const margin = Math.min(110, legendCellSize * 4);
+
       const cells = group
         .selectAll<SVGGElement, Link>('.cell')
         .data(legendData, (d) => meanAccessor(d) + stdAccessor(d))
@@ -64,7 +65,7 @@ export function Legend() {
         .text((_, i) => {
           const [min, max] = scale.invertExtent(scale.range()[i]);
           if (i + 1 === scale.range().length) return `$${min.toFixed(0)} - ${+max.toFixed(0)}`;
-          return `$${min.toFixed(0)} - ${+max.toFixed(0) - 0.01}`;
+          return `$${min.toFixed(0)} - ${+max.toFixed(0) - 1}`;
         });
 
       cellRenderer(group.selectAll('.cell'), legendCellSize, showMean, showDev);
@@ -111,7 +112,7 @@ export function Legend() {
       const g = ref.current;
       if (!g) return;
 
-      const cellSizeL = legendCellSize + 30;
+      const cellSizeL = Math.min(legendCellSize + 30, 60);
 
       const group = d3.select(g);
       group.selectAll('*').remove();
@@ -185,14 +186,19 @@ export function Legend() {
   }, [encoding, meanScale, devScale, drawLightnessLegend, makeLightnessLegendData]);
 
   return (
-    <Stack gap="5vh">
-      <div>
-        <Text size="xl" fw={700}>
+    <>
+      <div style={{ width: '100%', height: '70%' }}>
+        <Text size="xl" fw={700} style={{ marginBottom: '2vh' }}>
           {meanText}
         </Text>
         <svg
-          height={encoding !== EncodingType.Bivariate ? legendCellSize : '40vh'}
-          style={{ overflow: 'visible' }}
+          width="100%"
+          overflow="visible"
+          height={
+            encoding !== EncodingType.Bivariate
+              ? legendCellSize * 2
+              : Math.min(legendCellSize + 30, 60) * 7
+          }
         >
           <g ref={meanRef} />
         </svg>
@@ -200,14 +206,14 @@ export function Legend() {
 
       {devScale.range().length > 1 && encoding !== EncodingType.Bivariate && (
         <div>
-          <Text size="xl" fw={700}>
+          <Text size="xl" fw={700} style={{ marginBottom: '2vh' }}>
             {devText}
           </Text>
-          <svg height={legendCellSize} style={{ overflow: 'visible' }}>
+          <svg overflow="visible" height={legendCellSize * 2} width="100%">
             <g ref={devRef} />
           </svg>
         </div>
       )}
-    </Stack>
+    </>
   );
 }
