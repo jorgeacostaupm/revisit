@@ -30,7 +30,7 @@ import { useCellRenderer } from '../hooks/useRenderEncodeCells';
 import ControlPanel from './ControlPanel';
 
 const MARGIN = {
-  top: 100,
+  top: 101,
   left: 120,
   right: 5,
   bottom: 5,
