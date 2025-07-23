@@ -1,45 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/dev/src/parser/GlobalConfigSchema.json",
-  "configsList": [
-    "tutorial",
-    "example-brush-interactions",
-    "example-cleveland",
-    "example-mvnv",
-    "example-VLAT-full-randomized",
-    "example-VLAT-mini-randomized",
-    "demo-html",
-    "demo-html-input",
-    "demo-survey",
-    "demo-training",
-    "demo-html-trrack",
-    "demo-click-accuracy-test",
-    "demo-image",
-    "demo-upset",
-    "demo-vega",
-    "demo-video-slider",
-    "demo-video",
-    "demo-dynamic",
-    "demo-yaml",
-    "library-beauvis",
-    "library-calvi",
-    "library-color-blindness",
-    "library-demographics",
-    "library-mic-check",
-    "library-mini-vlat",
-    "library-nasa-tlx",
-    "library-previs",
-    "library-sus",
-    "library-vlat",
-    "test-audio",
-    "test-library",
-    "test-likert-matrix",
-    "test-parser-errors",
-    "test-randomization",
-    "test-skip-logic",
-    "test-step-logic"
-
-  ],
+  "configsList": ["matrices"],
   "configs": {
+    "matrices": {
+      "path": "matrices/config.json"
+    },
     "tutorial": {
       "path": "tutorial/config.json"
     },

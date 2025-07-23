@@ -58,6 +58,7 @@
     "react-timer-hook": "^3.0.8",
     "react-vega": "^7.6.0",
     "rehype-raw": "^7.0.0",
+    "reorder.js": "file:../reorder.js",
     "ts-json-schema-generator": "^2.3.0",
     "typedoc": "^0.27.6",
     "typedoc-plugin-frontmatter": "^1.1.2",
