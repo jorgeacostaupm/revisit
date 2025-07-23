@@ -1803,11 +1803,6 @@
   resolved "https://registry.npmjs.org/@rtsao/scc/-/scc-1.1.0.tgz"
   integrity sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==
 
-"@sgratzl/science@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@sgratzl/science/-/science-2.0.0.tgz#9154f6f5d55c5712f48887c25492a4dc7bc6cc99"
-  integrity sha512-LO3gArm8rVczcksg35xnZbOLEOE091VjyvvzR8mnPjP5K5+xqZEWhBi+lDcEk50dAlfPBoBHfwmu+MmiiSpXHw==
-
 "@shikijs/engine-oniguruma@^1.27.2":
   version "1.27.2"
   resolved "https://registry.npmjs.org/@shikijs/engine-oniguruma/-/engine-oniguruma-1.27.2.tgz"
@@ -7053,13 +7048,6 @@ remark-rehype@^11.0.0:
     mdast-util-to-hast "^13.0.0"
     unified "^11.0.0"
     vfile "^6.0.0"
-
-reorder.js@^2.2.6:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/reorder.js/-/reorder.js-2.2.6.tgz#2d4bc421076a69cdd120e132406c25c0241cd696"
-  integrity sha512-mE0Vffgm6Bf2REDUCF5eNbYl0FAzuTzhAneokLEcnhWcamdwz9TwGLySrgYQDubqgr4bM85hRAcGG0q3kqCwCw==
-  dependencies:
-    "@sgratzl/science" "^2.0.0"
 
 repeat-string@^1.5.4:
   version "1.6.1"
