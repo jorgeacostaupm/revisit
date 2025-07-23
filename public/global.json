@@ -1,10 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/dev/src/parser/GlobalConfigSchema.json",
-  "configsList": ["matrices"],
+  "configsList": ["tutorial"],
   "configs": {
-    "matrices": {
-      "path": "matrices/config.json"
-    },
     "tutorial": {
       "path": "tutorial/config.json"
     },
