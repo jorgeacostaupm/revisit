@@ -5,11 +5,120 @@
   "doi": "10.1109/tvcg.2022.3209390",
   "externalLink": "https://www.aviz.fr/Research/BeauVis-Scale",
   "components": {
+    "overlaid-angle": {
+      "type": "image",
+      "path": "libraries/beauvis/assets/vis-example.png",
+      "style": {
+        "width": "800px",
+        "marginBottom": "10px"
+      },
+      "response": [
+        {
+          "id": "overlaid-angle-response",
+          "prompt": "To what extent do you agree that this visual representation is...? (this is a test)",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "matrix-radio",
+          "answerOptions": [
+            "Strongly disagree",
+            "Disagree",
+            "Slightly disagree",
+            "Neutral",
+            "Slightly agree",
+            "Agree",
+            "Strongly agree"
+          ],
+          "questionOptions": ["enjoyable", "likable", "pleasing", "nice", "appealing"]
+        }
+      ]
+    },
+    "overlaid-size": {
+      "type": "image",
+      "path": "libraries/beauvis/assets/mark_size.svg",
+      "style": {
+        "width": "800px",
+        "marginBottom": "10px"
+      },
+      "response": [
+        {
+          "id": "overlaid-size-response",
+          "prompt": "To what extent do you agree that this visual representation is...? (this is a test)",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "matrix-radio",
+          "answerOptions": [
+            "Strongly disagree",
+            "Disagree",
+            "Slightly disagree",
+            "Neutral",
+            "Slightly agree",
+            "Agree",
+            "Strongly agree"
+          ],
+          "questionOptions": ["enjoyable", "likable", "pleasing", "nice", "appealing"]
+        }
+      ]
+    },
+    "bivariate": {
+      "type": "image",
+      "path": "libraries/beauvis/assets/vis-example.png",
+      "style": {
+        "width": "800px",
+        "marginBottom": "10px"
+      },
+      "response": [
+        {
+          "id": "bivariate-response",
+          "prompt": "To what extent do you agree that this visual representation is...? (this is a test)",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "matrix-radio",
+          "answerOptions": [
+            "Strongly disagree",
+            "Disagree",
+            "Slightly disagree",
+            "Neutral",
+            "Slightly agree",
+            "Agree",
+            "Strongly agree"
+          ],
+          "questionOptions": ["enjoyable", "likable", "pleasing", "nice", "appealing"]
+        }
+      ]
+    },
+    "barchart": {
+      "type": "image",
+      "path": "libraries/beauvis/assets/vis-example.png",
+      "style": {
+        "width": "800px",
+        "marginBottom": "10px"
+      },
+      "response": [
+        {
+          "id": "barchart-response",
+          "prompt": "To what extent do you agree that this visual representation is...? (this is a test)",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "matrix-radio",
+          "answerOptions": [
+            "Strongly disagree",
+            "Disagree",
+            "Slightly disagree",
+            "Neutral",
+            "Slightly agree",
+            "Agree",
+            "Strongly agree"
+          ],
+          "questionOptions": ["enjoyable", "likable", "pleasing", "nice", "appealing"]
+        }
+      ]
+    },
     "5items": {
       "type": "image",
       "path": "libraries/beauvis/assets/vis-example.png",
       "style": {
-        "width": "800px"
+        "width": "800px",
+        "marginBottom": "50px"
       },
       "response": [
         {
@@ -27,13 +136,7 @@
             "Agree",
             "Strongly agree"
           ],
-          "questionOptions": [
-            "enjoyable",
-            "likable",
-            "pleasing",
-            "nice",
-            "appealing"
-          ]
+          "questionOptions": ["enjoyable", "likable", "pleasing", "nice", "appealing"]
         }
       ]
     },
@@ -59,12 +162,7 @@
             "Agree",
             "Strongly agree"
           ],
-          "questionOptions": [
-            "enjoyable",
-            "likable",
-            "pleasing",
-            "nice"
-          ]
+          "questionOptions": ["enjoyable", "likable", "pleasing", "nice"]
         }
       ]
     },
@@ -90,15 +188,10 @@
             "Agree",
             "Strongly agree"
           ],
-          "questionOptions": [
-            "enjoyable",
-            "likable",
-            "pleasing"
-          ]
+          "questionOptions": ["enjoyable", "likable", "pleasing"]
         }
       ]
     }
   },
-  "sequences": {
-  }
+  "sequences": {}
 }

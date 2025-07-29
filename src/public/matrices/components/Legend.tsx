@@ -8,8 +8,8 @@ import { Link } from '../utils/Interfaces';
 import { EncodingType } from '../utils/Enums';
 
 const marginBivariate = 80;
-const meanText = 'Price Ranges:';
-const devText = 'Price Deviation Ranges:';
+const meanText = 'Price Ranges (in $):';
+const devText = 'Price Variation Ranges (in $):';
 
 export function Legend() {
   const {
@@ -48,7 +48,7 @@ export function Legend() {
       const group = d3.select(g);
       group.selectAll('*').remove();
 
-      const margin = Math.min(90, legendCellSize * 4);
+      const margin = Math.min(90, legendCellSize * 3 + 10);
 
       const cells = group
         .selectAll<SVGGElement, Link>('.cell')
@@ -64,8 +64,8 @@ export function Legend() {
         .attr('text-anchor', 'middle')
         .text((_, i) => {
           const [min, max] = scale.invertExtent(scale.range()[i]);
-          if (i + 1 === scale.range().length) return `$${min.toFixed(0)} - ${+max.toFixed(0)}`;
-          return `$${min.toFixed(0)} - ${+max.toFixed(0) - 1}`;
+          if (i + 1 === scale.range().length) return `${min.toFixed(0)}-${+max.toFixed(0)}`;
+          return `${min.toFixed(0)}-${+max.toFixed(0) - 1}`;
         });
 
       cellRenderer(group.selectAll('.cell'), legendCellSize, showMean, showDev);

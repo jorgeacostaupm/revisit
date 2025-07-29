@@ -9,7 +9,9 @@ function ClearAndResetButtons() {
 
   return (
     <Button
-      style={{ width: '50%' }}
+      variant="filled"
+      size="sm"
+      styles={{ root: { width: 'fit-content', display: 'inline-flex' } }}
       onClick={() => {
         setAnswerNodes([]);
         trrack?.apply('Set Answer', actions?.setAnswerNodes([]));
@@ -29,7 +31,9 @@ function PathSelection() {
   const { setLinkMarks } = useMatrixContext();
   return (
     <Button
-      style={{ width: '50%' }}
+      variant="filled"
+      size="sm"
+      styles={{ root: { width: 'fit-content', display: 'inline-flex' } }}
       onClick={() => {
         setLinkMarks([]);
       }}
