@@ -8,11 +8,11 @@ This study aims to evaluate an encoding technique for visualizing the **mean** a
 
 Please ensure that you are opening this experiment with the Chrome browser. You cannot navigate back to previous pages.
 
-Only continue if you:
+Only continue if you meet all of the following:
 
-- are a fluent English speaker
-- are at least 18 years old
-- are using a computer (not a phone or tablet)
+- fluent English speaker
+- at least 18 years old
+- using a computer (not a phone or tablet)
 
 The study will take approximately **45 minutes to complete**.
 

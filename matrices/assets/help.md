@@ -50,7 +50,7 @@ In this study, we want to show two important things about flight prices between 
 
 ## What do "mean" and "variation" mean?
 
-The **mean** is very simple: it’s just the **usual price** you would expect.
+The **mean** is very simple: it’s just the **average price** you would expect.
 
 Imagine you took several flights between California and Texas.
 One flight cost $100, another $120, another $80.

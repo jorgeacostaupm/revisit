@@ -228,7 +228,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "training_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "provideFeedback": true,
@@ -243,7 +243,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "training_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "provideFeedback": true,
@@ -263,7 +263,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "training_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "provideFeedback": true,
@@ -290,7 +290,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "training_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "provideFeedback": true,
@@ -318,7 +318,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "training_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "provideFeedback": true,
@@ -346,7 +346,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "training_data.txt",
-        "encoding": "Overlaid Mark Size",
+        "encoding": "Mark Size",
         "isClusterTask": true,
         "clusterMarks": [
           {
@@ -429,7 +429,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size",
+        "encoding": "Mark Size",
         "nodeOrderingDisabled": true
       },
       "path": "matrices/Stimuli.tsx",
@@ -477,7 +477,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size",
+        "encoding": "Mark Size",
         "nodeOrderingDisabled": true
       },
       "path": "matrices/Stimuli.tsx",
@@ -502,7 +502,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "response": [
@@ -536,7 +536,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "response": [
@@ -552,7 +552,12 @@
     "attr_comb": {
       "correctAnswer": [
         {
-          "answer": ["Georgia", "New Jersey", "Pennsylvania", "Texas", "Virginia", "Arizona"],
+          "answer": {
+            "root": {
+              "answer": ["Georgia", "New Jersey", "Pennsylvania", "Texas", "Virginia", "Arizona"],
+              "id": "answerNodes"
+            }
+          },
           "id": "answerNodes"
         }
       ],
@@ -560,7 +565,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "response": [
@@ -584,7 +589,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "response": [
@@ -608,7 +613,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "response": [
@@ -645,7 +650,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "response": [
@@ -661,7 +666,12 @@
     "attr_comb_extra": {
       "correctAnswer": [
         {
-          "answer": ["Massachusetts", "Missouri", "New York", "Tennessee", "Washington"],
+          "answer": {
+            "root": {
+              "answer": ["Massachusetts", "Missouri", "New York", "Tennessee", "Washington"],
+              "id": "answerNodes"
+            }
+          },
           "id": "answerNodes"
         }
       ],
@@ -669,7 +679,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "response": [
@@ -693,7 +703,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "response": [
@@ -717,7 +727,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "response": [
@@ -748,7 +758,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size",
+        "encoding": "Mark Size",
         "destinationSelectionDisabled": true
       },
       "path": "matrices/Stimuli.tsx",
@@ -784,7 +794,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "response": [
@@ -818,7 +828,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size",
+        "encoding": "Mark Size",
         "destinationSelectionDisabled": true
       },
       "path": "matrices/Stimuli.tsx",
@@ -850,7 +860,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size",
+        "encoding": "Mark Size",
         "destinationSelectionDisabled": true
       },
       "path": "matrices/Stimuli.tsx",
@@ -886,7 +896,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "response": [
@@ -915,7 +925,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "response": [
@@ -941,7 +951,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size",
+        "encoding": "Mark Size",
         "destinationSelectionDisabled": true,
         "nodeOrderingDisabled": true,
         "clusterMarks": [
@@ -992,7 +1002,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size",
+        "encoding": "Mark Size",
         "destinationSelectionDisabled": true,
         "nodeOrderingDisabled": true,
         "clusterMarks": [
@@ -1038,7 +1048,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
+        "encoding": "Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "response": [
@@ -1064,7 +1074,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size",
+        "encoding": "Mark Size",
         "destinationSelectionDisabled": true,
         "nodeOrderingDisabled": true,
         "clusterMarks": [
@@ -1115,7 +1125,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
-        "encoding": "Overlaid Mark Size",
+        "encoding": "Mark Size",
         "destinationSelectionDisabled": true,
         "nodeOrderingDisabled": true,
         "clusterMarks": [
@@ -1161,7 +1171,7 @@
       "response": [],
       "type": "react-component"
     },
-    "$previs-size.se.4dimensions": {
+    "$previs.se.4dimensions": {
       "correctAnswer": [],
       "path": "",
       "response": [],
@@ -1231,11 +1241,11 @@
     "order": "fixed"
   },
   "studyMetadata": {
-    "authors": ["Jorge Acosta", "Tingying He", "Alex Lex"],
+    "authors": ["Jorge Acosta"],
     "date": "2025-01-13",
-    "description": "This study aims to evaluate the Overlaid Mark Size encoding technique for visualizing the mean and variation of flight prices in the U.S.",
+    "description": "This is an study to...",
     "organizations": ["Visualization Design Lab"],
-    "title": "Mean & Variation Encoding on Adjacency Matrices (Pre-Pilot)",
+    "title": "Mean & Variation Encodings on Adjacency Matrices (Pre-Pilot)",
     "version": "1.0"
   },
   "uiConfig": {
@@ -1243,7 +1253,6 @@
     "helpTextPath": "matrices/assets/encoding_descriptions/mark_size.md",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withSidebar": true,
-    "sidebarWidth": 500.0,
     "withProgressBar": true
   }
 }

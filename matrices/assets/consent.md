@@ -1,6 +1,6 @@
-_Principal Investigator: Jorge Acosta (jorge.acosta@upm.es), Polytechnic University of Madrid & University of Utah_
+_Principal Investigator: Tingying He (hetingying.hty@gmail.com), University of Utah_
 
-_Title of Research Study: Mean & Standard Deviation Encoding in Adjacency Matrices_
+_Title of Research Study: Mean & Variation Encoding on Adjacency Matrices_
 
 # Consent and Authorization Document
 
@@ -12,13 +12,13 @@ While network data is increasingly common, the visualization of multi-attribute 
 
 #### Risks to study participants
 
-Each participant in this study is assigned a random ID for analyses. As such,
+Each participant in this study is assigned a random ID for analysis. As such,
 your participation will remain anonymous and your responses will
 not be used to identify you.
 
 #### Benefits to research participants and others
 
-There may be no direct benefit to reserach participants.
+There may be no direct benefit to research participants.
 The possible benefits include exposure to interesting data
 visualization, along with helping inform the
 development of future data exploration platforms.
