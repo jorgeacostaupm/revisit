@@ -36,17 +36,18 @@ The data collected in this study is only being used for the present study and no
 
 #### Cost/Payment
 
-You will be compensated $??? for participating via Prolific.
+You will be compensated USD 12 for participating via Prolific.
 
 #### Contact
 
 For more information about this research or about the rights of
 research participants, or in case of research-related injury,
-contact: Jorge Acosta (jorge.acosta@upm.es).
+contact: Tingying He (hetingying.hty@gmail.com).
+
 Contact the Institutional Review Board (IRB) if you have questions regarding your rights as a research participant. Also, contact the IRB if you have questions, complaints or concerns which you do not feel you can discuss with the investigator. The University of Utah IRB may be reached by phone at (801) 581-3655 or by e-mail at irb@hsc.utah.edu.
 You may also contact the Research Participant Advocate (RPA) by phone at (801) 581-3803 or by email at participant.advocate@hsc.utah.edu.
 
-Your participation in this research is voluntary
+Your participation in this research is voluntary.
 Your refusal to participate will not result in any penalty to you
 or any loss of benefits to which you may otherwise be entitled.
 You may decide to stop participating in the research at any time
