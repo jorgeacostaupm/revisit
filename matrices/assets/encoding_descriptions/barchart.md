@@ -1,6 +1,6 @@
-## THIRD KEY CONCEPT: Encoding
+## THIRD KEY CONCEPT: Attribute Encoding
 
-As you might notice, if the network grows it will be very difficult to read the values on a graph or on the presented adjacency matrices. We have developed a way of encoding mean and variation to visualize this kind of networks.
+As you might notice, if the network grows it will be very difficult to read the values on a graph or on the presented adjacency matrices. We use a way of encoding mean and variation to visualize this kind of networks.
 
 ##### X color bar encodes the mean:
 
