@@ -1,4 +1,4 @@
-# FIRST KEY CONCEPT: Mean and Variation.
+# FIRST KEY CONCEPT: Mean and Variation
 
 In this study, we want to show two important things about flight prices in the U.S:
 

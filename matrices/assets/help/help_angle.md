@@ -45,7 +45,7 @@ Think of an adjacency matrix like a table:
 
 In our case a network and its associated adjacency matrix will look something like this:
 
-<img src='./assets/images/graph&matrix.svg' width='1000'>
+<img src='../matrices/assets/images/graph&matrix.svg' width='1000'>
 <br>
 
 You can match the graph to the matrix. For instance, states **A and B are connected**, their **mean flight price is $100** and the **variation is only $5**, so prices don’t fluctuate much on that route. In contrast, flights between **A and D** are both **expensive and highly variable**, so while you’ll usually pay more, there’s also a better chance of finding either a great bargain or a very pricey ticket.
@@ -54,28 +54,28 @@ When you see a **“0”** in the matrix, it means there is **no direct flight b
 
 Finally, the upper‑ (above the diagonal) and lower‑triangle (below the diagonal) of the matrix are mirrored because we’ve simplified things by assuming that prices from X to Y equal prices from Y to X.
 
-# THIRD KEY CONCEPT: Attribute Encoding
+# THIRD KEY CONCEPT: Encoding
 
-As you might notice, if the network grows it will be very difficult to read the values on a graph or on the presented adjacency matrices. We use a way of encoding mean and variation to visualize this kind of networks.
+As you might notice, if the network grows it will be very difficult to read the values on a graph or on the presented adjacency matrices. We have developed a way of encoding mean and variation to visualize this kind of networks.
 
-##### Color encodes the mean price:
+##### Color encodes the mean:
 
 Each cell in the matrix will have a color:
 
 - If the color is light, the mean flight price is low.
 - If the color is dark, the mean flight price is high.
 
-So, lighter is cheaper and darker is more expensive.
+So, lighter = cheaper and darker = more expensive.
 
-<img src='./assets/images/color-mean.svg' width='500'>
+<img src='../matrices/assets/images/mean_legend_mark.svg' width='500'>
 
-##### Mark size encodes the price variation.
+##### Mark angle encodes the variation.
 
-Inside each cell, there is a white square:
+Inside each cell, there will be a white square mark:
 
-- A tiny square means prices are very stable (they don't change much).
-- A big square means prices are all over the place (they change a lot!).
+- A small angle (0°) means prices are very stable (they don't change much).
+- A big angle (90°) means prices are all over the place (they change a lot!).
 
-So, small square = consistent prices, big square = unpredictable prices.
+So, small angle = consistent prices, big angle = unpredictable prices.
 
-<img src='./assets/images/size-std.svg' width='500'>
+<img src='../matrices/assets/images/std_legend_angle.svg' width='500'>

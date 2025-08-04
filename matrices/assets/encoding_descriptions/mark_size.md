@@ -1,4 +1,4 @@
-## THIRD KEY CONCEPT: Attribute Encoding
+# THIRD KEY CONCEPT: Attribute Encoding
 
 As you might notice, if the network grows it will be very difficult to read the values on a graph or on the presented adjacency matrices. We use a way of encoding mean and variation to visualize this kind of networks.
 
@@ -11,7 +11,7 @@ Each cell in the matrix will have a color:
 
 So, lighter is cheaper and darker is more expensive.
 
-<img src='./assets/images/color-mean.svg' width='500'>
+<img src='../matrices/assets/images/mean_legend_mark.svg' width='500'>
 
 ##### Mark size encodes the price variation.
 
@@ -22,6 +22,6 @@ Inside each cell, there is a white square:
 
 So, small square = consistent prices, big square = unpredictable prices.
 
-<img src='./assets/images/size-std.svg' width='500'>
+<img src='../matrices/assets/images/std_legend_size.svg' width='500'>
 
 Let's do some training exercises!
