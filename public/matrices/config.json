@@ -1243,7 +1243,7 @@
     "helpTextPath": "matrices/assets/encoding_descriptions/mark_size.md",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withSidebar": true,
-    "sidebarWidth": 500.0,
+    "sidebarWidth": 400.0,
     "withProgressBar": true
   }
 }
