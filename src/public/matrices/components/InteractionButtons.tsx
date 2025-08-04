@@ -45,9 +45,9 @@ function PathSelection() {
 
 export function InteractionButtons() {
   return (
-    <Stack style={{ display: 'flex', justifyContent: 'center' }}>
-      <PathSelection />
+    <Stack style={{ display: 'flex' }}>
       <ClearAndResetButtons />
+      <PathSelection />
     </Stack>
   );
 }

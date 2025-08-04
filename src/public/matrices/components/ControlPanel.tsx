@@ -45,8 +45,8 @@ export default function ControlPanel({
     <Box
       style={{
         position: 'absolute',
-        top: 80,
-        left: 500,
+        top: 0,
+        right: 0,
       }}
     >
       {!showConfigurationPanel && !opened && (

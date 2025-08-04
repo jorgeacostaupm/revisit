@@ -187,7 +187,7 @@ export function Legend() {
 
   return (
     <>
-      <div style={{ width: '100%', height: '70%' }}>
+      <div style={{ width: '100%', height: '100%' }}>
         <Text size="xl" fw={700} style={{ marginBottom: '2vh' }}>
           {meanText}
         </Text>

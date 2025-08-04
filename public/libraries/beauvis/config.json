@@ -7,11 +7,12 @@
   "components": {
     "overlaid-angle": {
       "type": "image",
-      "path": "libraries/beauvis/assets/vis-example.png",
+      "path": "libraries/beauvis/assets/mark_angle.svg",
       "style": {
         "width": "800px",
         "marginBottom": "10px"
       },
+      "sidebarWidth": 0,
       "response": [
         {
           "id": "overlaid-angle-response",
@@ -39,6 +40,7 @@
         "width": "800px",
         "marginBottom": "10px"
       },
+      "sidebarWidth": 0,
       "response": [
         {
           "id": "overlaid-size-response",
@@ -61,11 +63,12 @@
     },
     "bivariate": {
       "type": "image",
-      "path": "libraries/beauvis/assets/vis-example.png",
+      "path": "libraries/beauvis/assets/bivariate.svg",
       "style": {
         "width": "800px",
         "marginBottom": "10px"
       },
+      "sidebarWidth": 0,
       "response": [
         {
           "id": "bivariate-response",
@@ -88,11 +91,12 @@
     },
     "barchart": {
       "type": "image",
-      "path": "libraries/beauvis/assets/vis-example.png",
+      "path": "libraries/beauvis/assets/barchart.svg",
       "style": {
         "width": "800px",
         "marginBottom": "10px"
       },
+      "sidebarWidth": 0,
       "response": [
         {
           "id": "barchart-response",

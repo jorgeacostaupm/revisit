@@ -23,7 +23,7 @@ export function Stimuli({
     if (!file) return;
 
     try {
-      const response = await fetch(`data/${file}`);
+      const response = await fetch(`${file}`);
       if (!response.ok) throw new Error('Failed to fetch file');
 
       const text = await response.text();

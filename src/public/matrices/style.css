@@ -40,8 +40,8 @@
 }
 
 .container {
+  position: relative;
   display: flex;
-  align-items: center;
   gap: 2vw;
   width: 100%;
 }
@@ -49,6 +49,5 @@
 .matrix-svg {
   display: block;
   aspect-ratio: 1;
-  width: 65%;
   height: 89vh;
 }

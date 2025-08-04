@@ -7,7 +7,7 @@
   "components": {
     "Understand": {
       "type": "image",
-      "path": "libraries/previs/assets/mark_size.svg",
+      "path": "libraries/previs/assets/bivariate.svg",
       "style": {
         "width": "800px",
         "marginBottom": "10px"
@@ -48,7 +48,7 @@
     },
     "Layout": {
       "type": "image",
-      "path": "libraries/previs/assets/mark_size.svg",
+      "path": "libraries/previs/assets/bivariate.svg",
       "style": {
         "width": "800px",
         "marginBottom": "10px"
@@ -89,7 +89,7 @@
     },
     "ReadingData": {
       "type": "image",
-      "path": "libraries/previs/assets/mark_size.svg",
+      "path": "libraries/previs/assets/bivariate.svg",
       "style": {
         "width": "800px",
         "marginBottom": "10px"
@@ -130,7 +130,7 @@
     },
     "ReadingFeatures": {
       "type": "image",
-      "path": "libraries/previs/assets/mark_size.svg",
+      "path": "libraries/previs/assets/bivariate.svg",
       "style": {
         "width": "800px",
         "marginBottom": "10px"

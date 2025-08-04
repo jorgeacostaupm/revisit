@@ -6,7 +6,7 @@ export enum EncodingType {
   BarChartColor = 'Bar Chart + Color Scale',
   MarkAngle45 = 'Overlaid Mark Angle (0-45)',
   MarkAngle45_90 = 'Overlaid Mark Angle (45-90)',
-  MarkAngle90 = 'Overlaid Mark Angle (0-90)',
+  MarkAngle90 = 'Overlaid Mark Angle',
   ColorAngle45 = 'Color+Angle (0-45)',
   ColorAngle90 = 'Color+Angle (0-90)',
   Mean = 'Just the mean',

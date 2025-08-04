@@ -189,7 +189,6 @@ export function Matrix({
     <MatrixProvider value={contextValue}>
       <div className="container">
         <ControlPanel configProps={configProps} dataname={dataname} setDataname={setDataname} />
-        {' '}
         <svg ref={ref} className="matrix-svg">
           {shouldRender && (
             <g
@@ -220,6 +219,7 @@ export function Matrix({
               width: '35%',
               height: '100%',
               gap: '3vh',
+              marginTop: '10vh',
             }}
           >
             <InteractionButtons />
