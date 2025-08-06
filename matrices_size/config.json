@@ -93,7 +93,7 @@
       "correctAnswer": [
         {
           "answer": "c",
-          "id": "list2num"
+          "id": "num2list"
         }
       ],
       "nextButtonLocation": "belowStimulus",
@@ -431,7 +431,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "ADJACENCY. Select the nodes directly connected to a given node.<br>GOAL: Assess whether different encodings influence the perception of basic connectivity.<br>QUESTION. Which states are connected to Oregon? State ordering is disabled for this question.<br>ANSWER: List of nodes.",
+      "instruction": "Which states are connected to Oregon?<br> State ordering is disabled for this question.",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -479,7 +479,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "ADJACENCY. Select the nodes directly connected to a given node.<br>GOAL: Assess whether different encodings influence the perception of basic connectivity.<br>QUESTION. Which states are connected to Minnesota? State ordering is disabled for this question.<br>ANSWER: List of nodes.",
+      "instruction": "Which states are connected to Minnesota?<br> State ordering is disabled for this question.",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -504,7 +504,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "ADJACENCY BY MEAN. Select adjacent nodes to one given constrained by attribute values.<br>GOAL: Assess the effectiveness of the encoding to filter links when focusing on mean values.<br>QUESTION. Which states are connected to Nevada with a mean price higher than $150?<br>ANSWER: List of nodes.",
+      "instruction": "Which states are connected to Nevada with a mean price higher than $150?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -538,7 +538,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "ADJACENCY BY VARIATION. Select adjacent nodes to one given constrained by attribute values.<br>GOAL: Assess the effectiveness of the encoding to filter links when focusing on variation values.<br>QUESTION. Which states are connected to Utah with a price variation higher than $90?<br>ANSWER: List of nodes.",
+      "instruction": "Which states are connected to Utah with a price variation higher than $90?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -562,7 +562,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "ATTRIBUTE COMBINATION. Select adjacent nodes connected to a given node based on combined link attributes.<br>GOAL: Assess the performance of the encoding when combining attributes to filter links.<br>QUESTION. Which states are connected to Washington with flight prices of $150\u00b1$50?<br>ANSWER: List of nodes.",
+      "instruction": "Which states are connected to Washington with flight prices of $150\u00b1$50?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -586,7 +586,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "ATTRIBUTE EXTREMES. Identify adjacent nodes connected to a given node based on a combination of extreme link attributes.<br>GOAL. Assess how well the encoding enables users to detect extreme attribute values and integrate them simultaneously.<br>QUESTION. When flying from Missouri, which destination states have the highest and lowest ticket prices?<br>ANSWER. List of nodes.",
+      "instruction": "When flying from Missouri, which destination states have the highest and lowest ticket prices?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -610,7 +610,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "ADJACENCY BY MEAN. Select adjacent nodes to one given constrained by attribute values.<br>GOAL: Assess the effectiveness of the encoding to filter links when focusing on mean values.<br>QUESTION. Which states are connected to Arizona with a mean price lower than $100?<br>ANSWER: List of nodes.<br><br>To show that you are paying attention add Louisiana to your answer. (This  will be the 16th question)",
+      "instruction": "Which states are connected to Arizona with a mean price lower than $100?<br><br>To show that you are paying attention add Louisiana to your answer. (This  will be the 16th question)",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -647,7 +647,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "ADJACENCY BY VARIATION. Select adjacent nodes to one given constrained by attribute values.<br>GOAL: Assess the effectiveness of the encoding to filter links when focusing on variation values.<br>QUESTION. Which states are connected to Pennsylvania with a price variation lower than $60?<br>ANSWER: List of nodes.",
+      "instruction": "Which states are connected to Pennsylvania with a price variation lower than $60?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -671,7 +671,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "ATTRIBUTE COMBINATION. Select adjacent nodes connected to a given node based on combined link attributes.<br>GOAL: Assess the performance of the encoding when combining attributes to filter links.<br>QUESTION. Which states are connected to Maryland with flight prices of $100\u00b1$70?<br>ANSWER: List of nodes.",
+      "instruction": "Which states are connected to Maryland with flight prices of $100\u00b1$70?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -695,7 +695,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "ATTRIBUTE EXTREMES. Identify adjacent nodes connected to a given node based on a combination of extreme link attributes.<br>GOAL. Assess how well the encoding enables users to detect extreme attribute values and integrate them simultaneously.<br>QUESTION. When flying from Illinois, which destination states have the highest and lowest ticket prices?<br>ANSWER. List of nodes.",
+      "instruction": "When flying from Illinois, which destination states have the highest and lowest ticket prices?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -719,7 +719,7 @@
           "id": "path"
         }
       ],
-      "instruction": "PATH MEAN. Select between 4 paths the one that better fits for a given mean price criteria.<br>GOAL: Assess the effectiveness of the encoding when estimating mean on a path.<br>QUESTION. Considering only the mean price, which layover results in the lowest total cost?<br>ANSWER: Single selection (radio button).<br><br>To show that you are paying attention select Illinois on the matrix.(This  will be the 8th question)",
+      "instruction": "Considering only the mean price, which layover results in the lowest total cost?<br><br>To show that you are paying attention select Illinois on the matrix.(This  will be the 8th question)",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -750,7 +750,7 @@
           "id": "path"
         }
       ],
-      "instruction": "PATH VARIATION. Select between 4 paths the one that better fits for a given price variation criteria.<br>GOAL: Assess the effectiveness of the encoding when estimating variation on a path.<br>QUESTION. On which layover do prices vary the least?<br>ANSWER: Single selection (radio button).",
+      "instruction": "On which layover do prices vary the least?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -786,7 +786,7 @@
           "id": "std"
         }
       ],
-      "instruction": "PATH ESTIMATION. Estimate the price range of a layover.<br>GOAL: Assess the effectiveness of the encoding when estimating total value combining attributes on a path.<br>QUESTION. For the itinerary <br> Georgia \u2192 California \u2192 New York <br><br>What is the estimated total cost (mean \u00b1 variation)?<br>ANSWER: A range in the format mean\u00b1variation.",
+      "instruction": "For the itinerary <br> Georgia \u2192 California \u2192 New York <br><br>What is the estimated total cost (mean \u00b1 variation)?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -820,7 +820,7 @@
           "id": "path"
         }
       ],
-      "instruction": "PATH MEAN. Select between 4 paths the one that better fits for a given mean price criteria.<br>GOAL: Assess the effectiveness of the encoding when estimating mean on a path.<br>QUESTION. Considering only the mean price, which layover results in the lowest total cost?<br>ANSWER: Single selection (radio button).",
+      "instruction": "Considering only the mean price, which layover results in the lowest total cost?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -852,7 +852,7 @@
           "id": "path"
         }
       ],
-      "instruction": "PATH VARIATION. Select between 4 paths the one that better fits for a given price variation criteria.<br>GOAL: Assess the effectiveness of the encoding when estimating variation on a path.<br>QUESTION. On which layover do prices vary the least?<br>ANSWER: Single selection (radio button).",
+      "instruction": "On which layover do prices vary the least?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -888,7 +888,7 @@
           "id": "std"
         }
       ],
-      "instruction": "PATH ESTIMATION. Estimate the price range of a layover.<br>GOAL: Assess the effectiveness of the encoding when estimating total value combining attributes on a path.<br>QUESTION. For the itinerary <br> Pennsylvania \u2192 Missouri \u2192 Minnesota <br>What is the estimated total cost (mean \u00b1 variation)?<br>ANSWER: A range in the format mean\u00b1variation.",
+      "instruction": "For the itinerary <br> Pennsylvania \u2192 Missouri \u2192 Minnesota <br>What is the estimated total cost (mean \u00b1 variation)?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -917,7 +917,7 @@
     },
     "classification": {
       "correctAnswer": [],
-      "instruction": "CLASSIFICATION. Rank nodes depending on their link attribute average values.<br>GOAL: Assess the accuracy of encodings for estimating and comparing overall node link attribute values between nodes.<br>QUESTION. Assign each state to a category.<br>ANSWER: Multiple selection (matrix radio buttons).",
+      "instruction": "Assign each state to a category.",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -926,7 +926,11 @@
       "path": "matrices/Stimuli.tsx",
       "response": [
         {
-          "answerOptions": ["High Variation", "Medium Variation", "Low Variation"],
+          "answerOptions": [
+            "High Prices Variation",
+            "Medium Prices Variation",
+            "Low Prices Variation"
+          ],
           "id": "stability",
           "location": "sidebar",
           "prompt": "",
@@ -934,7 +938,8 @@
           "type": "matrix-radio"
         }
       ],
-      "type": "react-component"
+      "type": "react-component",
+      "sidebarWidth": 400
     },
     "cluster_mean": {
       "correctAnswer": [
@@ -943,7 +948,7 @@
           "id": "cluster"
         }
       ],
-      "instruction": "CLUSTER MEAN ESTIMATION TASK. Estimate and compare the average value of an attribute across clusters.<br>GOAL: Assess whether different encodings influence the perception of attribute cluster values.<br>QUESTION. Which cluster has the highest mean price?<br>ANSWER: Single selection (radio button).",
+      "instruction": "Which cluster has the highest mean price?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -994,7 +999,7 @@
           "id": "cluster"
         }
       ],
-      "instruction": "CLUSTER STABILITY ESTIMATION TASK. Estimate link stability of a cluster.<br>GOAL: Assess whether different encodings influence the perception of attribute cluster values.<br>QUESTION. Which cluster shows the highest price variation?<br>ANSWER: Single selection (radio button).",
+      "instruction": "Which cluster shows the highest price variation?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -1040,7 +1045,7 @@
     },
     "classification_extra": {
       "correctAnswer": [],
-      "instruction": "CLASSIFICATION. Rank nodes depending on their link attribute average values.<br>GOAL: Assess the accuracy of encodings for estimating and comparing overall node link attribute values between nodes.<br>QUESTION. Assign each state to a category.<br>ANSWER: Multiple selection (matrix radio buttons).",
+      "instruction": "Assign each state to a category.",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -1049,7 +1054,11 @@
       "path": "matrices/Stimuli.tsx",
       "response": [
         {
-          "answerOptions": ["High Variation", "Medium Variation", "Low Variation"],
+          "answerOptions": [
+            "High Prices Variation",
+            "Medium Prices Variation",
+            "Low Prices Variation"
+          ],
           "id": "stability",
           "location": "sidebar",
           "prompt": "",
@@ -1057,7 +1066,8 @@
           "type": "matrix-radio"
         }
       ],
-      "type": "react-component"
+      "type": "react-component",
+      "sidebarWidth": 400
     },
     "cluster_mean_extra": {
       "correctAnswer": [
@@ -1066,7 +1076,7 @@
           "id": "cluster"
         }
       ],
-      "instruction": "CLUSTER MEAN ESTIMATION TASK. Estimate and compare the average value of an attribute across clusters.<br>GOAL: Assess whether different encodings influence the perception of attribute cluster values.<br>QUESTION. Which cluster has the lowest mean price?<br>ANSWER: Single selection (radio button).",
+      "instruction": "Which cluster has the lowest mean price?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -1117,7 +1127,7 @@
           "id": "cluster"
         }
       ],
-      "instruction": "CLUSTER STABILITY ESTIMATION TASK. Estimate link stability of a cluster.<br>GOAL: Assess whether different encodings influence the perception of attribute cluster values.<br>QUESTION. Which cluster shows the lowest price variation?<br>ANSWER: Single selection (radio button).",
+      "instruction": "Which cluster shows the lowest price variation?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -1239,7 +1249,7 @@
   "studyMetadata": {
     "authors": ["Jorge Acosta", "Tingying He", "Alex Lex"],
     "date": "2025-01-13",
-    "description": "[Sidebar is properly setted on this study] This study aims to evaluate the Overlaid Mark Size encoding technique for visualizing the mean and variation of flight prices in the U.S.",
+    "description": "[Sidebar and min size setted] This study aims to evaluate the Overlaid Mark Size encoding technique for visualizing the mean and variation of flight prices in the U.S.",
     "organizations": ["Visualization Design Lab"],
     "title": "Mean & Variation Overlaid Mark Size Encoding on AM's (Pre-Pilot)",
     "version": "1.0"
@@ -1249,6 +1259,8 @@
     "helpTextPath": "matrices/assets/help/help_size.md",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withSidebar": true,
-    "withProgressBar": true
+    "withProgressBar": true,
+    "minHeightSize": 800,
+    "minWidthSize": 1400
   }
 }
