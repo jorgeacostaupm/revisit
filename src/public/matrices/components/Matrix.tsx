@@ -3,8 +3,6 @@
 import { useMemo } from 'react';
 import * as d3 from 'd3';
 
-import { useResizeObserver } from '@mantine/hooks';
-
 import { Trrack } from '@trrack/core';
 
 import { OriginAxis } from './axis/OriginAxis';
@@ -30,10 +28,10 @@ import { useCellRenderer } from '../hooks/useRenderEncodeCells';
 import ControlPanel from './ControlPanel';
 
 const MARGIN = {
-  top: 100,
+  top: 120,
   left: 120,
-  right: 5,
-  bottom: 5,
+  right: 3,
+  bottom: 3,
 };
 
 export function Matrix({
@@ -65,7 +63,8 @@ export function Matrix({
   const orderingState = useOrderingState(data, configProps.clusterMode, configProps.clusterVar);
 
   // ---------------------------- Dimensions ----------------------------
-  const [ref, { width, height }] = useResizeObserver();
+  /* const [ref, { width, height }] = useResizeObserver(); */
+  const [width, height] = [695, 695];
   const size = Math.min(width - MARGIN.left - MARGIN.right, height - MARGIN.top - MARGIN.bottom);
 
   // ---------------------------- Data Processing ----------------------------
@@ -189,7 +188,7 @@ export function Matrix({
     <MatrixProvider value={contextValue}>
       <div className="container">
         <ControlPanel configProps={configProps} dataname={dataname} setDataname={setDataname} />
-        <svg ref={ref} className="matrix-svg">
+        <svg className="matrix-svg">
           {shouldRender && (
             <g
               transform={`translate(${MARGIN.left},${MARGIN.top})`}
@@ -216,10 +215,9 @@ export function Matrix({
             style={{
               display: 'flex',
               flexDirection: 'column',
-              width: '35%',
-              height: '100%',
-              gap: '3vh',
-              marginTop: '10vh',
+              width: '350px',
+              gap: '20px',
+              marginTop: '120px',
             }}
           >
             <InteractionButtons />

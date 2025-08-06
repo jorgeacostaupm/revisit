@@ -42,12 +42,20 @@
 .container {
   position: relative;
   display: flex;
-  gap: 2vw;
+  gap: 25px;
+  width: 1068px;
+  height: 695px;
+}
+
+.precontainer {
+  position: relative;
   width: 100%;
+  height: 695px;
+  overflow: scroll;
 }
 
 .matrix-svg {
   display: block;
-  aspect-ratio: 1;
-  height: 89vh;
+  height: 695px;
+  width: 695px;
 }

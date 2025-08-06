@@ -48,7 +48,7 @@ export function Legend() {
       const group = d3.select(g);
       group.selectAll('*').remove();
 
-      const margin = Math.min(90, legendCellSize * 3 + 10);
+      const margin = Math.max(legendCellSize + 20, 70);
 
       const cells = group
         .selectAll<SVGGElement, Link>('.cell')
@@ -112,7 +112,7 @@ export function Legend() {
       const g = ref.current;
       if (!g) return;
 
-      const cellSizeL = Math.min(legendCellSize + 30, 60);
+      const cellSizeL = legendCellSize;
 
       const group = d3.select(g);
       group.selectAll('*').remove();
@@ -138,8 +138,8 @@ export function Legend() {
         .attr('text-anchor', 'start')
         .text((d, i) => {
           const [min, max] = mScale.invertExtent(d);
-          if (i + 1 === mScale.range().length) return `$${min.toFixed(0)} - ${+max.toFixed(0)}`;
-          return `$${min.toFixed(0)} - ${+max.toFixed(0) - 0.01}`;
+          if (i + 1 === mScale.range().length) return `${min.toFixed(0)} - ${+max.toFixed(0)}`;
+          return `${min.toFixed(0)} - ${+max.toFixed(0)}`;
         });
 
       group
@@ -155,8 +155,8 @@ export function Legend() {
         .attr('text-anchor', 'start')
         .text((d, i) => {
           const [min, max] = dScale.invertExtent(d);
-          if (i + 1 === dScale.range().length) return `$${min.toFixed(0)} - ${+max.toFixed(0)}`;
-          return `$${min.toFixed(0)} - ${+max.toFixed(0) - 0.01}`;
+          if (i + 1 === dScale.range().length) return `${min.toFixed(0)} - ${+max.toFixed(0)}`;
+          return `${min.toFixed(0)} - ${+max.toFixed(0)}`;
         });
 
       cellRenderer(group.selectAll('.cell'), cellSizeL, showMean, showDev);
@@ -187,8 +187,8 @@ export function Legend() {
 
   return (
     <>
-      <div style={{ width: '100%', height: '100%' }}>
-        <Text size="xl" fw={700} style={{ marginBottom: '2vh' }}>
+      <div style={{ width: '100%' }}>
+        <Text size="xl" fw={700} style={{ marginBottom: '20px' }}>
           {meanText}
         </Text>
         <svg
@@ -206,7 +206,7 @@ export function Legend() {
 
       {devScale.range().length > 1 && encoding !== EncodingType.Bivariate && (
         <div>
-          <Text size="xl" fw={700} style={{ marginBottom: '2vh' }}>
+          <Text size="xl" fw={700} style={{ marginBottom: '20px' }}>
             {devText}
           </Text>
           <svg overflow="visible" height={legendCellSize * 2} width="100%">
