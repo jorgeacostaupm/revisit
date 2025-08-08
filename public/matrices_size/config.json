@@ -13,8 +13,7 @@
           "type": "shortText"
         }
       ],
-      "type": "markdown",
-      "sidebarWidth": 0
+      "type": "markdown"
     },
     "consent": {
       "correctAnswer": [],
@@ -38,15 +37,13 @@
           "type": "radio"
         }
       ],
-      "type": "markdown",
-      "sidebarWidth": 0
+      "type": "markdown"
     },
     "data_description": {
       "correctAnswer": [],
       "path": "matrices/assets/data.md",
       "response": [],
-      "type": "markdown",
-      "sidebarWidth": 0
+      "type": "markdown"
     },
     "list2num": {
       "allowFailedTraining": false,
@@ -85,8 +82,7 @@
         }
       ],
       "trainingAttempts": 2.0,
-      "type": "questionnaire",
-      "sidebarWidth": 0
+      "type": "questionnaire"
     },
     "num2list": {
       "allowFailedTraining": false,
@@ -125,15 +121,13 @@
         }
       ],
       "trainingAttempts": 2.0,
-      "type": "questionnaire",
-      "sidebarWidth": 0
+      "type": "questionnaire"
     },
     "connectivity_description": {
       "correctAnswer": [],
       "path": "matrices/assets/connectivity.md",
       "response": [],
-      "type": "markdown",
-      "sidebarWidth": 0
+      "type": "markdown"
     },
     "matrix2graph": {
       "allowFailedTraining": false,
@@ -225,8 +219,7 @@
       "correctAnswer": [],
       "path": "matrices/assets/encoding_descriptions/mark_size.md",
       "response": [],
-      "type": "markdown",
-      "sidebarWidth": 0
+      "type": "markdown"
     },
     "training_intro": {
       "allowFailedTraining": false,
@@ -406,8 +399,7 @@
       "correctAnswer": [],
       "path": "matrices/assets/training_ends.md",
       "response": [],
-      "type": "markdown",
-      "sidebarWidth": 0
+      "type": "markdown"
     },
     "adj": {
       "correctAnswer": [
@@ -888,7 +880,8 @@
           "type": "matrix-radio"
         }
       ],
-      "type": "react-component"
+      "type": "react-component",
+      "sidebarWidth": 400
     },
     "cluster_mean": {
       "correctAnswer": [
@@ -1015,7 +1008,8 @@
           "type": "matrix-radio"
         }
       ],
-      "type": "react-component"
+      "type": "react-component",
+      "sidebarWidth": 400
     },
     "cluster_mean_extra": {
       "correctAnswer": [
@@ -1123,8 +1117,7 @@
       "correctAnswer": [],
       "path": "matrices/assets/tasks_end.md",
       "response": [],
-      "type": "markdown",
-      "sidebarWidth": 0
+      "type": "markdown"
     },
     "$beauvis.co.overlaid-size": {
       "correctAnswer": [],
@@ -1205,7 +1198,7 @@
     "order": "fixed"
   },
   "studyMetadata": {
-    "authors": ["Jorge Acosta", "Tingying He", "Alex Lex"],
+    "authors": ["Jorge Acostaaa", "Tingying He", "Alex Lex"],
     "date": "2025-01-13",
     "description": "This study aims to evaluate the Overlaid Mark Size encoding technique for visualizing the mean and variation of flight prices in the U.S.",
     "organizations": ["Visualization Design Lab"],
