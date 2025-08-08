@@ -406,8 +406,7 @@
       "correctAnswer": [],
       "path": "matrices/assets/training_ends.md",
       "response": [],
-      "type": "markdown",
-      "sidebarWidth": 0
+      "type": "markdown"
     },
     "adj": {
       "correctAnswer": [
@@ -888,7 +887,8 @@
           "type": "matrix-radio"
         }
       ],
-      "type": "react-component"
+      "type": "react-component",
+      "sidebarWidth": 400
     },
     "cluster_mean": {
       "correctAnswer": [
@@ -1015,7 +1015,8 @@
           "type": "matrix-radio"
         }
       ],
-      "type": "react-component"
+      "type": "react-component",
+      "sidebarWidth": 400
     },
     "cluster_mean_extra": {
       "correctAnswer": [
@@ -1205,7 +1206,7 @@
     "order": "fixed"
   },
   "studyMetadata": {
-    "authors": ["Jorge Acosta", "Tingying He", "Alex Lex"],
+    "authors": ["Jorge Acostaaa", "Tingying He", "Alex Lex"],
     "date": "2025-01-13",
     "description": "This study aims to evaluate the Overlaid Mark Size encoding technique for visualizing the mean and variation of flight prices in the U.S.",
     "organizations": ["Visualization Design Lab"],
