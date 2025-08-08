@@ -65,6 +65,58 @@ export interface StudyMetadata {
 export type ResponseBlockLocation = 'sidebar' | 'aboveStimulus' | 'belowStimulus' | 'stimulus';
 export type ConfigResponseBlockLocation = Exclude<ResponseBlockLocation, 'stimulus'>;
 
+export type Styles = {
+  /** Sizing */
+  height?: string;
+  width?: string;
+  minHeight?: string;
+  minWidth?: string;
+  maxHeight?: string;
+  maxWidth?: string;
+
+  /** Positioning */
+  position?: 'static' | 'relative' | 'absolute' | 'fixed' | 'sticky';
+  top?: string;
+  bottom?: string;
+  left?: string;
+  right?: string;
+
+  /** Spacing */
+  margin?: string;
+  padding?: string;
+
+  /** Border */
+  border?: string;
+  borderRadius?: string;
+
+  /** Background */
+  background?: string;
+  backgroundColor?: string;
+  backgroundImage?: string;
+  backgroundPosition?: string;
+  backgroundSize?: string;
+
+  /** Filter */
+  filter?: string;
+
+  /** Typography */
+  color?: string;
+  font?: string;
+  fontFamily?: string;
+  fontSize?: string;
+  fontStyle?: 'normal' | 'italic' | 'oblique';
+  fontWeight?: string | number;
+  textAlign?: 'start' | 'center' | 'end' | 'justify' | 'left' | 'right' | 'match-parent';
+  textDecoration?: 'none' | 'underline' | 'overline' | 'line-through' | 'underline-overline';
+  textTransform?: 'capitalize' | 'lowercase' | 'none' | 'uppercase';
+  letterSpacing?: string;
+  wordSpacing?: string;
+  lineHeight?: string | number;
+
+  /** Transform */
+  transform?: string;
+};
+
 /**
  * The UIConfig is used to configure the UI of the app.
  * This includes the logo, contact email, and whether to show a progress bar.
@@ -152,6 +204,8 @@ export interface UIConfig {
   minWidthSize?: number;
   /** The minimum screen height size for the study */
   minHeightSize?: number;
+  /** The path to the external stylesheet file. */
+  stylesheetPath?: string;
 }
 
 /**
@@ -204,6 +258,10 @@ export interface BaseResponse {
   withDivider?: boolean;
   /** Renders the response with an option for "I don't know". This counts as a completed answer for the validation. */
   withDontKnow?: boolean;
+  /** The path to the external stylesheet file. */
+  stylesheetPath?: string;
+  /**  You can set styles here, using React CSSProperties, for example: {"width": 100} or {"width": "50%"} */
+  style?: Styles;
 }
 
 /**
@@ -290,7 +348,9 @@ export interface LongTextResponse extends BaseResponse {
   "type": "likert",
   "leftLabel": "Not Enjoyable",
   "rightLabel": "Very Enjoyable",
-  "numItems": 5
+  "numItems": 5,
+  "start": 1,
+  "spacing": 1
 }
 ```
  */
@@ -298,6 +358,10 @@ export interface LikertResponse extends BaseResponse {
   type: 'likert';
   /** The number of options to render. */
   numItems: number;
+  /** The starting value of the likert scale. Defaults to 1. */
+  start?: number;
+  /** The spacing between the options. Defaults to 1. */
+  spacing?: number;
   /** The left label of the likert scale. E.g Strongly Disagree */
   leftLabel?: string;
   /** The right label of the likert scale. E.g Strongly Agree */
@@ -679,6 +743,10 @@ export interface BaseIndividualComponent {
   windowEventDebounceTime?: number;
   /** The order of the responses. Defaults to 'fixed'. */
   responseOrder?: 'fixed' | 'random';
+  /** The path to the external stylesheet file. */
+  stylesheetPath?: string;
+  /**  You can set styles here, using React CSSProperties, for example: {"width": 100} or {"width": "50%"} */
+  style?: Styles;
 }
 
 /**
@@ -767,8 +835,6 @@ export interface ImageComponent extends BaseIndividualComponent {
   type: 'image';
   /** The path to the image. This could be a relative path from the public folder or a url to an external image. */
   path: string;
-  /** The style of the image. This is an object with css properties as keys and css values as values. */
-  style?: Record<string, string>;
 }
 
 /**
@@ -1497,6 +1563,12 @@ export interface LibraryConfig {
   $schema: string;
   /** A description of the library. */
   description: string;
+  /** The components that are used in the study. They must be fully defined here with all properties. Some properties may be inherited from baseComponents. */
+  components: Record<string, IndividualComponent | InheritedComponent>
+  /** The order of the components in the study. This might include some randomness. */
+  sequences: Record<string, StudyConfig['sequence']>;
+  /** Additional description of the library. It accepts markdown formatting. */
+  additionalDescription?: string;
   /** The reference to the paper where the content of the library is based on. */
   reference?: string;
   /** The DOI of the paper where the content of the library is based on. */
@@ -1505,10 +1577,6 @@ export interface LibraryConfig {
   externalLink?: string;
   /** The base components that are used in the study. These components can be used to template other components. See [BaseComponents](../../type-aliases/BaseComponents) for more information. */
   baseComponents?: BaseComponents;
-  /** The components that are used in the study. They must be fully defined here with all properties. Some properties may be inherited from baseComponents. */
-  components: Record<string, IndividualComponent | InheritedComponent>
-  /** The order of the components in the study. This might include some randomness. */
-  sequences: Record<string, StudyConfig['sequence']>;
 }
 
 /**
