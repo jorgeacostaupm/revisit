@@ -1242,6 +1242,8 @@
     "helpTextPath": "matrices/assets/help/help_bivariate.md",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withSidebar": true,
-    "withProgressBar": true
+    "withProgressBar": true,
+    "minHeightSize": 800,
+    "minWidthSize": 1400
   }
 }
