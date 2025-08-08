@@ -13,7 +13,8 @@
           "type": "shortText"
         }
       ],
-      "type": "markdown"
+      "type": "markdown",
+      "sidebarWidth": 0
     },
     "consent": {
       "correctAnswer": [],
@@ -37,13 +38,15 @@
           "type": "radio"
         }
       ],
-      "type": "markdown"
+      "type": "markdown",
+      "sidebarWidth": 0
     },
     "data_description": {
       "correctAnswer": [],
       "path": "matrices/assets/data.md",
       "response": [],
-      "type": "markdown"
+      "type": "markdown",
+      "sidebarWidth": 0
     },
     "list2num": {
       "allowFailedTraining": false,
@@ -82,7 +85,8 @@
         }
       ],
       "trainingAttempts": 2.0,
-      "type": "questionnaire"
+      "type": "questionnaire",
+      "sidebarWidth": 0
     },
     "num2list": {
       "allowFailedTraining": false,
@@ -121,13 +125,15 @@
         }
       ],
       "trainingAttempts": 2.0,
-      "type": "questionnaire"
+      "type": "questionnaire",
+      "sidebarWidth": 0
     },
     "connectivity_description": {
       "correctAnswer": [],
       "path": "matrices/assets/connectivity.md",
       "response": [],
-      "type": "markdown"
+      "type": "markdown",
+      "sidebarWidth": 0
     },
     "matrix2graph": {
       "allowFailedTraining": false,
@@ -219,7 +225,8 @@
       "correctAnswer": [],
       "path": "matrices/assets/encoding_descriptions/mark_size.md",
       "response": [],
-      "type": "markdown"
+      "type": "markdown",
+      "sidebarWidth": 0
     },
     "training_intro": {
       "allowFailedTraining": false,
@@ -1117,7 +1124,8 @@
       "correctAnswer": [],
       "path": "matrices/assets/tasks_end.md",
       "response": [],
-      "type": "markdown"
+      "type": "markdown",
+      "sidebarWidth": 0
     },
     "$beauvis.co.overlaid-size": {
       "correctAnswer": [],
