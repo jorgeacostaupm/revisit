@@ -9,16 +9,16 @@
       "type": "image",
       "path": "libraries/beauvis/assets/mark_angle.svg",
       "style": {
-        "width": "800px",
-        "marginBottom": "10px"
+        "width": "680px",
+        "margin": "auto"
       },
-      "sidebarWidth": 0,
+      "sidebarWidth": 670,
       "response": [
         {
           "id": "overlaid-angle-response",
-          "prompt": "To what extent do you agree that this visual representation is...? (this is a test)",
+          "prompt": "To what extent do you agree that this visual representation is...?",
           "required": true,
-          "location": "belowStimulus",
+          "location": "sidebar",
           "type": "matrix-radio",
           "answerOptions": [
             "Strongly disagree",
@@ -37,16 +37,16 @@
       "type": "image",
       "path": "libraries/beauvis/assets/mark_size.svg",
       "style": {
-        "width": "800px",
-        "marginBottom": "10px"
+        "width": "680px",
+        "margin": "auto"
       },
-      "sidebarWidth": 0,
+      "sidebarWidth": 670,
       "response": [
         {
           "id": "overlaid-size-response",
-          "prompt": "To what extent do you agree that this visual representation is...? (this is a test)",
+          "prompt": "To what extent do you agree that this visual representation is...?",
           "required": true,
-          "location": "belowStimulus",
+          "location": "sidebar",
           "type": "matrix-radio",
           "answerOptions": [
             "Strongly disagree",
@@ -65,16 +65,16 @@
       "type": "image",
       "path": "libraries/beauvis/assets/bivariate.svg",
       "style": {
-        "width": "800px",
-        "marginBottom": "10px"
+        "width": "680px",
+        "margin": "auto"
       },
-      "sidebarWidth": 0,
+      "sidebarWidth": 670,
       "response": [
         {
           "id": "bivariate-response",
-          "prompt": "To what extent do you agree that this visual representation is...? (this is a test)",
+          "prompt": "To what extent do you agree that this visual representation is...?",
           "required": true,
-          "location": "belowStimulus",
+          "location": "sidebar",
           "type": "matrix-radio",
           "answerOptions": [
             "Strongly disagree",
@@ -93,16 +93,16 @@
       "type": "image",
       "path": "libraries/beauvis/assets/barchart.svg",
       "style": {
-        "width": "800px",
-        "marginBottom": "10px"
+        "width": "680px",
+        "margin": "auto"
       },
-      "sidebarWidth": 0,
+      "sidebarWidth": 670,
       "response": [
         {
           "id": "barchart-response",
-          "prompt": "To what extent do you agree that this visual representation is...? (this is a test)",
+          "prompt": "To what extent do you agree that this visual representation is...?",
           "required": true,
-          "location": "belowStimulus",
+          "location": "sidebar",
           "type": "matrix-radio",
           "answerOptions": [
             "Strongly disagree",
@@ -121,8 +121,7 @@
       "type": "image",
       "path": "libraries/beauvis/assets/vis-example.png",
       "style": {
-        "width": "800px",
-        "marginBottom": "50px"
+        "width": "800px"
       },
       "response": [
         {

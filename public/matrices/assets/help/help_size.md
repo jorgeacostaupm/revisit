@@ -50,7 +50,7 @@ In our case a network and its associated adjacency matrix will look something li
 
 You can match the graph to the matrix. For instance, states **A and B are connected**, their **mean flight price is $100** and the **variation is only $5**, so prices don’t fluctuate much on that route. In contrast, flights between **A and D** are both **expensive and highly variable**, so while you’ll usually pay more, there’s also a better chance of finding either a great bargain or a very pricey ticket.
 
-When you see a **“0”** in the matrix, it means there is **no direct flight between those two states** (for example, A to C). You’ll also notice little circles on A, B, and E: These are self-connections, indicating that each state has **internal flights** (for example, flying between different cities within A), in the matrix **self-connections always lie on the diagonal** (A to A, B to B, and so on).
+When you see an empty space in the matrix, it means there is **no direct flight between those two states** (for example, A to C). You’ll also notice little circles on A, B, and E: These are self-connections, indicating that each state has **internal flights** (for example, flying between different cities within A), in the matrix **self-connections always lie on the diagonal** (A to A, B to B, and so on).
 
 Finally, the upper‑ (above the diagonal) and lower‑triangle (below the diagonal) of the matrix are mirrored because we’ve simplified things by assuming that prices from X to Y equal prices from Y to X.
 
