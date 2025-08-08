@@ -9,8 +9,8 @@
       "type": "image",
       "path": "libraries/previs/assets/mark_angle.svg",
       "style": {
-        "width": "800px",
-        "marginBottom": "10px"
+        "width": "30%",
+        "margin": "auto"
       },
       "sidebarWidth": 0,
       "response": [
@@ -50,8 +50,8 @@
       "type": "image",
       "path": "libraries/previs/assets/mark_angle.svg",
       "style": {
-        "width": "800px",
-        "marginBottom": "10px"
+        "width": "30%",
+        "margin": "auto"
       },
       "sidebarWidth": 0,
       "response": [
@@ -91,8 +91,8 @@
       "type": "image",
       "path": "libraries/previs/assets/mark_angle.svg",
       "style": {
-        "width": "800px",
-        "marginBottom": "10px"
+        "width": "30%",
+        "margin": "auto"
       },
       "sidebarWidth": 0,
       "response": [
@@ -132,8 +132,8 @@
       "type": "image",
       "path": "libraries/previs/assets/mark_angle.svg",
       "style": {
-        "width": "800px",
-        "marginBottom": "10px"
+        "width": "30%",
+        "margin": "auto"
       },
       "sidebarWidth": 0,
       "response": [

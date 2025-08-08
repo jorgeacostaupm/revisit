@@ -215,7 +215,8 @@
         }
       ],
       "style": {
-        "width": "80%"
+        "width": "80%",
+        "margin": "auto"
       },
       "trainingAttempts": 2.0,
       "type": "image"
@@ -405,86 +406,35 @@
       "correctAnswer": [],
       "path": "matrices/assets/training_ends.md",
       "response": [],
-      "type": "markdown"
+      "type": "markdown",
+      "sidebarWidth": 0
     },
     "adj": {
       "correctAnswer": [
         {
           "answer": [
-            "Arizona",
-            "California",
-            "Colorado",
-            "Florida",
-            "Georgia",
-            "Illinois",
-            "Massachusetts",
-            "New Jersey",
-            "New York",
-            "Washington",
-            "Virginia",
-            "Utah",
-            "Oregon",
-            "Minnesota",
-            "Nevada",
-            "Texas"
-          ],
-          "id": "answerNodes"
-        }
-      ],
-      "instruction": "Which states are connected to Oregon?<br> State ordering is disabled for this question.",
-      "nextButtonLocation": "sidebar",
-      "parameters": {
-        "dataset": "../matrices/data/tasks_data.txt",
-        "encoding": "Overlaid Mark Size",
-        "nodeOrderingDisabled": true
-      },
-      "path": "matrices/Stimuli.tsx",
-      "response": [
-        {
-          "id": "answerNodes",
-          "location": "sidebar",
-          "prompt": "Selected States:",
-          "type": "reactive"
-        }
-      ],
-      "type": "react-component"
-    },
-    "adj_extra": {
-      "correctAnswer": [
-        {
-          "answer": [
-            "Arizona",
-            "California",
-            "Colorado",
             "Florida",
             "Georgia",
             "Illinois",
             "Maryland",
-            "Michigan",
             "Massachusetts",
-            "Missouri",
-            "Nevada",
+            "Michigan",
             "New Jersey",
             "New York",
-            "North Carolina",
             "Ohio",
-            "Oregon",
             "Pennsylvania",
             "Tennessee",
             "Texas",
-            "Utah",
-            "Virginia",
             "Washington"
           ],
           "id": "answerNodes"
         }
       ],
-      "instruction": "Which states are connected to Minnesota?<br> State ordering is disabled for this question.",
+      "instruction": "Which states are connected to South Carolina?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
-        "encoding": "Overlaid Mark Size",
-        "nodeOrderingDisabled": true
+        "encoding": "Overlaid Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
       "response": [
@@ -562,7 +512,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "Which states are connected to Washington with flight prices of $150\u00b1$50?",
+      "instruction": "Which states are connected to Washington with flight prices of $160\u00b1$50?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -927,9 +877,9 @@
       "response": [
         {
           "answerOptions": [
-            "High Prices Variation",
-            "Medium Prices Variation",
-            "Low Prices Variation"
+            "High Price Variation",
+            "Medium Price Variation",
+            "Low Price Variation"
           ],
           "id": "stability",
           "location": "sidebar",
@@ -938,8 +888,7 @@
           "type": "matrix-radio"
         }
       ],
-      "type": "react-component",
-      "sidebarWidth": 400
+      "type": "react-component"
     },
     "cluster_mean": {
       "correctAnswer": [
@@ -1066,8 +1015,7 @@
           "type": "matrix-radio"
         }
       ],
-      "type": "react-component",
-      "sidebarWidth": 400
+      "type": "react-component"
     },
     "cluster_mean_extra": {
       "correctAnswer": [
@@ -1171,6 +1119,13 @@
       ],
       "type": "react-component"
     },
+    "tasks_end": {
+      "correctAnswer": [],
+      "path": "matrices/assets/tasks_end.md",
+      "response": [],
+      "type": "markdown",
+      "sidebarWidth": 0
+    },
     "$beauvis.co.overlaid-size": {
       "correctAnswer": [],
       "path": "",
@@ -1211,7 +1166,6 @@
       {
         "components": [
           "adj",
-          "adj_extra",
           "adj_mean",
           "adj_var",
           "attr_comb",
@@ -1236,6 +1190,10 @@
         "order": "fixed"
       },
       {
+        "components": ["tasks_end"],
+        "order": "fixed"
+      },
+      {
         "components": ["$beauvis.co.overlaid-size"],
         "order": "fixed"
       },
@@ -1249,7 +1207,7 @@
   "studyMetadata": {
     "authors": ["Jorge Acosta", "Tingying He", "Alex Lex"],
     "date": "2025-01-13",
-    "description": "[Sidebar and min size setted] This study aims to evaluate the Overlaid Mark Size encoding technique for visualizing the mean and variation of flight prices in the U.S.",
+    "description": "This study aims to evaluate the Overlaid Mark Size encoding technique for visualizing the mean and variation of flight prices in the U.S.",
     "organizations": ["Visualization Design Lab"],
     "title": "Mean & Variation Overlaid Mark Size Encoding on AM's (Pre-Pilot)",
     "version": "1.0"

@@ -9,16 +9,16 @@
       "type": "image",
       "path": "libraries/previs/assets/bivariate.svg",
       "style": {
-        "width": "800px",
-        "marginBottom": "10px"
+        "width": "680px",
+        "margin": "auto"
       },
-      "sidebarWidth": 0,
+      "sidebarWidth": 670,
       "response": [
         {
           "id": "obvious",
           "prompt": "It is **obvious** for me how to read this visualization",
           "required": true,
-          "location": "belowStimulus",
+          "location": "sidebar",
           "type": "likert",
           "numItems": 7,
           "rightLabel": "Strongly agree",
@@ -28,7 +28,7 @@
           "id": "represent",
           "prompt": "I can easily understand **how the data is represented** in this visualization",
           "required": true,
-          "location": "belowStimulus",
+          "location": "sidebar",
           "type": "likert",
           "numItems": 7,
           "rightLabel": "Strongly agree",
@@ -38,7 +38,7 @@
           "id": "understand",
           "prompt": "I can **easily understand** this visualization",
           "required": true,
-          "location": "belowStimulus",
+          "location": "sidebar",
           "type": "likert",
           "numItems": 7,
           "rightLabel": "Strongly agree",
@@ -50,16 +50,16 @@
       "type": "image",
       "path": "libraries/previs/assets/bivariate.svg",
       "style": {
-        "width": "800px",
-        "marginBottom": "10px"
+        "width": "680px",
+        "margin": "auto"
       },
-      "sidebarWidth": 0,
+      "sidebarWidth": 670,
       "response": [
         {
           "id": "messy",
           "prompt": "I don't find this visualization **messy**",
           "required": true,
-          "location": "belowStimulus",
+          "location": "sidebar",
           "type": "likert",
           "numItems": 7,
           "rightLabel": "Strongly agree",
@@ -69,7 +69,7 @@
           "id": "crowd",
           "prompt": "I don't find this visualization **crowded**",
           "required": true,
-          "location": "belowStimulus",
+          "location": "sidebar",
           "type": "likert",
           "numItems": 7,
           "rightLabel": "Strongly agree",
@@ -79,7 +79,7 @@
           "id": "distract",
           "prompt": "I don't find **distracting parts** in this visualization",
           "required": true,
-          "location": "belowStimulus",
+          "location": "sidebar",
           "type": "likert",
           "numItems": 7,
           "rightLabel": "Strongly agree",
@@ -91,16 +91,16 @@
       "type": "image",
       "path": "libraries/previs/assets/bivariate.svg",
       "style": {
-        "width": "800px",
-        "marginBottom": "10px"
+        "width": "680px",
+        "margin": "auto"
       },
-      "sidebarWidth": 0,
+      "sidebarWidth": 670,
       "response": [
         {
           "id": "find",
           "prompt": "I can easily **find specific** elements in this visualization",
           "required": true,
-          "location": "belowStimulus",
+          "location": "sidebar",
           "type": "likert",
           "numItems": 7,
           "rightLabel": "Strongly agree",
@@ -110,7 +110,7 @@
           "id": "identify",
           "prompt": "I can easily **identify relevant information** in this visualization",
           "required": true,
-          "location": "belowStimulus",
+          "location": "sidebar",
           "type": "likert",
           "numItems": 7,
           "rightLabel": "Strongly agree",
@@ -120,7 +120,7 @@
           "id": "information",
           "prompt": "I can easily **retrieve information** from this visualization",
           "required": true,
-          "location": "belowStimulus",
+          "location": "sidebar",
           "type": "likert",
           "numItems": 7,
           "rightLabel": "Strongly agree",
@@ -132,16 +132,16 @@
       "type": "image",
       "path": "libraries/previs/assets/bivariate.svg",
       "style": {
-        "width": "800px",
-        "marginBottom": "10px"
+        "width": "680px",
+        "margin": "auto"
       },
-      "sidebarWidth": 0,
+      "sidebarWidth": 670,
       "response": [
         {
           "id": "visible",
           "prompt": "I find data features (for example, a minimum, or an outlier, or a trend) **visible** in this visualization",
           "required": true,
-          "location": "belowStimulus",
+          "location": "sidebar",
           "type": "likert",
           "numItems": 7,
           "rightLabel": "Strongly agree",
@@ -151,7 +151,7 @@
           "id": "see",
           "prompt": "I can **clearly see** data features (for example, a minimum, or an outlier, or a trend) in this visualization",
           "required": true,
-          "location": "belowStimulus",
+          "location": "sidebar",
           "type": "likert",
           "numItems": 7,
           "rightLabel": "Strongly agree",
