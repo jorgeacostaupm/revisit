@@ -15,12 +15,12 @@ So, lighter is cheaper and darker is more expensive.
 
 ##### Mark size encodes the price variation.
 
-Inside each cell, there is a white square:
+Inside each cell, there is a gray square:
 
-- A tiny square means prices are very stable (they don't change much).
-- A big square means prices are all over the place (they change a lot!).
+- A tiny gray square means prices are very stable (they don't change much).
+- A big gray square means prices are all over the place (they change a lot!).
 
-So, small square = consistent prices, big square = unpredictable prices.
+So, small gray square = consistent prices, big gray square = unpredictable prices.
 
 <img src='../matrices/assets/images/std_legend_size.svg' width='500'>
 

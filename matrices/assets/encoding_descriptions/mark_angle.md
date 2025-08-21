@@ -15,7 +15,7 @@ So, lighter = cheaper and darker = more expensive.
 
 ##### Mark angle encodes the variation.
 
-Inside each cell, there will be a white square mark:
+Inside each cell, there will be a gray rectangular mark:
 
 - A small angle (0°) means prices are very stable (they don't change much).
 - A big angle (90°) means prices are all over the place (they change a lot!).

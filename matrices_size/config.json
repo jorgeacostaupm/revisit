@@ -13,8 +13,7 @@
           "type": "shortText"
         }
       ],
-      "type": "markdown",
-      "sidebarWidth": 0
+      "type": "markdown"
     },
     "consent": {
       "correctAnswer": [],
@@ -38,15 +37,13 @@
           "type": "radio"
         }
       ],
-      "type": "markdown",
-      "sidebarWidth": 0
+      "type": "markdown"
     },
     "data_description": {
       "correctAnswer": [],
       "path": "matrices/assets/data.md",
       "response": [],
-      "type": "markdown",
-      "sidebarWidth": 0
+      "type": "markdown"
     },
     "list2num": {
       "allowFailedTraining": false,
@@ -85,8 +82,7 @@
         }
       ],
       "trainingAttempts": 2.0,
-      "type": "questionnaire",
-      "sidebarWidth": 0
+      "type": "questionnaire"
     },
     "num2list": {
       "allowFailedTraining": false,
@@ -125,15 +121,13 @@
         }
       ],
       "trainingAttempts": 2.0,
-      "type": "questionnaire",
-      "sidebarWidth": 0
+      "type": "questionnaire"
     },
     "connectivity_description": {
       "correctAnswer": [],
       "path": "matrices/assets/connectivity.md",
       "response": [],
-      "type": "markdown",
-      "sidebarWidth": 0
+      "type": "markdown"
     },
     "matrix2graph": {
       "allowFailedTraining": false,
@@ -225,8 +219,7 @@
       "correctAnswer": [],
       "path": "matrices/assets/encoding_descriptions/mark_size.md",
       "response": [],
-      "type": "markdown",
-      "sidebarWidth": 0
+      "type": "markdown"
     },
     "training_intro": {
       "allowFailedTraining": false,
@@ -349,7 +342,7 @@
           "id": "training_cluster"
         }
       ],
-      "instruction": "Finally, clusters are groups of nodes that are highly interconnected. In this context, it means you can travel between any of the states within a cluster.<br> Which of the highlighted clusters has the highest average mean price?",
+      "instruction": "Finally, clusters are groups of nodes that are highly interconnected. In this context, it means you can travel directly between any of the states within a cluster.<br> Which of the highlighted clusters has the highest average mean price?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/training_data.txt",
@@ -528,14 +521,14 @@
       ],
       "type": "react-component"
     },
-    "attr_extreme": {
+    "attr_extremes": {
       "correctAnswer": [
         {
           "answer": ["Minnesota", "Pennsylvania"],
           "id": "answerNodes"
         }
       ],
-      "instruction": "When flying from Missouri, which destination states have the highest and lowest ticket prices?",
+      "instruction": "When flying from Missouri, which destination states have the possible possible highest and lowest ticket prices? (Select two states)",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -559,7 +552,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "Which states are connected to Arizona with a mean price lower than $100?<br><br>To show that you are paying attention add Louisiana to your answer. (This  will be the 16th question)",
+      "instruction": "Which states are connected to Arizona with a mean price lower than $100?<br><br>To show that you are paying attention add Louisiana to your answer to the question above. (This is the attention check question) ",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -616,7 +609,7 @@
     "attr_comb_extra": {
       "correctAnswer": [
         {
-          "answer": ["Massachusetts", "Missouri", "New York", "Tennessee", "Washington"],
+          "answer": ["Massachusetts", "Tennessee", "Washington"],
           "id": "answerNodes"
         }
       ],
@@ -644,7 +637,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "When flying from Illinois, which destination states have the highest and lowest ticket prices?",
+      "instruction": "When flying from Illinois, which destination states have the possible highest and lowest ticket prices?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -668,7 +661,7 @@
           "id": "path"
         }
       ],
-      "instruction": "Considering only the mean price, which layover results in the lowest total cost?<br><br>To show that you are paying attention select Illinois on the matrix.(This  will be the 8th question)",
+      "instruction": "Considering only the mean price, which layover results in the lowest total cost?<br><br>To show that you are paying attention select Illinois on the matrix.(This is the attention check question) ",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -866,7 +859,7 @@
     },
     "classification": {
       "correctAnswer": [],
-      "instruction": "Assign each state to a category.",
+      "instruction": "Observe the flight prices from each of these three states to all their connected states. Rank the states by their price variation, from highest to lowest, and assign each state to a category based on its price variation.",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -887,8 +880,7 @@
           "type": "matrix-radio"
         }
       ],
-      "type": "react-component",
-      "sidebarWidth": 400
+      "type": "react-component"
     },
     "cluster_mean": {
       "correctAnswer": [
@@ -994,7 +986,7 @@
     },
     "classification_extra": {
       "correctAnswer": [],
-      "instruction": "Assign each state to a category.",
+      "instruction": "Observe the flight prices from each of these three states to all their connected states. Rank the states by their price variation, from highest to lowest, and assign each state to a category based on its price variation.",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -1015,8 +1007,7 @@
           "type": "matrix-radio"
         }
       ],
-      "type": "react-component",
-      "sidebarWidth": 400
+      "type": "react-component"
     },
     "cluster_mean_extra": {
       "correctAnswer": [
@@ -1124,8 +1115,7 @@
       "correctAnswer": [],
       "path": "matrices/assets/tasks_end.md",
       "response": [],
-      "type": "markdown",
-      "sidebarWidth": 0
+      "type": "markdown"
     },
     "$beauvis.co.overlaid-size": {
       "correctAnswer": [],
@@ -1170,7 +1160,7 @@
           "adj_mean",
           "adj_var",
           "attr_comb",
-          "attr_extreme",
+          "attr_extremes",
           "adj_mean_extra",
           "adj_var_extra",
           "attr_comb_extra",
