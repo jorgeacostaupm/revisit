@@ -49,7 +49,7 @@ export default function ControlPanel({
         left: 0,
       }}
     >
-      {!showConfigurationPanel && !opened && (
+      {showConfigurationPanel && !opened && (
         <Burger opened={opened} onClick={() => setOpened((o) => !o)} size="lg" />
       )}
 
