@@ -13,6 +13,7 @@
         "margin": "auto"
       },
       "sidebarWidth": 670,
+      "nextButtonLocation": "sidebar",
       "response": [
         {
           "id": "overlaid-angle-response",
@@ -41,6 +42,7 @@
         "margin": "auto"
       },
       "sidebarWidth": 670,
+      "nextButtonLocation": "sidebar",
       "response": [
         {
           "id": "overlaid-size-response",
@@ -69,6 +71,7 @@
         "margin": "auto"
       },
       "sidebarWidth": 670,
+      "nextButtonLocation": "sidebar",
       "response": [
         {
           "id": "bivariate-response",
@@ -97,6 +100,7 @@
         "margin": "auto"
       },
       "sidebarWidth": 670,
+      "nextButtonLocation": "sidebar",
       "response": [
         {
           "id": "barchart-response",
@@ -130,6 +134,7 @@
           "required": true,
           "location": "belowStimulus",
           "type": "matrix-radio",
+          "questionOrder": "random",
           "answerOptions": [
             "Strongly disagree",
             "Disagree",
@@ -156,6 +161,7 @@
           "required": true,
           "location": "belowStimulus",
           "type": "matrix-radio",
+          "questionOrder": "random",
           "answerOptions": [
             "Strongly disagree",
             "Disagree",
@@ -182,6 +188,7 @@
           "required": true,
           "location": "belowStimulus",
           "type": "matrix-radio",
+          "questionOrder": "random",
           "answerOptions": [
             "Strongly disagree",
             "Disagree",

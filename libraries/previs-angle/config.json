@@ -12,7 +12,8 @@
         "width": "30%",
         "margin": "auto"
       },
-      "sidebarWidth": 0,
+      "sidebarWidth": 670,
+      "nextButtonLocation": "sidebar",
       "response": [
         {
           "id": "obvious",
@@ -53,7 +54,8 @@
         "width": "30%",
         "margin": "auto"
       },
-      "sidebarWidth": 0,
+      "sidebarWidth": 670,
+      "nextButtonLocation": "sidebar",
       "response": [
         {
           "id": "messy",
@@ -94,7 +96,8 @@
         "width": "30%",
         "margin": "auto"
       },
-      "sidebarWidth": 0,
+      "sidebarWidth": 670,
+      "nextButtonLocation": "sidebar",
       "response": [
         {
           "id": "find",
@@ -135,7 +138,8 @@
         "width": "30%",
         "margin": "auto"
       },
-      "sidebarWidth": 0,
+      "sidebarWidth": 670,
+      "nextButtonLocation": "sidebar",
       "response": [
         {
           "id": "visible",

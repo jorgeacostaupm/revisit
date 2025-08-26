@@ -13,6 +13,7 @@
         "margin": "auto"
       },
       "sidebarWidth": 670,
+      "nextButtonLocation": "sidebar",
       "response": [
         {
           "id": "obvious",
@@ -54,6 +55,7 @@
         "margin": "auto"
       },
       "sidebarWidth": 670,
+      "nextButtonLocation": "sidebar",
       "response": [
         {
           "id": "messy",
@@ -95,6 +97,7 @@
         "margin": "auto"
       },
       "sidebarWidth": 670,
+      "nextButtonLocation": "sidebar",
       "response": [
         {
           "id": "find",
@@ -136,6 +139,7 @@
         "margin": "auto"
       },
       "sidebarWidth": 670,
+      "nextButtonLocation": "sidebar",
       "response": [
         {
           "id": "visible",

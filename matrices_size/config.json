@@ -4,6 +4,7 @@
     "introduction": {
       "correctAnswer": [],
       "path": "matrices/assets/introduction.md",
+      "sidebarWidth": 0,
       "response": [
         {
           "id": "signature",
@@ -18,6 +19,7 @@
     "consent": {
       "correctAnswer": [],
       "path": "matrices/assets/consent.md",
+      "sidebarWidth": 0,
       "response": [
         {
           "id": "accept",
@@ -42,11 +44,13 @@
     "data_description": {
       "correctAnswer": [],
       "path": "matrices/assets/data.md",
+      "sidebarWidth": 0,
       "response": [],
       "type": "markdown"
     },
     "list2num": {
       "allowFailedTraining": false,
+      "sidebarWidth": 0,
       "correctAnswer": [
         {
           "answer": "b",
@@ -86,6 +90,7 @@
     },
     "num2list": {
       "allowFailedTraining": false,
+      "sidebarWidth": 0,
       "correctAnswer": [
         {
           "answer": "c",
@@ -126,6 +131,7 @@
     "connectivity_description": {
       "correctAnswer": [],
       "path": "matrices/assets/connectivity.md",
+      "sidebarWidth": 0,
       "response": [],
       "type": "markdown"
     },
@@ -218,6 +224,7 @@
     "encoding_description": {
       "correctAnswer": [],
       "path": "matrices/assets/encoding_descriptions/mark_size.md",
+      "sidebarWidth": 0,
       "response": [],
       "type": "markdown"
     },
@@ -500,11 +507,11 @@
     "attr_comb": {
       "correctAnswer": [
         {
-          "answer": ["Georgia", "New Jersey", "Pennsylvania", "Texas", "Virginia", "Arizona"],
+          "answer": ["Georgia", "Pennsylvania", "Texas"],
           "id": "answerNodes"
         }
       ],
-      "instruction": "Which states are connected to Washington with flight prices of $160\u00b1$50?",
+      "instruction": "Which states are connected to Washington with flight prices of $170\u00b1$40?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -583,7 +590,6 @@
             "North Carolina",
             "South Carolina",
             "Tennessee",
-            "Utah",
             "Texas"
           ],
           "id": "answerNodes"
@@ -609,11 +615,11 @@
     "attr_comb_extra": {
       "correctAnswer": [
         {
-          "answer": ["Massachusetts", "Tennessee", "Washington"],
+          "answer": ["Tennessee", "Washington"],
           "id": "answerNodes"
         }
       ],
-      "instruction": "Which states are connected to Maryland with flight prices of $100\u00b1$70?",
+      "instruction": "Which states are connected to Maryland with flight prices of $120\u00b1$70?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -679,7 +685,6 @@
             "Utah \u2192 Nevada \u2192 New York"
           ],
           "prompt": "Select a layover:",
-          "secondaryText": "Remember that you can highlight cells by clicking on them.",
           "type": "radio"
         }
       ],
@@ -692,7 +697,7 @@
           "id": "path"
         }
       ],
-      "instruction": "On which layover do prices vary the least?",
+      "instruction": "Considering only the price variation, which layover results in the highest price variation?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -711,7 +716,6 @@
             "California \u2192 Massachusetts \u2192 Michigan"
           ],
           "prompt": "Select a layover:",
-          "secondaryText": "Remember that you can highlight cells by clicking on them.",
           "type": "radio"
         }
       ],
@@ -781,7 +785,6 @@
             "Florida \u2192 Washington \u2192 North Carolina"
           ],
           "prompt": "Select a layover:",
-          "secondaryText": "Remember that you can highlight cells by clicking on them.",
           "type": "radio"
         }
       ],
@@ -794,7 +797,7 @@
           "id": "path"
         }
       ],
-      "instruction": "On which layover do prices vary the least?",
+      "instruction": "Considering only the price variation, which layover results in the highest price variation?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -808,12 +811,11 @@
           "location": "sidebar",
           "options": [
             "Missouri \u2192 Michigan \u2192 Utah",
-            "Missouri \u2192 Illinois \u2192 Utah",
-            "Missouri \u2192 Tennessee \u2192 Utah",
+            "Missouri \u2192 New York \u2192 Utah",
+            "Missouri \u2192 Georgia \u2192 Utah",
             "Missouri \u2192 Virginia \u2192 Utah"
           ],
           "prompt": "Select a layover:",
-          "secondaryText": "Remember that you can highlight cells by clicking on them.",
           "type": "radio"
         }
       ],
@@ -1063,7 +1065,7 @@
     "cluster_var_extra": {
       "correctAnswer": [
         {
-          "answer": "C",
+          "answer": "A",
           "id": "cluster"
         }
       ],
@@ -1208,8 +1210,6 @@
     "helpTextPath": "matrices/assets/help/help_size.md",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withSidebar": true,
-    "withProgressBar": true,
-    "minHeightSize": 800,
-    "minWidthSize": 1400
+    "withProgressBar": true
   }
 }
