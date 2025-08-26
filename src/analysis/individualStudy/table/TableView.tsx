@@ -1,25 +1,31 @@
 /* eslint-disable react/no-unstable-nested-components */
 import {
-  Text, Flex, Button, Group, Space, Modal, TextInput,
+  Text,
+  Flex,
+  Button,
+  Group,
+  Space,
+  Modal,
+  TextInput,
   Tooltip,
   Badge,
   RingProgress,
   Stack,
 } from '@mantine/core';
 import React, {
-  useCallback, useMemo, useState,
+  JSX, useCallback, useMemo, useState,
 } from 'react';
 import { useParams } from 'react-router';
 import {
-  MantineReactTable, MRT_Cell as MrtCell, MRT_ColumnDef as MrtColumnDef, MRT_RowSelectionState as MrtRowSelectionState, useMantineReactTable,
+  MantineReactTable,
+  MRT_Cell as MrtCell,
+  MRT_ColumnDef as MrtColumnDef,
+  MRT_RowSelectionState as MrtRowSelectionState,
+  useMantineReactTable,
 } from 'mantine-react-table';
-import {
-  IconCheck, IconHourglassEmpty, IconX,
-} from '@tabler/icons-react';
+import { IconCheck, IconHourglassEmpty, IconX } from '@tabler/icons-react';
 
-import {
-  ParticipantData, StoredAnswer, StudyConfig,
-} from '../../../parser/types';
+import { ParticipantData, StoredAnswer, StudyConfig } from '../../../parser/types';
 import { useStorageEngine } from '../../../storage/storageEngineHooks';
 import { useAuth } from '../../../store/hooks/useAuth';
 import { participantName } from '../../../utils/participantName';
@@ -32,7 +38,11 @@ import { DownloadButtons } from '../../../components/downloader/DownloadButtons'
 
 function formatDate(date: Date): string | JSX.Element {
   if (date.valueOf() === 0 || Number.isNaN(date.valueOf())) {
-    return <Text size="sm" c="dimmed">None</Text>;
+    return (
+      <Text size="sm" c="dimmed">
+        None
+      </Text>
+    );
   }
 
   return date.toLocaleDateString([], { hour: '2-digit', minute: '2-digit' });
@@ -54,77 +64,125 @@ export function TableView({
   const { user } = useAuth();
   const [checked, setChecked] = useState<MrtRowSelectionState>({});
 
-  const rejectParticipant = useCallback(async (participantId: string, reason: string) => {
-    if (storageEngine && studyId) {
-      if (user.isAdmin) {
-        const finalReason = reason === '' ? 'Rejected by admin' : reason;
-        await storageEngine.rejectParticipant(participantId, finalReason, studyId);
-        await refresh();
-      } else {
-        console.warn('You are not authorized to perform this action.');
+  const rejectParticipant = useCallback(
+    async (participantId: string, reason: string) => {
+      if (storageEngine && studyId) {
+        if (user.isAdmin) {
+          const finalReason = reason === '' ? 'Rejected by admin' : reason;
+          await storageEngine.rejectParticipant(participantId, finalReason, studyId);
+          await refresh();
+        } else {
+          console.warn('You are not authorized to perform this action.');
+        }
       }
-    }
-  }, [refresh, storageEngine, studyId, user.isAdmin]);
+    },
+    [refresh, storageEngine, studyId, user.isAdmin],
+  );
 
   const [modalRejectParticipantsOpened, setModalRejectParticipantsOpened] = useState<boolean>(false);
   const [rejectParticipantsMessage, setRejectParticipantsMessage] = useState<string>('');
 
   const handleRejectParticipants = useCallback(async () => {
     setModalRejectParticipantsOpened(false);
-    const promises = Object.keys(checked).filter((v) => checked[v]).map(async (participantId) => await rejectParticipant(participantId, rejectParticipantsMessage));
+    const promises = Object.keys(checked)
+      .filter((v) => checked[v])
+      .map(
+        async (participantId) => await rejectParticipant(participantId, rejectParticipantsMessage),
+      );
     await Promise.all(promises);
     setChecked({});
     await refresh();
   }, [checked, refresh, rejectParticipant, rejectParticipantsMessage]);
 
   const selectedData = useMemo(() => {
-    const selected = Object.keys(checked).filter((v) => checked[v])
+    const selected = Object.keys(checked)
+      .filter((v) => checked[v])
       .map((participantId) => visibleParticipants.find((p) => p.participantId === participantId))
       .filter((p) => p !== undefined) as ParticipantData[];
 
     return selected.length > 0 ? selected : visibleParticipants;
   }, [checked, visibleParticipants]);
 
-  const columns = useMemo<MrtColumnDef<ParticipantData>[]>(() => [
-    {
-      accessorFn: (row: ParticipantData) => {
-        const incompleteEntries = Object.entries(row.answers || {}).filter((e) => e[1].startTime === 0);
+  const columns = useMemo<MrtColumnDef<ParticipantData>[]>(
+    () => [
+      {
+        accessorFn: (row: ParticipantData) => {
+          const incompleteEntries = Object.entries(row.answers || {}).filter(
+            (e) => e[1].startTime === 0,
+          );
 
-        return { percent: (Object.entries(row.answers).length - incompleteEntries.length) / (getSequenceFlatMap(row.sequence).length - 1), completed: row.completed, rejected: row.rejected };
+          return {
+            percent:
+              (Object.entries(row.answers).length - incompleteEntries.length)
+              / (getSequenceFlatMap(row.sequence).length - 1),
+            completed: row.completed,
+            rejected: row.rejected,
+          };
+        },
+        header: 'Status',
+        size: 50,
+        Cell: ({
+          cell,
+        }: {
+          cell: MrtCell<
+            ParticipantData,
+            { percent: number; completed: boolean; rejected: ParticipantData['rejected'] }
+          >;
+        }) => {
+          const cellValue = cell.getValue();
+          return cellValue.completed ? (
+            <Group align="center" justify="center" w="100%">
+              <Tooltip label="Completed">
+                <IconCheck size={30} color="teal" style={{ marginBottom: -3 }} />
+              </Tooltip>
+            </Group>
+          ) : cellValue.rejected ? (
+            <Stack align="center" justify="center" gap={4} w="100%">
+              <Tooltip label="Rejected">
+                <IconX size={30} color="red" style={{ marginBottom: -3 }} />
+              </Tooltip>
+              <Text size="xs" c="dimmed" ta="center">
+                {cellValue.rejected.reason}
+              </Text>
+            </Stack>
+          ) : (
+            <Group align="center" justify="center" w="100%">
+              <Tooltip label="In Progress">
+                <RingProgress
+                  size={30}
+                  thickness={4}
+                  sections={[{ value: cellValue.percent * 100, color: 'blue' }]}
+                />
+              </Tooltip>
+            </Group>
+          );
+        },
       },
-      header: 'Status',
-      size: 50,
-      Cell: ({ cell }: { cell: MrtCell<ParticipantData, {percent: number, completed: boolean, rejected: ParticipantData['rejected']}> }) => {
-        const cellValue = cell.getValue();
-        return (
-          cellValue.completed ? <Group align="center" justify="center" w="100%"><Tooltip label="Completed"><IconCheck size={30} color="teal" style={{ marginBottom: -3 }} /></Tooltip></Group>
-            : cellValue.rejected ? (
-              <Stack align="center" justify="center" gap={4} w="100%">
-                <Tooltip label="Rejected"><IconX size={30} color="red" style={{ marginBottom: -3 }} /></Tooltip>
-                <Text size="xs" c="dimmed" ta="center">{cellValue.rejected.reason}</Text>
-              </Stack>
-            )
-              : (
-                <Group align="center" justify="center" w="100%">
-                  <Tooltip label="In Progress">
-                    <RingProgress
-                      size={30}
-                      thickness={4}
-                      sections={[{ value: cellValue.percent * 100, color: 'blue' }]}
-                    />
-                  </Tooltip>
-                </Group>
-              ));
-      },
-    },
-    { accessorKey: 'participantIndex', header: '#', size: 50 },
-    { accessorKey: 'participantId', header: 'ID' },
-    ...(studyConfig.uiConfig.participantNameField ? [{ accessorFn: (row: ParticipantData) => participantName(row, studyConfig), header: 'Name' }] : []),
-    {
-      accessorFn: (row: ParticipantData) => new Date(Math.max(...Object.values<StoredAnswer>(row.answers).filter((data) => data.endTime > 0).map((s) => s.endTime)) - Math.min(...Object.values<StoredAnswer>(row.answers).filter((data) => data.startTime > 0).map((s) => s.startTime))),
-      header: 'Duration',
-      Cell: ({ cell }: {cell: MrtCell<ParticipantData, Date>}) => (
-        !Number.isNaN(cell.getValue()) ? (
+      { accessorKey: 'participantIndex', header: '#', size: 50 },
+      { accessorKey: 'participantId', header: 'ID' },
+      ...(studyConfig.uiConfig.participantNameField
+        ? [
+          {
+            accessorFn: (row: ParticipantData) => participantName(row, studyConfig),
+            header: 'Name',
+          },
+        ]
+        : []),
+      {
+        accessorFn: (row: ParticipantData) => new Date(
+          Math.max(
+            ...Object.values<StoredAnswer>(row.answers)
+              .filter((data) => data.endTime > 0)
+              .map((s) => s.endTime),
+          )
+              - Math.min(
+                ...Object.values<StoredAnswer>(row.answers)
+                  .filter((data) => data.startTime > 0)
+                  .map((s) => s.startTime),
+              ),
+        ),
+        header: 'Duration',
+        Cell: ({ cell }: { cell: MrtCell<ParticipantData, Date> }) => (!Number.isNaN(cell.getValue()) ? (
           <Badge
             variant="light"
             size="lg"
@@ -134,52 +192,60 @@ export function TableView({
           >
             {`${humanReadableDuration(+cell.getValue()) || 'N/A'}`}
           </Badge>
-        ) : 'Incomplete'
-      ),
+        ) : (
+          'Incomplete'
+        )),
+      },
 
-    },
-
-    {
-      accessorFn: (row: ParticipantData) => new Date(Math.min(...Object.values<StoredAnswer>(row.answers).filter((data) => data.startTime > 0).map((s) => s.startTime))),
-      Cell: ({ cell }) => (
-        formatDate(cell.getValue() as Date)
-      ),
-      header: 'Start Time',
-    },
-    {
-      accessorFn: (row: ParticipantData) => Object.values(row.answers).filter((answer) => answer.correctAnswer.length > 0 && answer.endTime > 0).map((answer) => checkAnswerCorrect(answer.answer, answer.correctAnswer)),
-      header: 'Correct Answers',
-      Cell: ({ cell }: {cell: MrtCell<ParticipantData, boolean[]>}) => (
-        <>
-          <Badge
-            variant="light"
-            size="lg"
-            color="green"
-            leftSection={<IconCheck width={18} height={18} style={{ paddingTop: 1 }} />}
-            pb={1}
-          >
-            {cell.getValue().filter((b) => b).length}
-          </Badge>
-          <Badge
-            variant="light"
-            size="lg"
-            color="red"
-            leftSection={<IconX width={18} height={18} style={{ paddingTop: 1 }} />}
-            pb={1}
-          >
-
-            {cell.getValue().length - cell.getValue().filter((b) => b).length}
-          </Badge>
-        </>
-      ),
-    },
-    {
-      accessorKey: 'metadata',
-      header: 'Metadata',
-      Cell: ({ cell }: {cell: MrtCell<ParticipantData, ParticipantData['metadata']>}) => <MetaCell metaData={cell.getValue()} />,
-    },
-
-  ], [studyConfig]);
+      {
+        accessorFn: (row: ParticipantData) => new Date(
+          Math.min(
+            ...Object.values<StoredAnswer>(row.answers)
+              .filter((data) => data.startTime > 0)
+              .map((s) => s.startTime),
+          ),
+        ),
+        Cell: ({ cell }) => formatDate(cell.getValue() as Date),
+        header: 'Start Time',
+      },
+      {
+        accessorFn: (row: ParticipantData) => Object.values(row.answers)
+          .filter((answer) => answer.correctAnswer.length > 0 && answer.endTime > 0)
+          .map((answer) => checkAnswerCorrect(answer.answer, answer.correctAnswer)),
+        header: 'Correct Answers',
+        Cell: ({ cell }: { cell: MrtCell<ParticipantData, boolean[]> }) => (
+          <>
+            <Badge
+              variant="light"
+              size="lg"
+              color="green"
+              leftSection={<IconCheck width={18} height={18} style={{ paddingTop: 1 }} />}
+              pb={1}
+            >
+              {cell.getValue().filter((b) => b).length}
+            </Badge>
+            <Badge
+              variant="light"
+              size="lg"
+              color="red"
+              leftSection={<IconX width={18} height={18} style={{ paddingTop: 1 }} />}
+              pb={1}
+            >
+              {cell.getValue().length - cell.getValue().filter((b) => b).length}
+            </Badge>
+          </>
+        ),
+      },
+      {
+        accessorKey: 'metadata',
+        header: 'Metadata',
+        Cell: ({ cell }: { cell: MrtCell<ParticipantData, ParticipantData['metadata']> }) => (
+          <MetaCell metaData={cell.getValue()} />
+        ),
+      },
+    ],
+    [studyConfig],
+  );
 
   const table = useMantineReactTable({
     columns,
@@ -199,7 +265,13 @@ export function TableView({
     renderDetailPanel: ({ row }) => {
       const r = row.original;
       return (
-        <AllTasksTimeline maxLength={undefined} studyConfig={studyConfig} studyId={studyId || ''} participantData={r} width={width - 60} />
+        <AllTasksTimeline
+          maxLength={undefined}
+          studyConfig={studyConfig}
+          studyId={studyId || ''}
+          participantData={r}
+          width={width - 60}
+        />
       );
     },
     defaultColumn: {
@@ -213,15 +285,16 @@ export function TableView({
       <>
         <Flex justify="space-between" mb={8} p={8}>
           <Group>
-            <Button disabled={Object.keys(checked).length === 0 || !user.isAdmin} onClick={() => setModalRejectParticipantsOpened(true)} color="red">
+            <Button
+              disabled={Object.keys(checked).length === 0 || !user.isAdmin}
+              onClick={() => setModalRejectParticipantsOpened(true)}
+              color="red"
+            >
               Reject Participants (
               {Object.keys(checked).length}
               )
             </Button>
-            <DownloadButtons
-              visibleParticipants={selectedData}
-              studyId={studyId || ''}
-            />
+            <DownloadButtons visibleParticipants={selectedData} studyId={studyId || ''} />
           </Group>
         </Flex>
         <Modal
@@ -233,14 +306,22 @@ export function TableView({
               {Object.keys(checked).length}
               )
             </Text>
-        )}
+)}
         >
           <TextInput
             label="Please enter the reason for rejection."
             onChange={(event) => setRejectParticipantsMessage(event.target.value)}
           />
           <Flex mt="sm" justify="right">
-            <Button mr={5} variant="subtle" color="dark" onClick={() => { setModalRejectParticipantsOpened(false); setRejectParticipantsMessage(''); }}>
+            <Button
+              mr={5}
+              variant="subtle"
+              color="dark"
+              onClick={() => {
+                setModalRejectParticipantsOpened(false);
+                setRejectParticipantsMessage('');
+              }}
+            >
               Cancel
             </Button>
             <Button color="red" onClick={() => handleRejectParticipants()}>
@@ -252,19 +333,14 @@ export function TableView({
     ),
   });
 
-  return (
-    visibleParticipants.length > 0 ? (
-      <MantineReactTable
-        table={table}
-      />
-
-    ) : (
-      <>
-        <Space h="xl" />
-        <Flex justify="center" align="center">
-          <Text>No data available</Text>
-        </Flex>
-      </>
-    )
+  return visibleParticipants.length > 0 ? (
+    <MantineReactTable table={table} />
+  ) : (
+    <>
+      <Space h="xl" />
+      <Flex justify="center" align="center">
+        <Text>No data available</Text>
+      </Flex>
+    </>
   );
 }
