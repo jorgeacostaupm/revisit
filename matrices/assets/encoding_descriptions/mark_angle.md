@@ -11,7 +11,7 @@ Each cell in the matrix will have a color:
 
 So, lighter = cheaper and darker = more expensive.
 
-<img src='../matrices/assets/images/mean_legend_mark.svg' width='500'>
+<img src='./matrices/assets/images/mean_legend_mark.svg' width='500'>
 
 ##### Mark angle encodes the variation.
 
@@ -22,6 +22,6 @@ Inside each cell, there will be a gray rectangular mark:
 
 So, small angle = consistent prices, big angle = unpredictable prices.
 
-<img src='../matrices/assets/images/std_legend_angle.svg' width='500'>
+<img src='./matrices/assets/images/std_legend_angle.svg' width='500'>
 
 Let's do some training exercises!
