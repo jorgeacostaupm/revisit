@@ -16,6 +16,8 @@ Only continue if you meet all of the following:
 
 The study will take approximately **45 minutes to complete**.
 
+**IMPORTANT: This study has a training phase; incorrect answers within the allowed attempts will prevent you from continuing and receiving compensation.**
+
 We thank you for your interest in participating in this study. Please click the "Next" button below to proceed to the informed consent.
 
 We appreciate your participation!

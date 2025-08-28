@@ -9,8 +9,7 @@
       "type": "image",
       "path": "libraries/previs/assets/mark_angle.svg",
       "style": {
-        "width": "30%",
-        "margin": "auto"
+        "width": "680px"
       },
       "sidebarWidth": 670,
       "nextButtonLocation": "sidebar",
@@ -51,8 +50,7 @@
       "type": "image",
       "path": "libraries/previs/assets/mark_angle.svg",
       "style": {
-        "width": "30%",
-        "margin": "auto"
+        "width": "680px"
       },
       "sidebarWidth": 670,
       "nextButtonLocation": "sidebar",
@@ -93,8 +91,7 @@
       "type": "image",
       "path": "libraries/previs/assets/mark_angle.svg",
       "style": {
-        "width": "30%",
-        "margin": "auto"
+        "width": "680px"
       },
       "sidebarWidth": 670,
       "nextButtonLocation": "sidebar",
@@ -135,8 +132,7 @@
       "type": "image",
       "path": "libraries/previs/assets/mark_angle.svg",
       "style": {
-        "width": "30%",
-        "margin": "auto"
+        "width": "680px"
       },
       "sidebarWidth": 670,
       "nextButtonLocation": "sidebar",

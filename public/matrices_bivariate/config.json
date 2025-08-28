@@ -4,6 +4,7 @@
     "introduction": {
       "correctAnswer": [],
       "path": "matrices/assets/introduction.md",
+      "sidebarWidth": 0,
       "response": [
         {
           "id": "signature",
@@ -18,6 +19,7 @@
     "consent": {
       "correctAnswer": [],
       "path": "matrices/assets/consent.md",
+      "sidebarWidth": 0,
       "response": [
         {
           "id": "accept",
@@ -42,6 +44,7 @@
     "data_description": {
       "correctAnswer": [],
       "path": "matrices/assets/data.md",
+      "sidebarWidth": 0,
       "response": [],
       "type": "markdown"
     },
@@ -126,6 +129,7 @@
     "connectivity_description": {
       "correctAnswer": [],
       "path": "matrices/assets/connectivity.md",
+      "sidebarWidth": 0,
       "response": [],
       "type": "markdown"
     },
@@ -218,6 +222,7 @@
     "encoding_description": {
       "correctAnswer": [],
       "path": "matrices/assets/encoding_descriptions/bivariate.md",
+      "sidebarWidth": 0,
       "response": [],
       "type": "markdown"
     },
@@ -239,7 +244,7 @@
     "training_interaction": {
       "allowFailedTraining": false,
       "correctAnswer": [],
-      "instruction": "<b>Move your mouse over the cells:</b> this will highlight the corresponding row and column.<br><br><b>Click on the top labels (states at the top): </b>the left axis will reorder itself. States that have flights connected to it will come first. The ones without direct flights will move to the bottom.</li> Click again on the top label to undo the ordering.<br><br><b>Click on the left-side labels (states written horizontally): </b>to answer some questions you'll need to select states by clicking on the names on the left side. Click once to select a state. Click again to unselect it, or use the Clear States Selection button if you want to start fresh.<br><br><b>Click on the cells to mark a connection: </b>this is not an answer but it can help you in certain tasks. Click again to undo cell selection or use the Clear Flights Selection button if you want to start fresh.",
+      "instruction": "<b>Move your mouse over the cells:</b> this will highlight the corresponding row and column.<br><br><b>Click on the top labels (states at the top): </b>That state column will be highlighted.<br><br><b>Click on the left-side labels (states written horizontally): </b>to answer some questions you'll need to select states by clicking on the names on the left side. Click once to select a state. Click again to unselect it, or use the Clear States Selection button if you want to start fresh.<br><br><b>Click on the cells to mark a connection: </b>this is not an answer but it can help you in certain tasks. Click again to undo cell selection or use the Clear Flights Selection button if you want to start fresh.",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/training_data.txt",
@@ -334,6 +339,47 @@
       "trainingAttempts": 4.0,
       "type": "react-component"
     },
+    "training_path_estimation": {
+      "allowFailedTraining": false,
+      "correctAnswer": [
+        {
+          "answer": 250,
+          "id": "mean"
+        },
+        {
+          "answer": 180,
+          "id": "std"
+        }
+      ],
+      "instruction": "Training: For the itinerary <br> Texas \u2192 Kentucky \u2192 New York <br> Assuming you buy flights in the middle of the ranges of means, and with maximum variation. Estimate total mean cost and variation.<br><br>1. Look at the range of means for each flight.<br>2. Take the middle value of each range.<br>3. Add those middle values together, this is the mean cost.<br>4. Look at the variation of each flight.<br>5. Take the maximun of each range<br>6. Add those maximum values together, this is the variation.<br>IMPORTANT: Round the values, if the range is 0-49 use the 0-50 range, so the mean will be 25. A maximum variation of 119 will be rounded to 120.",
+      "nextButtonLocation": "sidebar",
+      "parameters": {
+        "dataset": "../matrices/data/training_data.txt",
+        "encoding": "Bivariate"
+      },
+      "path": "matrices/Stimuli.tsx",
+      "provideFeedback": true,
+      "response": [
+        {
+          "id": "mean",
+          "location": "sidebar",
+          "max": 500.0,
+          "min": 0.0,
+          "prompt": "Mean:",
+          "type": "numerical"
+        },
+        {
+          "id": "std",
+          "location": "sidebar",
+          "max": 300.0,
+          "min": 0.0,
+          "prompt": "Variation:",
+          "type": "numerical"
+        }
+      ],
+      "trainingAttempts": 4.0,
+      "type": "react-component"
+    },
     "training_cluster": {
       "allowFailedTraining": false,
       "correctAnswer": [
@@ -347,7 +393,6 @@
       "parameters": {
         "dataset": "../matrices/data/training_data.txt",
         "encoding": "Bivariate",
-        "isClusterTask": true,
         "clusterMarks": [
           {
             "option": "A",
@@ -398,6 +443,7 @@
     "training_ends": {
       "correctAnswer": [],
       "path": "matrices/assets/training_ends.md",
+      "sidebarWidth": 0,
       "response": [],
       "type": "markdown"
     },
@@ -694,8 +740,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
-        "encoding": "Bivariate",
-        "destinationSelectionDisabled": true
+        "encoding": "Bivariate"
       },
       "path": "matrices/Stimuli.tsx",
       "response": [
@@ -725,7 +770,7 @@
           "id": "std"
         }
       ],
-      "instruction": "For the itinerary <br> Georgia \u2192 California \u2192 New York <br><br>What is the estimated total cost (mean \u00b1 variation)?",
+      "instruction": "For the itinerary <br> Georgia \u2192 California \u2192 New York <br><br>Assuming you buy flights in the middle of the ranges of means, and with maximum variation. Estimate total mean cost and variation.",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -736,7 +781,7 @@
         {
           "id": "mean",
           "location": "sidebar",
-          "max": 250.0,
+          "max": 500.0,
           "min": 0.0,
           "prompt": "Mean:",
           "type": "numerical"
@@ -744,7 +789,7 @@
         {
           "id": "std",
           "location": "sidebar",
-          "max": 150.0,
+          "max": 300.0,
           "min": 0.0,
           "prompt": "Variation:",
           "type": "numerical"
@@ -763,8 +808,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
-        "encoding": "Bivariate",
-        "destinationSelectionDisabled": true
+        "encoding": "Bivariate"
       },
       "path": "matrices/Stimuli.tsx",
       "response": [
@@ -794,8 +838,7 @@
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
-        "encoding": "Bivariate",
-        "destinationSelectionDisabled": true
+        "encoding": "Bivariate"
       },
       "path": "matrices/Stimuli.tsx",
       "response": [
@@ -825,7 +868,7 @@
           "id": "std"
         }
       ],
-      "instruction": "For the itinerary <br> Pennsylvania \u2192 Missouri \u2192 Minnesota <br>What is the estimated total cost (mean \u00b1 variation)?",
+      "instruction": "For the itinerary <br> Pennsylvania \u2192 Missouri \u2192 Minnesota <br> Assuming you buy flights in the middle of the ranges of means, and with maximum variation. Estimate total mean cost and variation.",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -836,7 +879,7 @@
         {
           "id": "mean",
           "location": "sidebar",
-          "max": 250.0,
+          "max": 500.0,
           "min": 0.0,
           "prompt": "Mean:",
           "type": "numerical"
@@ -844,7 +887,7 @@
         {
           "id": "std",
           "location": "sidebar",
-          "max": 150.0,
+          "max": 350.0,
           "min": 0.0,
           "prompt": "Variation:",
           "type": "numerical"
@@ -856,6 +899,7 @@
       "correctAnswer": [],
       "instruction": "Observe the flight prices from each of these three states to all their connected states. Rank the states by their price variation, from highest to lowest, and assign each state to a category based on its price variation.",
       "nextButtonLocation": "sidebar",
+      "sidebarWidth": 400,
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
         "encoding": "Bivariate"
@@ -889,8 +933,6 @@
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
         "encoding": "Bivariate",
-        "destinationSelectionDisabled": true,
-        "nodeOrderingDisabled": true,
         "clusterMarks": [
           {
             "option": "A",
@@ -940,8 +982,6 @@
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
         "encoding": "Bivariate",
-        "destinationSelectionDisabled": true,
-        "nodeOrderingDisabled": true,
         "clusterMarks": [
           {
             "option": "A",
@@ -983,6 +1023,7 @@
       "correctAnswer": [],
       "instruction": "Observe the flight prices from each of these three states to all their connected states. Rank the states by their price variation, from highest to lowest, and assign each state to a category based on its price variation.",
       "nextButtonLocation": "sidebar",
+      "sidebarWidth": 400,
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
         "encoding": "Bivariate"
@@ -1016,8 +1057,6 @@
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
         "encoding": "Bivariate",
-        "destinationSelectionDisabled": true,
-        "nodeOrderingDisabled": true,
         "clusterMarks": [
           {
             "option": "A",
@@ -1067,8 +1106,6 @@
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
         "encoding": "Bivariate",
-        "destinationSelectionDisabled": true,
-        "nodeOrderingDisabled": true,
         "clusterMarks": [
           {
             "option": "A",
@@ -1109,6 +1146,7 @@
     "tasks_end": {
       "correctAnswer": [],
       "path": "matrices/assets/tasks_end.md",
+      "sidebarWidth": 0,
       "response": [],
       "type": "markdown"
     },
@@ -1128,70 +1166,15 @@
   "importedLibraries": ["previs-bivariate", "beauvis"],
   "sequence": {
     "components": [
-      "introduction",
-      "consent",
-      "data_description",
-      "list2num",
-      "num2list",
-      "connectivity_description",
-      "matrix2graph",
-      "graph2matrix",
-      "encoding_description",
       {
-        "components": [
-          "training_intro",
-          "training_interaction",
-          "training_selection",
-          "training_mean_adjacency",
-          "training_std_adjacency",
-          "training_cluster",
-          "training_ends"
-        ],
-        "order": "fixed"
-      },
-      {
-        "components": [
-          "adj",
-          "adj_mean",
-          "adj_var",
-          "attr_comb",
-          "attr_extremes",
-          "adj_mean_extra",
-          "adj_var_extra",
-          "attr_comb_extra",
-          "attr_extremes_extra",
-          "path_mean",
-          "path_var",
-          "path_estimation",
-          "path_mean_extra",
-          "path_var_extra",
-          "path_estimation_extra",
-          "classification",
-          "cluster_mean",
-          "cluster_var",
-          "classification_extra",
-          "cluster_mean_extra",
-          "cluster_var_extra"
-        ],
-        "order": "fixed"
-      },
-      {
-        "components": ["tasks_end"],
-        "order": "fixed"
-      },
-      {
-        "components": ["$beauvis.co.bivariate"],
-        "order": "fixed"
-      },
-      {
-        "components": ["$previs-bivariate.se.4dimensions"],
-        "order": "fixed"
+        "components": ["adj", "adj_mean"],
+        "order": "random"
       }
     ],
     "order": "fixed"
   },
   "studyMetadata": {
-    "authors": ["Jorge Acostaaa", "Tingying He", "Alex Lex"],
+    "authors": ["Jorge Acosta", "Tingying He", "Alex Lex"],
     "date": "2025-01-13",
     "description": "This study aims to evaluate the Bivariate encoding technique for visualizing the mean and variation of flight prices in the U.S.",
     "organizations": ["Visualization Design Lab"],
@@ -1200,9 +1183,11 @@
   },
   "uiConfig": {
     "contactEmail": "jorge.acosta@upm.es",
-    "helpTextPath": "matrices/assets/help/help_bivariate.md",
+    "helpTextPath": "matrices/assets/help/help_size.md",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withSidebar": true,
-    "withProgressBar": true
+    "withProgressBar": true,
+    "minHeightSize": 800,
+    "minWidthSize": 1400
   }
 }

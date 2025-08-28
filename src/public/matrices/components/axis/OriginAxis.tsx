@@ -1,6 +1,6 @@
 import { Text, Tooltip } from '@mantine/core';
 
-import { useCallback, useEffect, useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import { useMatrixContext } from '../../utils/MatrixContext';
 import { Link } from '../../utils/Interfaces';
 
@@ -18,7 +18,7 @@ export const getOrder = (node: string, data: Link[]) => {
 };
 
 export function OriginAxis({ showLines = true }: { showLines?: boolean }) {
-  const {
+  /* const {
     configProps,
     data,
     originScale,
@@ -34,6 +34,23 @@ export function OriginAxis({ showLines = true }: { showLines?: boolean }) {
 
     orderedOrigins,
     setOrderedDestinations,
+
+    trrack,
+    actions,
+  } = useMatrixContext(); */
+
+  const {
+    configProps,
+    originScale,
+    destinationScale,
+
+    margin,
+
+    setDestinationHighlight,
+    setOriginHighlight,
+
+    orderingNode,
+    setOrderingNode,
 
     trrack,
     actions,
@@ -64,16 +81,16 @@ export function OriginAxis({ showLines = true }: { showLines?: boolean }) {
       if (configProps.nodeOrderingDisabled) return;
       if (oNode === node) {
         setOrderingNode(null);
-        trrack?.apply('Reset Sort', actions?.setOrderingNode(null));
+        trrack?.apply('Column Highlighting Off', actions?.setOrderingNode(null));
       } else {
         setOrderingNode(node);
-        trrack?.apply('Sort', actions?.setOrderingNode(node));
+        trrack?.apply('Column Highlighting On', actions?.setOrderingNode(node));
       }
     },
     [configProps.nodeOrderingDisabled, trrack, actions, setOrderingNode],
   );
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (configProps.nodeOrderingDisabled) return;
     if (orderingNode === null) {
       setOrderedDestinations(orderedOrigins);
@@ -87,7 +104,7 @@ export function OriginAxis({ showLines = true }: { showLines?: boolean }) {
     orderedOrigins,
     setOrderedDestinations,
     orderingNode,
-  ]);
+  ]); */
 
   return (
     <>
@@ -130,7 +147,8 @@ export function OriginAxis({ showLines = true }: { showLines?: boolean }) {
                 openDelay={200}
               >
                 <Text className="axis-label" size="s">
-                  {orderingNode === value ? `←  ${value}` : value}
+                  {/* {orderingNode === value ? `←  ${value}` : value} */}
+                  {value}
                 </Text>
               </Tooltip>
             </div>

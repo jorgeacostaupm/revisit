@@ -9,8 +9,7 @@
       "type": "image",
       "path": "libraries/beauvis/assets/mark_angle.svg",
       "style": {
-        "width": "680px",
-        "margin": "auto"
+        "width": "680px"
       },
       "sidebarWidth": 670,
       "nextButtonLocation": "sidebar",
@@ -38,8 +37,7 @@
       "type": "image",
       "path": "libraries/beauvis/assets/mark_size.svg",
       "style": {
-        "width": "680px",
-        "margin": "auto"
+        "width": "680px"
       },
       "sidebarWidth": 670,
       "nextButtonLocation": "sidebar",
@@ -67,8 +65,7 @@
       "type": "image",
       "path": "libraries/beauvis/assets/bivariate.svg",
       "style": {
-        "width": "680px",
-        "margin": "auto"
+        "width": "680px"
       },
       "sidebarWidth": 670,
       "nextButtonLocation": "sidebar",
@@ -96,8 +93,7 @@
       "type": "image",
       "path": "libraries/beauvis/assets/barchart.svg",
       "style": {
-        "width": "680px",
-        "margin": "auto"
+        "width": "680px"
       },
       "sidebarWidth": 670,
       "nextButtonLocation": "sidebar",
