@@ -11,7 +11,7 @@ Each cell in the matrix will have a color:
 
 So, lighter is cheaper and darker is more expensive.
 
-<img src='./matrices/assets/images/mean_legend_mark.svg' width='500'>
+<img src='matrices/assets/images/mean_legend_mark.svg' style="width:500px;">
 
 ##### Mark size encodes the price variation.
 
@@ -22,6 +22,6 @@ Inside each cell, there is a gray square:
 
 So, small gray square = consistent prices, big gray square = unpredictable prices.
 
-<img src='./matrices/assets/images/std_legend_size.svg' width='500'>
+<img src='matrices/assets/images/std_legend_size.svg' style="width:500px;">
 
 Let's do some training exercises!
