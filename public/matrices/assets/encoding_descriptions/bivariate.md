@@ -11,7 +11,7 @@ Each cell in the matrix will have a color:
 
 So, lighter = cheaper and darker = more expensive.
 
-<img src='../matrices/assets/images/legend_bivariate.svg' width='500'>
+<img src='./matrices/assets/images/legend_bivariate.svg' width='500'>
 
 ##### Lightness encodes the variation.
 

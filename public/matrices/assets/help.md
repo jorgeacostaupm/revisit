@@ -45,7 +45,7 @@ Think of an adjacency matrix like a table:
 
 In our case a network and its associated adjacency matrix will look something like this:
 
-<img src='./assets/images/graph&matrix.svg' width='1000'>
+<img src='./matrices/assets/images/graph&matrix.svg' width='1000'>
 <br>
 
 You can match the graph to the matrix. For instance, states **A and B are connected**, their **mean flight price is $100** and the **variation is only $5**, so prices don’t fluctuate much on that route. In contrast, flights between **A and D** are both **expensive and highly variable**, so while you’ll usually pay more, there’s also a better chance of finding either a great bargain or a very pricey ticket.
@@ -67,7 +67,7 @@ Each cell in the matrix will have a color:
 
 So, lighter is cheaper and darker is more expensive.
 
-<img src='./assets/images/color-mean.svg' width='500'>
+<img src='./matrices/assets/images/color-mean.svg' width='500'>
 
 ##### Mark size encodes the price variation.
 
@@ -78,4 +78,4 @@ Inside each cell, there is a white square:
 
 So, small square = consistent prices, big square = unpredictable prices.
 
-<img src='./assets/images/size-std.svg' width='500'>
+<img src='./matrices/assets/images/size-std.svg' width='500'>
