@@ -1166,8 +1166,74 @@
   "importedLibraries": ["previs-bivariate", "beauvis"],
   "sequence": {
     "components": [
+      "introduction",
+      "consent",
+      "data_description",
+      "list2num",
+      "num2list",
+      "connectivity_description",
+      "matrix2graph",
+      "graph2matrix",
+      "encoding_description",
       {
-        "components": ["adj", "adj_mean"],
+        "components": [
+          "training_intro",
+          "training_interaction",
+          "training_selection",
+          "training_mean_adjacency",
+          "training_std_adjacency",
+          "training_path_estimation",
+          "training_cluster",
+          "training_ends"
+        ],
+        "order": "fixed"
+      },
+      {
+        "components": [
+          "adj",
+          "adj_mean",
+          "adj_var",
+          "attr_comb",
+          "attr_extremes",
+          "adj_var_extra",
+          "attr_comb_extra",
+          "attr_extremes_extra",
+          "path_var",
+          "path_estimation",
+          "path_mean_extra",
+          "path_var_extra",
+          "path_estimation_extra",
+          "classification",
+          "cluster_mean",
+          "cluster_var",
+          "classification_extra",
+          "cluster_mean_extra",
+          "cluster_var_extra"
+        ],
+        "order": "random",
+        "interruptions": [
+          {
+            "firstLocation": 7,
+            "spacing": 0,
+            "components": ["path_mean"]
+          },
+          {
+            "firstLocation": 15,
+            "spacing": 0,
+            "components": ["adj_mean_extra"]
+          }
+        ]
+      },
+      {
+        "components": ["tasks_end"],
+        "order": "fixed"
+      },
+      {
+        "components": ["$beauvis.co.bivariate"],
+        "order": "random"
+      },
+      {
+        "components": ["$previs-bivariate.se.4dimensions"],
         "order": "random"
       }
     ],
