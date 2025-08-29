@@ -19,6 +19,7 @@
     "consent": {
       "correctAnswer": [],
       "path": "matrices/assets/consent.md",
+      "sidebarWidth": 0,
       "response": [
         {
           "id": "accept",
