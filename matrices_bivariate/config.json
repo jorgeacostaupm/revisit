@@ -1210,8 +1210,7 @@
           "cluster_mean_extra",
           "cluster_var_extra"
         ],
-        "order": "random",
-        "interruptions": []
+        "order": "random"
       },
       {
         "components": ["tasks_end"],
