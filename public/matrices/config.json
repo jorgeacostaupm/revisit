@@ -86,6 +86,7 @@
     },
     "num2list": {
       "allowFailedTraining": false,
+
       "correctAnswer": [
         {
           "answer": "c",
