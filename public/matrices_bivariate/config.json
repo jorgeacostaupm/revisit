@@ -1210,7 +1210,19 @@
           "cluster_mean_extra",
           "cluster_var_extra"
         ],
-        "order": "random"
+        "order": "random",
+        "interruptions": [
+          {
+            "firstLocation": 7,
+            "spacing": 0,
+            "components": ["path_mean"]
+          },
+          {
+            "firstLocation": 15,
+            "spacing": 0,
+            "components": ["adj_mean_extra"]
+          }
+        ]
       },
       {
         "components": ["tasks_end"],
