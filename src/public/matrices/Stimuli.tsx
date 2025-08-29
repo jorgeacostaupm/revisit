@@ -109,18 +109,16 @@ export function Stimuli({
   // ---------------------------- Render ----------------------------
 
   return data ? (
-    <div className="precontainer">
-      <Matrix
-        config={parameters}
-        data={data}
-        dataname={dataname}
-        setDataname={setDataname}
-        provenanceState={provenanceState}
-        actions={actions}
-        trrack={trrack}
-        setAnswer={setAnswer}
-      />
-    </div>
+    <Matrix
+      config={parameters}
+      data={data}
+      dataname={dataname}
+      setDataname={setDataname}
+      provenanceState={provenanceState}
+      actions={actions}
+      trrack={trrack}
+      setAnswer={setAnswer}
+    />
   ) : (
     <Loader />
   );

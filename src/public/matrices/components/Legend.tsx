@@ -197,7 +197,7 @@ export function Legend() {
           height={
             encoding !== EncodingType.Bivariate
               ? legendCellSize * 2
-              : Math.min(legendCellSize + 30, 60) * 7
+              : Math.min(legendCellSize + 30, 60) * 6
           }
         >
           <g ref={meanRef} />
