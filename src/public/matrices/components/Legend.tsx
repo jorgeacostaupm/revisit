@@ -7,7 +7,7 @@ import { useMatrixContext } from '../utils/MatrixContext';
 import { Link } from '../utils/Interfaces';
 import { EncodingType } from '../utils/Enums';
 
-const marginBivariate = 80;
+const marginBivariate = 60;
 const meanText = 'Price Ranges (in $):';
 const devText = 'Price Variation Ranges (in $):';
 
@@ -117,6 +117,8 @@ export function Legend() {
       const group = d3.select(g);
       group.selectAll('*').remove();
 
+      group.attr('transform', `translate(${40}, ${0})`);
+
       group
         .selectAll<SVGGElement, Link>('.cell')
         .data(legendData, (d) => meanAccessor(d) + stdAccessor(d))
@@ -133,13 +135,13 @@ export function Legend() {
         .join('text')
         .attr(
           'transform',
-          (d, i) => `translate(${cellSizeL * i + 15}, ${marginBivariate - 5})rotate(-45)`,
+          (_, i) => `translate(${cellSizeL * i + 15}, ${marginBivariate - 5})rotate(-45)`,
         )
         .attr('text-anchor', 'start')
         .text((d, i) => {
           const [min, max] = mScale.invertExtent(d);
           if (i + 1 === mScale.range().length) return `${min.toFixed(0)} - ${+max.toFixed(0)}`;
-          return `${min.toFixed(0)} - ${+max.toFixed(0)}`;
+          return `${min.toFixed(0)} - ${+max.toFixed(0) - 1}`;
         });
 
       group
@@ -148,7 +150,7 @@ export function Legend() {
         .join('text')
         .attr(
           'transform',
-          (d, i) => `translate(${mScale.range().length * cellSizeL + 5},${
+          (_, i) => `translate(${mScale.range().length * cellSizeL + 5},${
             cellSizeL * i + marginBivariate + cellSizeL / 2 + 5
           })`,
         )
@@ -156,7 +158,7 @@ export function Legend() {
         .text((d, i) => {
           const [min, max] = dScale.invertExtent(d);
           if (i + 1 === dScale.range().length) return `${min.toFixed(0)} - ${+max.toFixed(0)}`;
-          return `${min.toFixed(0)} - ${+max.toFixed(0)}`;
+          return `${min.toFixed(0)} - ${+max.toFixed(0) - 1}`;
         });
 
       cellRenderer(group.selectAll('.cell'), cellSizeL, showMean, showDev);
@@ -188,25 +190,40 @@ export function Legend() {
   return (
     <>
       <div style={{ width: '100%' }}>
-        <Text size="xl" fw={700} style={{ marginBottom: '20px' }}>
+        <Text
+          size="xl"
+          fw={700}
+          style={{ marginBottom: '5px', marginLeft: encoding !== EncodingType.Bivariate ? 0 : 20 }}
+        >
           {meanText}
         </Text>
+
         <svg
           width="100%"
           overflow="visible"
-          height={
-            encoding !== EncodingType.Bivariate
-              ? legendCellSize * 2
-              : Math.min(legendCellSize + 30, 60) * 6
-          }
+          height={encoding !== EncodingType.Bivariate ? legendCellSize * 2 : 170}
         >
           <g ref={meanRef} />
         </svg>
+
+        {encoding === EncodingType.Bivariate && (
+          <Text
+            size="xl"
+            fw={700}
+            style={{
+              position: 'absolute',
+              transform: 'rotate(-90deg)',
+              transformOrigin: 'left top',
+            }}
+          >
+            Price Variation
+          </Text>
+        )}
       </div>
 
       {devScale.range().length > 1 && encoding !== EncodingType.Bivariate && (
         <div>
-          <Text size="xl" fw={700} style={{ marginBottom: '20px' }}>
+          <Text size="xl" fw={700} style={{ marginBottom: '5px' }}>
             {devText}
           </Text>
           <svg overflow="visible" height={legendCellSize * 2} width="100%">
