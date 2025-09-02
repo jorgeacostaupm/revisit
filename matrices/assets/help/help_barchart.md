@@ -67,7 +67,9 @@ Each cell in the matrix will have a X color bar:
 
 So, shorter = cheaper and larger = more expensive.
 
-<img src='./matrices/assets/images/mean_legend_barchart.svg' width='500'>
+<img src='./matrices/assets/images/mean_legend_barchart.svg' style="width:500px;">
+
+<img src='./matrices/assets/images/std_legend_barchart.svg' style="width:500px;">
 
 ##### X color bar encodes the variation:
 
@@ -77,7 +79,3 @@ Each cell in the matrix will have a X color bar:
 - If X color bar is large prices are all over the place (they change a lot!).
 
 So, shorter = consistent prices and larger = unpredictable prices.
-
-<img src='./matrices/assets/images/std_legend_barchart.svg' width='500'>
-
-Let's do some training exercises!

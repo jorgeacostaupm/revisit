@@ -1,6 +1,6 @@
 # THIRD KEY CONCEPT: Encoding
 
-As you might notice, if the network grows it will be very difficult to read the values on a graph or on the presented adjacency matrices. We have developed a way of encoding mean and variation to visualize this kind of networks.
+As you might notice, if the network grows it will be very difficult to read the values on a graph or on the presented adjacency matrices. We use a way of encoding mean and variation to visualize this kind of networks.
 
 ##### Color encodes the mean:
 
@@ -11,7 +11,7 @@ Each cell in the matrix will have a color:
 
 So, lighter = cheaper and darker = more expensive.
 
-<img src='./matrices/assets/images/legend_bivariate.svg' style="width:500px;">
+<img src='./matrices/assets/images/legend_bivariate.svg' style="width:500px;margin-bottom:40px">
 
 ##### Lightness encodes the variation.
 
