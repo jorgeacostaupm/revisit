@@ -8,7 +8,7 @@ import { Link } from '../utils/Interfaces';
 import { EncodingType } from '../utils/Enums';
 
 const marginBivariate = 60;
-const meanText = 'Price Ranges (in $):';
+const meanText = 'Mean Price Ranges (in $):';
 const devText = 'Price Variation Ranges (in $):';
 
 export function Legend() {
