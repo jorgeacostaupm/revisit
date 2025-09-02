@@ -54,7 +54,7 @@ When you see an empty space in the matrix, it means there is **no direct flight 
 
 Finally, the upper‑ (above the diagonal) and lower‑triangle (below the diagonal) of the matrix are mirrored because we’ve simplified things by assuming that prices from X to Y equal prices from Y to X.
 
-# THIRD KEY CONCEPT: Attribute Encoding
+# THIRD KEY CONCEPT: Encoding
 
 As you might notice, if the network grows it will be very difficult to read the values on a graph or on the presented adjacency matrices. We use a way of encoding mean and variation to visualize this kind of networks.
 
@@ -67,15 +67,15 @@ Each cell in the matrix will have a color:
 
 So, lighter is cheaper and darker is more expensive.
 
-<img src='./matrices/assets/images/mean_legend_mark.svg' width='500'>
+<img src='matrices/assets/images/mean_legend_mark.svg' style="width:500px;">
+
+<img src='matrices/assets/images/std_legend_size.svg' style="width:500px;">
 
 ##### Mark size encodes the price variation.
 
-Inside each cell, there is a white square:
+Inside each cell, there is a gray square:
 
-- A tiny square means prices are very stable (they don't change much).
-- A big square means prices are all over the place (they change a lot!).
+- A tiny gray square means prices are very stable (they don't change much).
+- A big gray square means prices are all over the place (they change a lot!).
 
-So, small square = consistent prices, big square = unpredictable prices.
-
-<img src='./matrices/assets/images/std_legend_size.svg' width='500'>
+So, small gray square = consistent prices, big gray square = unpredictable prices.

@@ -1251,7 +1251,7 @@
   },
   "uiConfig": {
     "contactEmail": "jorge.acosta@upm.es",
-    "helpTextPath": "matrices/assets/help/help_size.md",
+    "helpTextPath": "matrices/assets/help/help_angle.md",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withSidebar": true,
     "withProgressBar": true,
