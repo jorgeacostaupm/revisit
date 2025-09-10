@@ -7,7 +7,7 @@
       "sidebarWidth": 0,
       "response": [
         {
-          "id": "signature",
+          "id": "prolificId",
           "location": "belowStimulus",
           "placeholder": "Prolific ID",
           "prompt": "Please enter your Prolific ID",
