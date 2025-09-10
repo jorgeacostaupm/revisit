@@ -12,7 +12,9 @@
           "placeholder": "Prolific ID",
           "prompt": "Please enter your Prolific ID",
           "type": "shortText",
-          "style": { "margin": "0% 20% 0% 20%" }
+          "style": { "margin": "0% 20% 0% 20%" },
+          "required": true,
+          "paramCapture": "PROLIFIC_PID"
         }
       ],
       "type": "markdown",
@@ -1128,6 +1130,8 @@
     "withSidebar": true,
     "withProgressBar": true,
     "minHeightSize": 800,
-    "minWidthSize": 1400
+    "minWidthSize": 1400,
+    "urlParticipantIdParam": "PROLIFIC_PID",
+    "studyEndMsg": "**Thank you for completing the study. You may click this link and return to Prolific**: [yourProlificLink](yourProlificLink)"
   }
 }
