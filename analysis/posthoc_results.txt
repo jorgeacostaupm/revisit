@@ -1,0 +1,400 @@
+=== f1_adj ===
+           Multiple Comparison of Means - Tukey HSD, FWER=0.05           
+=========================================================================
+       group1              group2       meandiff p-adj lower upper reject
+-------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle      0.0   nan   0.0   0.0  False
+          Bivariate  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+Overlaid Mark Angle  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+-------------------------------------------------------------------------
+
+=== f1_adj_mean ===
+           Multiple Comparison of Means - Tukey HSD, FWER=0.05           
+=========================================================================
+       group1              group2       meandiff p-adj lower upper reject
+-------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle      0.0   nan   0.0   0.0  False
+          Bivariate  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+Overlaid Mark Angle  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+-------------------------------------------------------------------------
+
+=== f1_adj_mean_extra ===
+             Multiple Comparison of Means - Tukey HSD, FWER=0.05             
+=============================================================================
+       group1              group2       meandiff p-adj   lower  upper  reject
+-----------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle   0.1111 0.6902 -2.0083 2.2305  False
+          Bivariate  Overlaid Mark Size   0.0556 0.8553 -1.7799  1.891  False
+Overlaid Mark Angle  Overlaid Mark Size  -0.0556 0.8553  -1.891 1.7799  False
+-----------------------------------------------------------------------------
+
+=== f1_adj_var ===
+             Multiple Comparison of Means - Tukey HSD, FWER=0.05             
+=============================================================================
+       group1              group2       meandiff p-adj   lower  upper  reject
+-----------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle      0.0    1.0  -1.122  1.122  False
+          Bivariate  Overlaid Mark Size   0.0294 0.8553 -0.9423 1.0011  False
+Overlaid Mark Angle  Overlaid Mark Size   0.0294 0.8553 -0.9423 1.0011  False
+-----------------------------------------------------------------------------
+
+=== f1_adj_var_extra ===
+             Multiple Comparison of Means - Tukey HSD, FWER=0.05             
+=============================================================================
+       group1              group2       meandiff p-adj  lower   upper  reject
+-----------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle  -0.8027   0.0 -0.8027 -0.8027   True
+          Bivariate  Overlaid Mark Size   0.0435   0.0  0.0435  0.0435   True
+Overlaid Mark Angle  Overlaid Mark Size   0.8462   0.0  0.8462  0.8462   True
+-----------------------------------------------------------------------------
+
+=== f1_attr_comb ===
+           Multiple Comparison of Means - Tukey HSD, FWER=0.05           
+=========================================================================
+       group1              group2       meandiff p-adj lower upper reject
+-------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle     -1.0   0.0  -1.0  -1.0   True
+          Bivariate  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+Overlaid Mark Angle  Overlaid Mark Size      1.0   0.0   1.0   1.0   True
+-------------------------------------------------------------------------
+
+=== f1_attr_comb_extra ===
+           Multiple Comparison of Means - Tukey HSD, FWER=0.05           
+=========================================================================
+       group1              group2       meandiff p-adj lower upper reject
+-------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle     -0.4   0.0  -0.4  -0.4   True
+          Bivariate  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+Overlaid Mark Angle  Overlaid Mark Size      0.4   0.0   0.4   0.4   True
+-------------------------------------------------------------------------
+
+=== f1_attr_extremes ===
+           Multiple Comparison of Means - Tukey HSD, FWER=0.05           
+=========================================================================
+       group1              group2       meandiff p-adj lower upper reject
+-------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle      0.5   0.0   0.5   0.5   True
+          Bivariate  Overlaid Mark Size      0.5   0.0   0.5   0.5   True
+Overlaid Mark Angle  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+-------------------------------------------------------------------------
+
+=== f1_attr_extremes_extra ===
+           Multiple Comparison of Means - Tukey HSD, FWER=0.05           
+=========================================================================
+       group1              group2       meandiff p-adj lower upper reject
+-------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle      0.5   0.0   0.5   0.5   True
+          Bivariate  Overlaid Mark Size      0.5   0.0   0.5   0.5   True
+Overlaid Mark Angle  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+-------------------------------------------------------------------------
+
+=== accuracy_classification ===
+              Multiple Comparison of Means - Tukey HSD, FWER=0.05              
+===============================================================================
+       group1              group2       meandiff p-adj   lower    upper  reject
+-------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle      0.0    1.0 -12.7164 12.7164  False
+          Bivariate  Overlaid Mark Size  -0.3333 0.8553  -11.346 10.6794  False
+Overlaid Mark Angle  Overlaid Mark Size  -0.3333 0.8553  -11.346 10.6794  False
+-------------------------------------------------------------------------------
+
+=== accuracy_classification_extra ===
+           Multiple Comparison of Means - Tukey HSD, FWER=0.05           
+=========================================================================
+       group1              group2       meandiff p-adj lower upper reject
+-------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle     -1.0   0.0  -1.0  -1.0   True
+          Bivariate  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+Overlaid Mark Angle  Overlaid Mark Size      1.0   0.0   1.0   1.0   True
+-------------------------------------------------------------------------
+
+=== accuracy_cluster_mean ===
+           Multiple Comparison of Means - Tukey HSD, FWER=0.05           
+=========================================================================
+       group1              group2       meandiff p-adj lower upper reject
+-------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle      0.0   nan   0.0   0.0  False
+          Bivariate  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+Overlaid Mark Angle  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+-------------------------------------------------------------------------
+
+=== accuracy_cluster_mean_extra ===
+           Multiple Comparison of Means - Tukey HSD, FWER=0.05           
+=========================================================================
+       group1              group2       meandiff p-adj lower upper reject
+-------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle      0.0   nan   0.0   0.0  False
+          Bivariate  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+Overlaid Mark Angle  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+-------------------------------------------------------------------------
+
+=== accuracy_cluster_var ===
+              Multiple Comparison of Means - Tukey HSD, FWER=0.05              
+===============================================================================
+       group1              group2       meandiff p-adj   lower    upper  reject
+-------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle      0.0    1.0 -19.0746 19.0746  False
+          Bivariate  Overlaid Mark Size     -0.5 0.8553 -17.0191 16.0191  False
+Overlaid Mark Angle  Overlaid Mark Size     -0.5 0.8553 -17.0191 16.0191  False
+-------------------------------------------------------------------------------
+
+=== accuracy_cluster_var_extra ===
+           Multiple Comparison of Means - Tukey HSD, FWER=0.05           
+=========================================================================
+       group1              group2       meandiff p-adj lower upper reject
+-------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle      1.0   0.0   1.0   1.0   True
+          Bivariate  Overlaid Mark Size      1.0   0.0   1.0   1.0   True
+Overlaid Mark Angle  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+-------------------------------------------------------------------------
+
+=== accuracy_path_mean ===
+              Multiple Comparison of Means - Tukey HSD, FWER=0.05              
+===============================================================================
+       group1              group2       meandiff p-adj   lower    upper  reject
+-------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle     -1.0 0.6902 -20.0746 18.0746  False
+          Bivariate  Overlaid Mark Size     -0.5 0.8553 -17.0191 16.0191  False
+Overlaid Mark Angle  Overlaid Mark Size      0.5 0.8553 -16.0191 17.0191  False
+-------------------------------------------------------------------------------
+
+=== accuracy_path_mean_extra ===
+           Multiple Comparison of Means - Tukey HSD, FWER=0.05           
+=========================================================================
+       group1              group2       meandiff p-adj lower upper reject
+-------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle     -1.0   0.0  -1.0  -1.0   True
+          Bivariate  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+Overlaid Mark Angle  Overlaid Mark Size      1.0   0.0   1.0   1.0   True
+-------------------------------------------------------------------------
+
+=== accuracy_path_var ===
+           Multiple Comparison of Means - Tukey HSD, FWER=0.05           
+=========================================================================
+       group1              group2       meandiff p-adj lower upper reject
+-------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle      0.0   nan   0.0   0.0  False
+          Bivariate  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+Overlaid Mark Angle  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+-------------------------------------------------------------------------
+
+=== accuracy_path_var_extra ===
+           Multiple Comparison of Means - Tukey HSD, FWER=0.05           
+=========================================================================
+       group1              group2       meandiff p-adj lower upper reject
+-------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle      0.0   nan   0.0   0.0  False
+          Bivariate  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+Overlaid Mark Angle  Overlaid Mark Size      0.0   nan   0.0   0.0  False
+-------------------------------------------------------------------------
+
+=== time_adj ===
+              Multiple Comparison of Means - Tukey HSD, FWER=0.05              
+===============================================================================
+       group1              group2       meandiff p-adj   lower    upper  reject
+-------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle    0.833  0.834 -24.3645 26.0305  False
+          Bivariate  Overlaid Mark Size  10.6795 0.1018 -11.1422 32.5012  False
+Overlaid Mark Angle  Overlaid Mark Size   9.8465 0.1103 -11.9752 31.6682  False
+-------------------------------------------------------------------------------
+
+=== time_adj_mean ===
+               Multiple Comparison of Means - Tukey HSD, FWER=0.05               
+=================================================================================
+       group1              group2       meandiff p-adj    lower    upper   reject
+---------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle    -15.9 0.3055 -117.8155  86.0155  False
+          Bivariate  Overlaid Mark Size  -3.0755 0.8203  -91.3369  85.1859  False
+Overlaid Mark Angle  Overlaid Mark Size  12.8245 0.3257  -75.4369 101.0859  False
+---------------------------------------------------------------------------------
+
+=== time_adj_mean_extra ===
+               Multiple Comparison of Means - Tukey HSD, FWER=0.05               
+=================================================================================
+       group1              group2       meandiff p-adj    lower    upper   reject
+---------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle   -8.523 0.9868 -1047.172 1030.126  False
+          Bivariate  Overlaid Mark Size   19.882 0.9145 -879.6145 919.3785  False
+Overlaid Mark Angle  Overlaid Mark Size   28.405 0.8453 -871.0915 927.9015  False
+---------------------------------------------------------------------------------
+
+=== time_adj_var ===
+                Multiple Comparison of Means - Tukey HSD, FWER=0.05                
+===================================================================================
+       group1              group2       meandiff p-adj    lower      upper   reject
+-----------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle  -27.364 0.8985 -1148.7967 1094.0687  False
+          Bivariate  Overlaid Mark Size   17.852 0.9385  -953.3372  989.0412  False
+Overlaid Mark Angle  Overlaid Mark Size   45.216 0.7318  -925.9732 1016.4052  False
+-----------------------------------------------------------------------------------
+
+=== time_adj_var_extra ===
+               Multiple Comparison of Means - Tukey HSD, FWER=0.05               
+=================================================================================
+       group1              group2       meandiff p-adj    lower    upper   reject
+---------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle  -22.279 0.7591  -541.985  497.427  False
+          Bivariate  Overlaid Mark Size   15.906 0.8165 -434.1726 465.9846  False
+Overlaid Mark Angle  Overlaid Mark Size   38.185 0.5079 -411.8936 488.2636  False
+---------------------------------------------------------------------------------
+
+=== time_attr_comb ===
+                Multiple Comparison of Means - Tukey HSD, FWER=0.05                
+===================================================================================
+       group1              group2       meandiff p-adj    lower      upper   reject
+-----------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle   -5.834 0.9994 -3352.0113 3340.3433  False
+          Bivariate  Overlaid Mark Size  104.284 0.8115 -2793.5905 3002.1585  False
+Overlaid Mark Angle  Overlaid Mark Size  110.118  0.796 -2787.7565 3007.9925  False
+-----------------------------------------------------------------------------------
+
+=== time_attr_comb_extra ===
+                Multiple Comparison of Means - Tukey HSD, FWER=0.05                
+===================================================================================
+       group1              group2       meandiff p-adj    lower      upper   reject
+-----------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle   43.469 0.9166 -1951.7702 2038.7082  False
+          Bivariate  Overlaid Mark Size   58.899 0.8261 -1669.0289 1786.8269  False
+Overlaid Mark Angle  Overlaid Mark Size    15.43 0.9844 -1712.4979 1743.3579  False
+-----------------------------------------------------------------------------------
+
+=== time_attr_extremes ===
+               Multiple Comparison of Means - Tukey HSD, FWER=0.05               
+=================================================================================
+       group1              group2       meandiff p-adj    lower    upper   reject
+---------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle   15.363 0.8352 -451.6018 482.3278  False
+          Bivariate  Overlaid Mark Size  54.5215  0.348 -349.8819 458.9249  False
+Overlaid Mark Angle  Overlaid Mark Size  39.1585 0.4591 -365.2449 443.5619  False
+---------------------------------------------------------------------------------
+
+=== time_attr_extremes_extra ===
+                Multiple Comparison of Means - Tukey HSD, FWER=0.05                
+===================================================================================
+       group1              group2       meandiff p-adj    lower      upper   reject
+-----------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle    -6.82 0.9976 -1988.0203 1974.3803  False
+          Bivariate  Overlaid Mark Size   86.438 0.7044 -1629.3318 1802.2078  False
+Overlaid Mark Angle  Overlaid Mark Size   93.258  0.677 -1622.5118 1809.0278  False
+-----------------------------------------------------------------------------------
+
+=== time_classification ===
+                Multiple Comparison of Means - Tukey HSD, FWER=0.05                
+===================================================================================
+       group1              group2       meandiff p-adj    lower      upper   reject
+-----------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle  -10.302 0.9992 -5064.1692 5043.5652  False
+          Bivariate  Overlaid Mark Size 135.2445 0.8505 -4241.5329 4512.0219  False
+Overlaid Mark Angle  Overlaid Mark Size 145.5465 0.8325 -4231.2309 4522.3239  False
+-----------------------------------------------------------------------------------
+
+=== time_classification_extra ===
+                 Multiple Comparison of Means - Tukey HSD, FWER=0.05                 
+=====================================================================================
+       group1              group2       meandiff p-adj     lower      upper    reject
+-------------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle   -1.675    1.0 -19697.9338 19694.5838  False
+          Bivariate  Overlaid Mark Size  581.516 0.8261 -16475.9445 17638.9765  False
+Overlaid Mark Angle  Overlaid Mark Size  583.191 0.8253 -16474.2695 17640.6515  False
+-------------------------------------------------------------------------------------
+
+=== time_cluster_mean ===
+               Multiple Comparison of Means - Tukey HSD, FWER=0.05               
+=================================================================================
+       group1              group2       meandiff p-adj    lower    upper   reject
+---------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle    1.331 0.9903  -188.175  190.837  False
+          Bivariate  Overlaid Mark Size   6.9555 0.7627 -157.1615 171.0725  False
+Overlaid Mark Angle  Overlaid Mark Size   5.6245 0.8247 -158.4925 169.7415  False
+---------------------------------------------------------------------------------
+
+=== time_cluster_mean_extra ===
+             Multiple Comparison of Means - Tukey HSD, FWER=0.05              
+==============================================================================
+       group1              group2       meandiff p-adj   lower   upper  reject
+------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle   -4.417 0.0992 -13.2104 4.3764  False
+          Bivariate  Overlaid Mark Size  -2.0695 0.1812  -9.6848 5.5458  False
+Overlaid Mark Angle  Overlaid Mark Size   2.3475 0.1603  -5.2678 9.9628  False
+------------------------------------------------------------------------------
+
+=== time_cluster_var ===
+               Multiple Comparison of Means - Tukey HSD, FWER=0.05               
+=================================================================================
+       group1              group2       meandiff p-adj    lower    upper   reject
+---------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle    5.684 0.9506 -343.0184 354.3864  False
+          Bivariate  Overlaid Mark Size  -7.0515 0.9059 -309.0366 294.9336  False
+Overlaid Mark Angle  Overlaid Mark Size -12.7355 0.7643 -314.7206 289.2496  False
+---------------------------------------------------------------------------------
+
+=== time_cluster_var_extra ===
+               Multiple Comparison of Means - Tukey HSD, FWER=0.05               
+=================================================================================
+       group1              group2       meandiff p-adj    lower    upper   reject
+---------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle    2.802 0.9382 -149.3369 154.9409  False
+          Bivariate  Overlaid Mark Size    0.976 0.9892 -130.7801 132.7321  False
+Overlaid Mark Angle  Overlaid Mark Size   -1.826 0.9636 -133.5821 129.9301  False
+---------------------------------------------------------------------------------
+
+=== time_path_mean ===
+               Multiple Comparison of Means - Tukey HSD, FWER=0.05               
+=================================================================================
+       group1              group2       meandiff p-adj    lower    upper   reject
+---------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle  -40.186 0.4439 -438.0054 357.6334  False
+          Bivariate  Overlaid Mark Size   17.669 0.6981 -326.8527 362.1907  False
+Overlaid Mark Angle  Overlaid Mark Size   57.855 0.2856 -286.6667 402.3767  False
+---------------------------------------------------------------------------------
+
+=== time_path_mean_extra ===
+                Multiple Comparison of Means - Tukey HSD, FWER=0.05                
+===================================================================================
+       group1              group2       meandiff p-adj    lower      upper   reject
+-----------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle   39.396 0.9958 -8521.8287 8600.6207  False
+          Bivariate  Overlaid Mark Size 240.1745 0.8391 -7174.0636 7654.4126  False
+Overlaid Mark Angle  Overlaid Mark Size 200.7785 0.8791 -7213.4596 7615.0166  False
+-----------------------------------------------------------------------------------
+
+=== time_path_var ===
+                Multiple Comparison of Means - Tukey HSD, FWER=0.05                
+===================================================================================
+       group1              group2       meandiff p-adj    lower      upper   reject
+-----------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle   -44.42 0.9873 -5575.9529 5487.1129  False
+          Bivariate  Overlaid Mark Size 108.6655 0.9105 -4681.7825 4899.1135  False
+Overlaid Mark Angle  Overlaid Mark Size 153.0855 0.8424 -4637.3625 4943.5335  False
+-----------------------------------------------------------------------------------
+
+=== time_path_var_extra ===
+               Multiple Comparison of Means - Tukey HSD, FWER=0.05               
+=================================================================================
+       group1              group2       meandiff p-adj    lower    upper   reject
+---------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle   59.336 0.2228 -211.5993 330.2713  False
+          Bivariate  Overlaid Mark Size   56.806 0.2025 -177.8309 291.4429  False
+Overlaid Mark Angle  Overlaid Mark Size    -2.53 0.9775 -237.1669 232.1069  False
+---------------------------------------------------------------------------------
+
+=== time_path_estimation ===
+                Multiple Comparison of Means - Tukey HSD, FWER=0.05                
+===================================================================================
+       group1              group2       meandiff p-adj    lower      upper   reject
+-----------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle  -30.179 0.9934 -5277.5578 5217.1998  False
+          Bivariate  Overlaid Mark Size  116.498 0.8897 -4427.8654 4660.8614  False
+Overlaid Mark Angle  Overlaid Mark Size  146.677   0.84 -4397.6864 4691.0404  False
+-----------------------------------------------------------------------------------
+
+=== time_path_estimation_extra ===
+              Multiple Comparison of Means - Tukey HSD, FWER=0.05              
+===============================================================================
+       group1              group2       meandiff p-adj   lower    upper  reject
+-------------------------------------------------------------------------------
+          Bivariate Overlaid Mark Angle   -5.877 0.4791 -69.9867 58.2327  False
+          Bivariate  Overlaid Mark Size   4.4015 0.5337 -51.1191 59.9221  False
+Overlaid Mark Angle  Overlaid Mark Size  10.2785  0.261 -45.2421 65.7991  False
+-------------------------------------------------------------------------------
+

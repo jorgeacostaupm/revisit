@@ -27,7 +27,7 @@ export function ClusterMarks({ marks, size }: { marks: ClusterMark[] | null; siz
       </text>
       <rect
         className="mark"
-        key={i}
+        key={`clusterMark${i}`}
         x={originScale(d.origin)! - markStrokeWidth / 2}
         y={destinationScale(d.destination)! - markStrokeWidth / 2}
         width={size * cellSize + markStrokeWidth}
@@ -44,7 +44,7 @@ export function LinkMarks({ marks }: { marks: string[][] | null }) {
   return marks?.map((d, i) => (
     <rect
       className="mark"
-      key={i}
+      key={`linkMark${i}`}
       x={originScale(d[0])! - markStrokeWidth / 2}
       y={destinationScale(d[1])! - markStrokeWidth / 2}
       width={cellSize + markStrokeWidth}

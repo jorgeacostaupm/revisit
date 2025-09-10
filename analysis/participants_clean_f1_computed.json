@@ -1,0 +1,5161 @@
+[
+  {
+    "participantId": "9ae6e643-cdf3-40fb-9bf4-f9ff79f3dd66",
+    "participantConfigHash": "b82c4cd9ddf3171f7bc0706f74fd117468eaebd1f1399b289d1f49347e304be9",
+    "sequence": {
+      "orderPath": "root",
+      "order": "fixed",
+      "components": [
+        "introduction",
+        "consent",
+        "data_description",
+        "list2num",
+        "num2list",
+        "connectivity_description",
+        "matrix2graph",
+        "graph2matrix",
+        "encoding_description",
+        {
+          "orderPath": "root-9",
+          "order": "fixed",
+          "components": [
+            "training_intro",
+            "training_interaction",
+            "training_selection",
+            "training_mean_adjacency",
+            "training_std_adjacency",
+            "training_path_estimation",
+            "training_cluster",
+            "training_ends"
+          ]
+        },
+        {
+          "orderPath": "root-10",
+          "order": "random",
+          "components": [
+            "adj_var",
+            "path_var",
+            "path_estimation",
+            "path_var_extra",
+            "adj_mean",
+            "adj",
+            "path_mean_extra",
+            "path_mean",
+            "cluster_mean",
+            "attr_comb",
+            "classification",
+            "path_estimation_extra",
+            "cluster_var",
+            "attr_extremes_extra",
+            "attr_extremes",
+            "adj_mean_extra",
+            "adj_var_extra",
+            "attr_comb_extra",
+            "cluster_var_extra",
+            "cluster_mean_extra",
+            "classification_extra"
+          ]
+        },
+        {
+          "orderPath": "root-11",
+          "order": "fixed",
+          "components": [
+            "tasks_end"
+          ]
+        },
+        {
+          "orderPath": "root-12",
+          "order": "random",
+          "components": [
+            "$beauvis.co.overlaid-size"
+          ]
+        },
+        {
+          "orderPath": "root-13",
+          "order": "random",
+          "components": [
+            {
+              "id": "previs-4dimensions",
+              "orderPath": "root-13-0",
+              "order": "latinSquare",
+              "components": [
+                "$previs-size.components.Understand",
+                "$previs-size.components.Layout",
+                "$previs-size.components.ReadingData",
+                "$previs-size.components.ReadingFeatures"
+              ]
+            }
+          ]
+        },
+        "end"
+      ]
+    },
+    "participantIndex": 7,
+    "answers": {
+      "adj_var": {
+        "identifier": "adj_var_17",
+        "answer": {
+          "answerNodes": [
+            "Georgia",
+            "Massachusetts",
+            "Michigan",
+            "Minnesota",
+            "New Jersey",
+            "North Carolina",
+            "Oregon",
+            "Tennessee"
+          ]
+        },
+        "trialOrder": "17",
+        "componentName": "adj_var",
+        "incorrectAnswers": {},
+        "startTime": 1756915053164,
+        "endTime": 1756915160033,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Georgia",
+              "Illinois",
+              "Michigan",
+              "Massachusetts",
+              "Minnesota",
+              "New Jersey",
+              "North Carolina",
+              "Tennessee",
+              "Oregon"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "path_var": {
+        "identifier": "path_var_18",
+        "answer": {
+          "path": "California \u2192 Minesota \u2192 Michigan",
+          "answerNodes": [
+            "California",
+            "Michigan"
+          ]
+        },
+        "trialOrder": "18",
+        "componentName": "path_var",
+        "incorrectAnswers": {},
+        "startTime": 1756915160085,
+        "endTime": 1756915531818,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": "California \u2192 Massachusetts \u2192 Michigan",
+            "id": "path"
+          }
+        ],
+        "optionOrders": {
+          "path": [
+            {
+              "value": "California \u2192 Colorado \u2192 Michigan",
+              "label": "California \u2192 Colorado \u2192 Michigan"
+            },
+            {
+              "value": "California \u2192 Minesota \u2192 Michigan",
+              "label": "California \u2192 Minesota \u2192 Michigan"
+            },
+            {
+              "value": "California \u2192 Utah \u2192 Michigan",
+              "label": "California \u2192 Utah \u2192 Michigan"
+            },
+            {
+              "value": "California \u2192 Massachusetts \u2192 Michigan",
+              "label": "California \u2192 Massachusetts \u2192 Michigan"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "path"
+          ]
+        }
+      },
+      "path_estimation": {
+        "identifier": "path_estimation_19",
+        "answer": {
+          "mean": 350,
+          "std": 180,
+          "answerNodes": [
+            "Georgia",
+            "New York"
+          ]
+        },
+        "trialOrder": "19",
+        "componentName": "path_estimation",
+        "incorrectAnswers": {},
+        "startTime": 1756915531866,
+        "endTime": 1756915597873,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": 300,
+            "id": "mean"
+          },
+          {
+            "answer": 140,
+            "id": "std"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "mean",
+            "std"
+          ]
+        }
+      },
+      "path_var_extra": {
+        "identifier": "path_var_extra_20",
+        "answer": {
+          "path": "Missouri \u2192 Michigan \u2192 Utah",
+          "answerNodes": [
+            "Missouri",
+            "Utah"
+          ]
+        },
+        "trialOrder": "20",
+        "componentName": "path_var_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756915597917,
+        "endTime": 1756915684061,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": "Missouri \u2192 Michigan \u2192 Utah",
+            "id": "path"
+          }
+        ],
+        "optionOrders": {
+          "path": [
+            {
+              "value": "Missouri \u2192 Michigan \u2192 Utah",
+              "label": "Missouri \u2192 Michigan \u2192 Utah"
+            },
+            {
+              "value": "Missouri \u2192 New York \u2192 Utah",
+              "label": "Missouri \u2192 New York \u2192 Utah"
+            },
+            {
+              "value": "Missouri \u2192 Georgia \u2192 Utah",
+              "label": "Missouri \u2192 Georgia \u2192 Utah"
+            },
+            {
+              "value": "Missouri \u2192 Virginia \u2192 Utah",
+              "label": "Missouri \u2192 Virginia \u2192 Utah"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "path"
+          ]
+        }
+      },
+      "adj_mean": {
+        "identifier": "adj_mean_21",
+        "answer": {
+          "answerNodes": [
+            "Maryland",
+            "Massachusetts",
+            "New Jersey",
+            "New York",
+            "Virginia"
+          ]
+        },
+        "trialOrder": "21",
+        "componentName": "adj_mean",
+        "incorrectAnswers": {},
+        "startTime": 1756915684110,
+        "endTime": 1756915717282,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Maryland",
+              "Massachusetts",
+              "New Jersey",
+              "New York",
+              "Virginia"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "adj": {
+        "identifier": "adj_22",
+        "answer": {
+          "answerNodes": [
+            "Florida",
+            "Georgia",
+            "Illinois",
+            "Maryland",
+            "Massachusetts",
+            "Michigan",
+            "New Jersey",
+            "New York",
+            "Ohio",
+            "Pennsylvania",
+            "Tennessee",
+            "Texas",
+            "Washington"
+          ]
+        },
+        "trialOrder": "22",
+        "componentName": "adj",
+        "incorrectAnswers": {},
+        "startTime": 1756915717336,
+        "endTime": 1756915747880,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Florida",
+              "Georgia",
+              "Illinois",
+              "Maryland",
+              "Massachusetts",
+              "Michigan",
+              "New Jersey",
+              "New York",
+              "Ohio",
+              "Pennsylvania",
+              "Tennessee",
+              "Texas",
+              "Washington"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "path_mean_extra": {
+        "identifier": "path_mean_extra_23",
+        "answer": {
+          "path": "Florida \u2192 Minnesota \u2192 North Carolina",
+          "answerNodes": [
+            "Florida",
+            "North Carolina"
+          ]
+        },
+        "trialOrder": "23",
+        "componentName": "path_mean_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756915747932,
+        "endTime": 1756915803612,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": "Florida \u2192 Minnesota \u2192 North Carolina",
+            "id": "path"
+          }
+        ],
+        "optionOrders": {
+          "path": [
+            {
+              "value": "Florida \u2192 Lousiana \u2192 North Carolina",
+              "label": "Florida \u2192 Lousiana \u2192 North Carolina"
+            },
+            {
+              "value": "Florida \u2192 Minnesota \u2192 North Carolina",
+              "label": "Florida \u2192 Minnesota \u2192 North Carolina"
+            },
+            {
+              "value": "Florida \u2192 Colorado \u2192 North Carolina",
+              "label": "Florida \u2192 Colorado \u2192 North Carolina"
+            },
+            {
+              "value": "Florida \u2192 Washington \u2192 North Carolina",
+              "label": "Florida \u2192 Washington \u2192 North Carolina"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "path"
+          ]
+        }
+      },
+      "path_mean": {
+        "identifier": "path_mean_24",
+        "answer": {
+          "path": "Utah \u2192 Colorado \u2192 New York",
+          "answerNodes": [
+            "Utah",
+            "New York"
+          ]
+        },
+        "trialOrder": "24",
+        "componentName": "path_mean",
+        "incorrectAnswers": {},
+        "startTime": 1756915803667,
+        "endTime": 1756915896527,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": "Utah \u2192 Colorado \u2192 New York",
+            "id": "path"
+          }
+        ],
+        "optionOrders": {
+          "path": [
+            {
+              "value": "Utah \u2192 Michigan \u2192 New York",
+              "label": "Utah \u2192 Michigan \u2192 New York"
+            },
+            {
+              "value": "Utah \u2192 Washington \u2192 New York",
+              "label": "Utah \u2192 Washington \u2192 New York"
+            },
+            {
+              "value": "Utah \u2192 Colorado \u2192 New York",
+              "label": "Utah \u2192 Colorado \u2192 New York"
+            },
+            {
+              "value": "Utah \u2192 Nevada \u2192 New York",
+              "label": "Utah \u2192 Nevada \u2192 New York"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "path"
+          ]
+        }
+      },
+      "cluster_mean": {
+        "identifier": "cluster_mean_25",
+        "answer": {
+          "cluster": "C"
+        },
+        "trialOrder": "25",
+        "componentName": "cluster_mean",
+        "incorrectAnswers": {},
+        "startTime": 1756915896579,
+        "endTime": 1756915909256,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size",
+          "clusterMarks": [
+            {
+              "option": "A",
+              "origin": "Virginia",
+              "destination": "Arizona"
+            },
+            {
+              "option": "B",
+              "origin": "Massachusetts",
+              "destination": "Utah"
+            },
+            {
+              "option": "C",
+              "origin": "Washington",
+              "destination": "Massachusetts"
+            },
+            {
+              "option": "D",
+              "origin": "Utah",
+              "destination": "Tennessee"
+            }
+          ],
+          "clusterMode": "optimal",
+          "clusterVar": "mean"
+        },
+        "correctAnswer": [
+          {
+            "answer": "C",
+            "id": "cluster"
+          }
+        ],
+        "optionOrders": {
+          "cluster": [
+            {
+              "value": "A",
+              "label": "A"
+            },
+            {
+              "value": "B",
+              "label": "B"
+            },
+            {
+              "value": "C",
+              "label": "C"
+            },
+            {
+              "value": "D",
+              "label": "D"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "cluster"
+          ]
+        }
+      },
+      "attr_comb": {
+        "identifier": "attr_comb_26",
+        "answer": {
+          "answerNodes": [
+            "Georgia",
+            "Pennsylvania",
+            "Texas"
+          ]
+        },
+        "trialOrder": "26",
+        "componentName": "attr_comb",
+        "incorrectAnswers": {},
+        "startTime": 1756915909309,
+        "endTime": 1756916135696,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Georgia",
+              "Pennsylvania",
+              "Texas"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "classification": {
+        "identifier": "classification_27",
+        "answer": {
+          "stability": {
+            "Oregon": "Medium Price Variation",
+            "Utah": "High Price Variation",
+            "Illinois": "Low Price Variation"
+          },
+          "answerNodes": []
+        },
+        "trialOrder": "27",
+        "componentName": "classification",
+        "incorrectAnswers": {},
+        "startTime": 1756916135755,
+        "endTime": 1756916454970,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {
+          "stability": [
+            "Oregon",
+            "Utah",
+            "Illinois"
+          ]
+        },
+        "formOrder": {
+          "response": [
+            "stability"
+          ]
+        }
+      },
+      "path_estimation_extra": {
+        "identifier": "path_estimation_extra_28",
+        "answer": {
+          "mean": 200,
+          "std": 240,
+          "answerNodes": [
+            "Pennsylvania",
+            "Minnesota"
+          ]
+        },
+        "trialOrder": "28",
+        "componentName": "path_estimation_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756916455030,
+        "endTime": 1756916549917,
+        "timedOut": false,
+        "helpButtonClickedCount": 1,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": 0,
+            "id": "mean"
+          },
+          {
+            "answer": 0,
+            "id": "std"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "mean",
+            "std"
+          ]
+        }
+      },
+      "cluster_var": {
+        "identifier": "cluster_var_29",
+        "answer": {
+          "cluster": "D"
+        },
+        "trialOrder": "29",
+        "componentName": "cluster_var",
+        "incorrectAnswers": {},
+        "startTime": 1756916549974,
+        "endTime": 1756916557510,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size",
+          "clusterMarks": [
+            {
+              "option": "A",
+              "origin": "Missouri",
+              "destination": "Texas"
+            },
+            {
+              "option": "B",
+              "origin": "Maryland",
+              "destination": "New York"
+            },
+            {
+              "option": "C",
+              "origin": "Georgia",
+              "destination": "Minnesota"
+            },
+            {
+              "option": "D",
+              "origin": "Pennsylvania",
+              "destination": "North Carolina"
+            }
+          ],
+          "clusterMode": "optimal",
+          "clusterVar": "std"
+        },
+        "correctAnswer": [
+          {
+            "answer": "C",
+            "id": "cluster"
+          }
+        ],
+        "optionOrders": {
+          "cluster": [
+            {
+              "value": "A",
+              "label": "A"
+            },
+            {
+              "value": "B",
+              "label": "B"
+            },
+            {
+              "value": "C",
+              "label": "C"
+            },
+            {
+              "value": "D",
+              "label": "D"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "cluster"
+          ]
+        }
+      },
+      "attr_extremes_extra": {
+        "identifier": "attr_extremes_extra_30",
+        "answer": {
+          "answerNodes": [
+            "South Carolina",
+            "Utah"
+          ]
+        },
+        "trialOrder": "30",
+        "componentName": "attr_extremes_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756916557574,
+        "endTime": 1756916727390,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "South Carolina",
+              "Utah"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "attr_extremes": {
+        "identifier": "attr_extremes_31",
+        "answer": {
+          "answerNodes": [
+            "Minnesota",
+            "Pennsylvania"
+          ]
+        },
+        "trialOrder": "31",
+        "componentName": "attr_extremes",
+        "incorrectAnswers": {},
+        "startTime": 1756916727446,
+        "endTime": 1756916835604,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Minnesota",
+              "Pennsylvania"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "adj_mean_extra": {
+        "identifier": "adj_mean_extra_32",
+        "answer": {
+          "answerNodes": [
+            "California",
+            "Colorado",
+            "Nevada",
+            "Utah",
+            "Louisiana"
+          ]
+        },
+        "trialOrder": "32",
+        "componentName": "adj_mean_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756916835656,
+        "endTime": 1756916906130,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "California",
+              "Colorado",
+              "Nevada",
+              "Utah"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "adj_var_extra": {
+        "identifier": "adj_var_extra_33",
+        "answer": {
+          "answerNodes": [
+            "Illinois",
+            "Colorado",
+            "Florida",
+            "Georgia",
+            "Louisiana",
+            "Massachusetts",
+            "North Carolina",
+            "South Carolina",
+            "Tennessee",
+            "Texas",
+            "Washington"
+          ]
+        },
+        "trialOrder": "33",
+        "componentName": "adj_var_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756916906181,
+        "endTime": 1756916973729,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Washington",
+              "Colorado",
+              "Florida",
+              "Illinois",
+              "Georgia",
+              "Louisiana",
+              "Massachusetts",
+              "North Carolina",
+              "South Carolina",
+              "Tennessee",
+              "Texas"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "attr_comb_extra": {
+        "identifier": "attr_comb_extra_34",
+        "answer": {
+          "answerNodes": [
+            "Missouri",
+            "Tennessee",
+            "Washington"
+          ]
+        },
+        "trialOrder": "34",
+        "componentName": "attr_comb_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756916973776,
+        "endTime": 1756917110755,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Tennessee",
+              "Washington"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "cluster_var_extra": {
+        "identifier": "cluster_var_extra_35",
+        "answer": {
+          "cluster": "A"
+        },
+        "trialOrder": "35",
+        "componentName": "cluster_var_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756917110811,
+        "endTime": 1756917131169,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size",
+          "clusterMarks": [
+            {
+              "option": "A",
+              "origin": "Pennsylvania",
+              "destination": "Illinois"
+            },
+            {
+              "option": "B",
+              "origin": "Nevada",
+              "destination": "Nevada"
+            },
+            {
+              "option": "C",
+              "origin": "Nevada",
+              "destination": "Tennessee"
+            },
+            {
+              "option": "D",
+              "origin": "Massachusetts",
+              "destination": "Ohio"
+            }
+          ],
+          "clusterMode": "pca",
+          "clusterVar": "snr"
+        },
+        "correctAnswer": [
+          {
+            "answer": "A",
+            "id": "cluster"
+          }
+        ],
+        "optionOrders": {
+          "cluster": [
+            {
+              "value": "A",
+              "label": "A"
+            },
+            {
+              "value": "B",
+              "label": "B"
+            },
+            {
+              "value": "C",
+              "label": "C"
+            },
+            {
+              "value": "D",
+              "label": "D"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "cluster"
+          ]
+        }
+      },
+      "cluster_mean_extra": {
+        "identifier": "cluster_mean_extra_36",
+        "answer": {
+          "cluster": "A"
+        },
+        "trialOrder": "36",
+        "componentName": "cluster_mean_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756917131225,
+        "endTime": 1756917158643,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size",
+          "clusterMarks": [
+            {
+              "option": "A",
+              "origin": "Washington",
+              "destination": "Washington"
+            },
+            {
+              "option": "B",
+              "origin": "Tennessee",
+              "destination": "South Carolina"
+            },
+            {
+              "option": "C",
+              "origin": "New York",
+              "destination": "Tennessee"
+            },
+            {
+              "option": "D",
+              "origin": "Texas",
+              "destination": "New Jersey"
+            }
+          ],
+          "clusterMode": "pca",
+          "clusterVar": "mean"
+        },
+        "correctAnswer": [
+          {
+            "answer": "A",
+            "id": "cluster"
+          }
+        ],
+        "optionOrders": {
+          "cluster": [
+            {
+              "value": "A",
+              "label": "A"
+            },
+            {
+              "value": "B",
+              "label": "B"
+            },
+            {
+              "value": "C",
+              "label": "C"
+            },
+            {
+              "value": "D",
+              "label": "D"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "cluster"
+          ]
+        }
+      },
+      "classification_extra": {
+        "identifier": "classification_extra_37",
+        "answer": {
+          "stability": {
+            "Minnesota": "High Prices Variation",
+            "Pennsylvania": "Medium Prices Variation",
+            "Texas": "Low Prices Variation"
+          }
+        },
+        "trialOrder": "37",
+        "componentName": "classification_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756917158695,
+        "endTime": 1756917279862,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {
+          "stability": [
+            "Minnesota",
+            "Pennsylvania",
+            "Texas"
+          ]
+        },
+        "formOrder": {
+          "response": [
+            "stability"
+          ]
+        }
+      },
+      "$beauvis.co.overlaid-size": {
+        "identifier": "$beauvis.co.overlaid-size_39",
+        "answer": {
+          "overlaid-size-response": {
+            "enjoyable": "Agree",
+            "likable": "Agree",
+            "pleasing": "Agree",
+            "nice": "Agree",
+            "appealing": "Agree"
+          }
+        },
+        "trialOrder": "39",
+        "componentName": "$beauvis.co.overlaid-size",
+        "incorrectAnswers": {},
+        "startTime": 1756917285194,
+        "endTime": 1756917425843,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {
+          "overlaid-size-response": [
+            "enjoyable",
+            "likable",
+            "pleasing",
+            "nice",
+            "appealing"
+          ]
+        },
+        "formOrder": {
+          "response": [
+            "overlaid-size-response"
+          ]
+        }
+      },
+      "$previs-size.components.Understand": {
+        "identifier": "$previs-size.components.Understand_40",
+        "answer": {
+          "obvious": "5",
+          "represent": "6",
+          "understand": "6"
+        },
+        "trialOrder": "40",
+        "componentName": "$previs-size.components.Understand",
+        "incorrectAnswers": {},
+        "startTime": 1756917425910,
+        "endTime": 1756917446260,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "obvious",
+            "represent",
+            "understand"
+          ]
+        }
+      },
+      "$previs-size.components.Layout": {
+        "identifier": "$previs-size.components.Layout_41",
+        "answer": {
+          "messy": "4",
+          "crowd": "4",
+          "distract": "4"
+        },
+        "trialOrder": "41",
+        "componentName": "$previs-size.components.Layout",
+        "incorrectAnswers": {},
+        "startTime": 1756917446322,
+        "endTime": 1756917475274,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "messy",
+            "crowd",
+            "distract"
+          ]
+        }
+      },
+      "$previs-size.components.ReadingData": {
+        "identifier": "$previs-size.components.ReadingData_42",
+        "answer": {
+          "find": "6",
+          "identify": "5",
+          "information": "5"
+        },
+        "trialOrder": "42",
+        "componentName": "$previs-size.components.ReadingData",
+        "incorrectAnswers": {},
+        "startTime": 1756917475335,
+        "endTime": 1756917487909,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "find",
+            "identify",
+            "information"
+          ]
+        }
+      },
+      "$previs-size.components.ReadingFeatures": {
+        "answer": {
+          "visible": "5",
+          "see": "6"
+        },
+        "trialOrder": "43",
+        "componentName": "$previs-size.components.ReadingFeatures",
+        "incorrectAnswers": {},
+        "startTime": 1756917487972,
+        "endTime": 1756917514524,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "visible",
+            "see"
+          ]
+        }
+      }
+    },
+    "searchParams": {},
+    "metadata": {
+      "language": "en-US",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "resolution": {
+        "width": 1920,
+        "height": 1080,
+        "availHeight": 1055,
+        "availWidth": 1920,
+        "colorDepth": 24,
+        "orientation": "landscape-primary",
+        "pixelDepth": 24
+      },
+      "ip": "155.98.132.6"
+    },
+    "completed": true,
+    "rejected": false,
+    "participantTags": [
+      "previs-4dimensions"
+    ],
+    "f1_scores": {
+      "adj": 1.0,
+      "adj_mean": 1.0,
+      "adj_var": 0.9411764705882353,
+      "attr_comb": 1.0,
+      "attr_extremes": 1.0,
+      "adj_mean_extra": 0.888888888888889,
+      "adj_var_extra": 1.0,
+      "attr_comb_extra": 0.8,
+      "attr_extremes_extra": 1.0
+    }
+  },
+  {
+    "participantId": "14b2b321-dfad-4ad2-bb0e-5fd7715f10af",
+    "participantConfigHash": "b82c4cd9ddf3171f7bc0706f74fd117468eaebd1f1399b289d1f49347e304be9",
+    "sequence": {
+      "orderPath": "root",
+      "order": "fixed",
+      "components": [
+        "introduction",
+        "consent",
+        "data_description",
+        "list2num",
+        "num2list",
+        "connectivity_description",
+        "matrix2graph",
+        "graph2matrix",
+        "encoding_description",
+        {
+          "orderPath": "root-9",
+          "order": "fixed",
+          "components": [
+            "training_intro",
+            "training_interaction",
+            "training_selection",
+            "training_mean_adjacency",
+            "training_std_adjacency",
+            "training_path_estimation",
+            "training_cluster",
+            "training_ends"
+          ]
+        },
+        {
+          "orderPath": "root-10",
+          "order": "random",
+          "components": [
+            "classification_extra",
+            "path_var_extra",
+            "adj",
+            "cluster_mean_extra",
+            "path_var",
+            "cluster_var_extra",
+            "attr_comb",
+            "path_mean",
+            "adj_mean",
+            "path_estimation",
+            "path_mean_extra",
+            "classification",
+            "adj_var",
+            "path_estimation_extra",
+            "cluster_mean",
+            "adj_mean_extra",
+            "attr_extremes",
+            "adj_var_extra",
+            "attr_comb_extra",
+            "cluster_var",
+            "attr_extremes_extra"
+          ]
+        },
+        {
+          "orderPath": "root-11",
+          "order": "fixed",
+          "components": [
+            "tasks_end"
+          ]
+        },
+        {
+          "orderPath": "root-12",
+          "order": "random",
+          "components": [
+            "$beauvis.co.overlaid-size"
+          ]
+        },
+        {
+          "orderPath": "root-13",
+          "order": "random",
+          "components": [
+            {
+              "id": "previs-4dimensions",
+              "orderPath": "root-13-0",
+              "order": "latinSquare",
+              "components": [
+                "$previs-size.components.ReadingFeatures",
+                "$previs-size.components.Understand",
+                "$previs-size.components.ReadingData",
+                "$previs-size.components.Layout"
+              ]
+            }
+          ]
+        },
+        "end"
+      ]
+    },
+    "participantIndex": 9,
+    "answers": {
+      "classification_extra": {
+        "identifier": "classification_extra_17",
+        "answer": {
+          "stability": {
+            "Minnesota": "High Prices Variation",
+            "Pennsylvania": "Medium Prices Variation",
+            "Texas": "Low Prices Variation"
+          }
+        },
+        "trialOrder": "17",
+        "componentName": "classification_extra",
+        "incorrectAnswers": {},
+        "startTime": 1757059698226,
+        "endTime": 1757060851985,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {
+          "stability": [
+            "Minnesota",
+            "Pennsylvania",
+            "Texas"
+          ]
+        },
+        "formOrder": {
+          "response": [
+            "stability"
+          ]
+        }
+      },
+      "path_var_extra": {
+        "identifier": "path_var_extra_18",
+        "answer": {
+          "path": "Missouri \u2192 Michigan \u2192 Utah"
+        },
+        "trialOrder": "18",
+        "componentName": "path_var_extra",
+        "incorrectAnswers": {},
+        "startTime": 1757060852037,
+        "endTime": 1757060952385,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": "Missouri \u2192 Michigan \u2192 Utah",
+            "id": "path"
+          }
+        ],
+        "optionOrders": {
+          "path": [
+            {
+              "value": "Missouri \u2192 Michigan \u2192 Utah",
+              "label": "Missouri \u2192 Michigan \u2192 Utah"
+            },
+            {
+              "value": "Missouri \u2192 New York \u2192 Utah",
+              "label": "Missouri \u2192 New York \u2192 Utah"
+            },
+            {
+              "value": "Missouri \u2192 Georgia \u2192 Utah",
+              "label": "Missouri \u2192 Georgia \u2192 Utah"
+            },
+            {
+              "value": "Missouri \u2192 Virginia \u2192 Utah",
+              "label": "Missouri \u2192 Virginia \u2192 Utah"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "path"
+          ]
+        }
+      },
+      "adj": {
+        "identifier": "adj_19",
+        "answer": {
+          "answerNodes": [
+            "Florida",
+            "Illinois",
+            "Georgia",
+            "Maryland",
+            "Massachusetts",
+            "Michigan",
+            "New Jersey",
+            "New York",
+            "Ohio",
+            "Pennsylvania",
+            "Tennessee",
+            "Texas",
+            "Washington"
+          ]
+        },
+        "trialOrder": "19",
+        "componentName": "adj",
+        "incorrectAnswers": {},
+        "startTime": 1757060952429,
+        "endTime": 1757060981652,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Florida",
+              "Georgia",
+              "Illinois",
+              "Maryland",
+              "Massachusetts",
+              "Michigan",
+              "New Jersey",
+              "New York",
+              "Ohio",
+              "Pennsylvania",
+              "Tennessee",
+              "Texas",
+              "Washington"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "cluster_mean_extra": {
+        "identifier": "cluster_mean_extra_20",
+        "answer": {
+          "cluster": "A"
+        },
+        "trialOrder": "20",
+        "componentName": "cluster_mean_extra",
+        "incorrectAnswers": {},
+        "startTime": 1757060981705,
+        "endTime": 1757061009584,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size",
+          "clusterMarks": [
+            {
+              "option": "A",
+              "origin": "Washington",
+              "destination": "Washington"
+            },
+            {
+              "option": "B",
+              "origin": "Tennessee",
+              "destination": "South Carolina"
+            },
+            {
+              "option": "C",
+              "origin": "New York",
+              "destination": "Tennessee"
+            },
+            {
+              "option": "D",
+              "origin": "Texas",
+              "destination": "New Jersey"
+            }
+          ],
+          "clusterMode": "pca",
+          "clusterVar": "mean"
+        },
+        "correctAnswer": [
+          {
+            "answer": "A",
+            "id": "cluster"
+          }
+        ],
+        "optionOrders": {
+          "cluster": [
+            {
+              "value": "A",
+              "label": "A"
+            },
+            {
+              "value": "B",
+              "label": "B"
+            },
+            {
+              "value": "C",
+              "label": "C"
+            },
+            {
+              "value": "D",
+              "label": "D"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "cluster"
+          ]
+        }
+      },
+      "path_var": {
+        "identifier": "path_var_21",
+        "answer": {
+          "path": "California \u2192 Minesota \u2192 Michigan"
+        },
+        "trialOrder": "21",
+        "componentName": "path_var",
+        "incorrectAnswers": {},
+        "startTime": 1757061009631,
+        "endTime": 1757061091369,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": "California \u2192 Massachusetts \u2192 Michigan",
+            "id": "path"
+          }
+        ],
+        "optionOrders": {
+          "path": [
+            {
+              "value": "California \u2192 Colorado \u2192 Michigan",
+              "label": "California \u2192 Colorado \u2192 Michigan"
+            },
+            {
+              "value": "California \u2192 Minesota \u2192 Michigan",
+              "label": "California \u2192 Minesota \u2192 Michigan"
+            },
+            {
+              "value": "California \u2192 Utah \u2192 Michigan",
+              "label": "California \u2192 Utah \u2192 Michigan"
+            },
+            {
+              "value": "California \u2192 Massachusetts \u2192 Michigan",
+              "label": "California \u2192 Massachusetts \u2192 Michigan"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "path"
+          ]
+        }
+      },
+      "cluster_var_extra": {
+        "identifier": "cluster_var_extra_22",
+        "answer": {
+          "cluster": "A"
+        },
+        "trialOrder": "22",
+        "componentName": "cluster_var_extra",
+        "incorrectAnswers": {},
+        "startTime": 1757061091418,
+        "endTime": 1757061103800,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size",
+          "clusterMarks": [
+            {
+              "option": "A",
+              "origin": "Pennsylvania",
+              "destination": "Illinois"
+            },
+            {
+              "option": "B",
+              "origin": "Nevada",
+              "destination": "Nevada"
+            },
+            {
+              "option": "C",
+              "origin": "Nevada",
+              "destination": "Tennessee"
+            },
+            {
+              "option": "D",
+              "origin": "Massachusetts",
+              "destination": "Ohio"
+            }
+          ],
+          "clusterMode": "pca",
+          "clusterVar": "snr"
+        },
+        "correctAnswer": [
+          {
+            "answer": "A",
+            "id": "cluster"
+          }
+        ],
+        "optionOrders": {
+          "cluster": [
+            {
+              "value": "A",
+              "label": "A"
+            },
+            {
+              "value": "B",
+              "label": "B"
+            },
+            {
+              "value": "C",
+              "label": "C"
+            },
+            {
+              "value": "D",
+              "label": "D"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "cluster"
+          ]
+        }
+      },
+      "attr_comb": {
+        "identifier": "attr_comb_23",
+        "answer": {
+          "answerNodes": [
+            "Georgia",
+            "Pennsylvania",
+            "Texas"
+          ]
+        },
+        "trialOrder": "23",
+        "componentName": "attr_comb",
+        "incorrectAnswers": {},
+        "startTime": 1757061103840,
+        "endTime": 1757061154801,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Georgia",
+              "Pennsylvania",
+              "Texas"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "path_mean": {
+        "identifier": "path_mean_24",
+        "answer": {
+          "path": "Utah \u2192 Nevada \u2192 New York"
+        },
+        "trialOrder": "24",
+        "componentName": "path_mean",
+        "incorrectAnswers": {},
+        "startTime": 1757061154851,
+        "endTime": 1757061268567,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": "Utah \u2192 Colorado \u2192 New York",
+            "id": "path"
+          }
+        ],
+        "optionOrders": {
+          "path": [
+            {
+              "value": "Utah \u2192 Michigan \u2192 New York",
+              "label": "Utah \u2192 Michigan \u2192 New York"
+            },
+            {
+              "value": "Utah \u2192 Washington \u2192 New York",
+              "label": "Utah \u2192 Washington \u2192 New York"
+            },
+            {
+              "value": "Utah \u2192 Colorado \u2192 New York",
+              "label": "Utah \u2192 Colorado \u2192 New York"
+            },
+            {
+              "value": "Utah \u2192 Nevada \u2192 New York",
+              "label": "Utah \u2192 Nevada \u2192 New York"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "path"
+          ]
+        }
+      },
+      "adj_mean": {
+        "identifier": "adj_mean_25",
+        "answer": {
+          "answerNodes": [
+            "Maryland",
+            "Massachusetts",
+            "New Jersey",
+            "New York",
+            "Virginia"
+          ]
+        },
+        "trialOrder": "25",
+        "componentName": "adj_mean",
+        "incorrectAnswers": {},
+        "startTime": 1757061268620,
+        "endTime": 1757061296449,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Maryland",
+              "Massachusetts",
+              "New Jersey",
+              "New York",
+              "Virginia"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "path_estimation": {
+        "identifier": "path_estimation_26",
+        "answer": {
+          "mean": 350,
+          "std": 180
+        },
+        "trialOrder": "26",
+        "componentName": "path_estimation",
+        "incorrectAnswers": {},
+        "startTime": 1757061296512,
+        "endTime": 1757061637617,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": 300,
+            "id": "mean"
+          },
+          {
+            "answer": 140,
+            "id": "std"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "mean",
+            "std"
+          ]
+        }
+      },
+      "path_mean_extra": {
+        "identifier": "path_mean_extra_27",
+        "answer": {
+          "path": "Florida \u2192 Minnesota \u2192 North Carolina"
+        },
+        "trialOrder": "27",
+        "componentName": "path_mean_extra",
+        "incorrectAnswers": {},
+        "startTime": 1757061637670,
+        "endTime": 1757062142179,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": "Florida \u2192 Minnesota \u2192 North Carolina",
+            "id": "path"
+          }
+        ],
+        "optionOrders": {
+          "path": [
+            {
+              "value": "Florida \u2192 Lousiana \u2192 North Carolina",
+              "label": "Florida \u2192 Lousiana \u2192 North Carolina"
+            },
+            {
+              "value": "Florida \u2192 Minnesota \u2192 North Carolina",
+              "label": "Florida \u2192 Minnesota \u2192 North Carolina"
+            },
+            {
+              "value": "Florida \u2192 Colorado \u2192 North Carolina",
+              "label": "Florida \u2192 Colorado \u2192 North Carolina"
+            },
+            {
+              "value": "Florida \u2192 Washington \u2192 North Carolina",
+              "label": "Florida \u2192 Washington \u2192 North Carolina"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "path"
+          ]
+        }
+      },
+      "classification": {
+        "identifier": "classification_28",
+        "answer": {
+          "stability": {
+            "Oregon": "High Price Variation",
+            "Utah": "Medium Price Variation",
+            "Illinois": "Low Price Variation"
+          }
+        },
+        "trialOrder": "28",
+        "componentName": "classification",
+        "incorrectAnswers": {},
+        "startTime": 1757062142233,
+        "endTime": 1757062196495,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {
+          "stability": [
+            "Oregon",
+            "Utah",
+            "Illinois"
+          ]
+        },
+        "formOrder": {
+          "response": [
+            "stability"
+          ]
+        }
+      },
+      "adj_var": {
+        "identifier": "adj_var_29",
+        "answer": {
+          "answerNodes": [
+            "Georgia",
+            "Illinois",
+            "Massachusetts",
+            "Michigan",
+            "Minnesota",
+            "New Jersey",
+            "North Carolina",
+            "Oregon",
+            "Tennessee"
+          ]
+        },
+        "trialOrder": "29",
+        "componentName": "adj_var",
+        "incorrectAnswers": {},
+        "startTime": 1757062196553,
+        "endTime": 1757062244630,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Georgia",
+              "Illinois",
+              "Michigan",
+              "Massachusetts",
+              "Minnesota",
+              "New Jersey",
+              "North Carolina",
+              "Tennessee",
+              "Oregon"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "path_estimation_extra": {
+        "identifier": "path_estimation_extra_30",
+        "answer": {
+          "mean": 200,
+          "std": 240
+        },
+        "trialOrder": "30",
+        "componentName": "path_estimation_extra",
+        "incorrectAnswers": {},
+        "startTime": 1757062244688,
+        "endTime": 1757062336214,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": 0,
+            "id": "mean"
+          },
+          {
+            "answer": 0,
+            "id": "std"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "mean",
+            "std"
+          ]
+        }
+      },
+      "cluster_mean": {
+        "identifier": "cluster_mean_31",
+        "answer": {
+          "cluster": "C"
+        },
+        "trialOrder": "31",
+        "componentName": "cluster_mean",
+        "incorrectAnswers": {},
+        "startTime": 1757062336265,
+        "endTime": 1757062358877,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size",
+          "clusterMarks": [
+            {
+              "option": "A",
+              "origin": "Virginia",
+              "destination": "Arizona"
+            },
+            {
+              "option": "B",
+              "origin": "Massachusetts",
+              "destination": "Utah"
+            },
+            {
+              "option": "C",
+              "origin": "Washington",
+              "destination": "Massachusetts"
+            },
+            {
+              "option": "D",
+              "origin": "Utah",
+              "destination": "Tennessee"
+            }
+          ],
+          "clusterMode": "optimal",
+          "clusterVar": "mean"
+        },
+        "correctAnswer": [
+          {
+            "answer": "C",
+            "id": "cluster"
+          }
+        ],
+        "optionOrders": {
+          "cluster": [
+            {
+              "value": "A",
+              "label": "A"
+            },
+            {
+              "value": "B",
+              "label": "B"
+            },
+            {
+              "value": "C",
+              "label": "C"
+            },
+            {
+              "value": "D",
+              "label": "D"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "cluster"
+          ]
+        }
+      },
+      "adj_mean_extra": {
+        "identifier": "adj_mean_extra_32",
+        "answer": {
+          "answerNodes": [
+            "California",
+            "Colorado",
+            "Nevada",
+            "Utah"
+          ]
+        },
+        "trialOrder": "32",
+        "componentName": "adj_mean_extra",
+        "incorrectAnswers": {},
+        "startTime": 1757062358923,
+        "endTime": 1757062374945,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "California",
+              "Colorado",
+              "Nevada",
+              "Utah"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "attr_extremes": {
+        "identifier": "attr_extremes_33",
+        "answer": {
+          "answerNodes": [
+            "Pennsylvania",
+            "Minnesota"
+          ]
+        },
+        "trialOrder": "33",
+        "componentName": "attr_extremes",
+        "incorrectAnswers": {},
+        "startTime": 1757062374998,
+        "endTime": 1757062458675,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Minnesota",
+              "Pennsylvania"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "adj_var_extra": {
+        "identifier": "adj_var_extra_34",
+        "answer": {
+          "answerNodes": [
+            "Colorado",
+            "Florida",
+            "Georgia",
+            "Illinois",
+            "Louisiana",
+            "Massachusetts",
+            "North Carolina",
+            "South Carolina",
+            "Tennessee",
+            "Texas",
+            "Washington"
+          ]
+        },
+        "trialOrder": "34",
+        "componentName": "adj_var_extra",
+        "incorrectAnswers": {},
+        "startTime": 1757062458726,
+        "endTime": 1757062499028,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Washington",
+              "Colorado",
+              "Florida",
+              "Illinois",
+              "Georgia",
+              "Louisiana",
+              "Massachusetts",
+              "North Carolina",
+              "South Carolina",
+              "Tennessee",
+              "Texas"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "attr_comb_extra": {
+        "identifier": "attr_comb_extra_35",
+        "answer": {
+          "answerNodes": [
+            "Missouri",
+            "Tennessee",
+            "Washington"
+          ]
+        },
+        "trialOrder": "35",
+        "componentName": "attr_comb_extra",
+        "incorrectAnswers": {},
+        "startTime": 1757062499082,
+        "endTime": 1757062531459,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Tennessee",
+              "Washington"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "cluster_var": {
+        "identifier": "cluster_var_36",
+        "answer": {
+          "cluster": "C"
+        },
+        "trialOrder": "36",
+        "componentName": "cluster_var",
+        "incorrectAnswers": {},
+        "startTime": 1757062531509,
+        "endTime": 1757062557326,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size",
+          "clusterMarks": [
+            {
+              "option": "A",
+              "origin": "Missouri",
+              "destination": "Texas"
+            },
+            {
+              "option": "B",
+              "origin": "Maryland",
+              "destination": "New York"
+            },
+            {
+              "option": "C",
+              "origin": "Georgia",
+              "destination": "Minnesota"
+            },
+            {
+              "option": "D",
+              "origin": "Pennsylvania",
+              "destination": "North Carolina"
+            }
+          ],
+          "clusterMode": "optimal",
+          "clusterVar": "std"
+        },
+        "correctAnswer": [
+          {
+            "answer": "C",
+            "id": "cluster"
+          }
+        ],
+        "optionOrders": {
+          "cluster": [
+            {
+              "value": "A",
+              "label": "A"
+            },
+            {
+              "value": "B",
+              "label": "B"
+            },
+            {
+              "value": "C",
+              "label": "C"
+            },
+            {
+              "value": "D",
+              "label": "D"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "cluster"
+          ]
+        }
+      },
+      "attr_extremes_extra": {
+        "identifier": "attr_extremes_extra_37",
+        "answer": {
+          "answerNodes": [
+            "South Carolina",
+            "Utah"
+          ]
+        },
+        "trialOrder": "37",
+        "componentName": "attr_extremes_extra",
+        "incorrectAnswers": {},
+        "startTime": 1757062557377,
+        "endTime": 1757062623327,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Size"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "South Carolina",
+              "Utah"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "$beauvis.co.overlaid-size": {
+        "identifier": "$beauvis.co.overlaid-size_39",
+        "answer": {
+          "overlaid-size-response": {
+            "enjoyable": "Strongly agree",
+            "likable": "Strongly agree",
+            "pleasing": "Strongly agree",
+            "nice": "Strongly agree",
+            "appealing": "Strongly agree"
+          }
+        },
+        "trialOrder": "39",
+        "componentName": "$beauvis.co.overlaid-size",
+        "incorrectAnswers": {},
+        "startTime": 1757062628348,
+        "endTime": 1757062924408,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {
+          "overlaid-size-response": [
+            "enjoyable",
+            "likable",
+            "pleasing",
+            "nice",
+            "appealing"
+          ]
+        },
+        "formOrder": {
+          "response": [
+            "overlaid-size-response"
+          ]
+        }
+      },
+      "$previs-size.components.ReadingFeatures": {
+        "identifier": "$previs-size.components.ReadingFeatures_40",
+        "answer": {
+          "visible": "5",
+          "see": "5"
+        },
+        "trialOrder": "40",
+        "componentName": "$previs-size.components.ReadingFeatures",
+        "incorrectAnswers": {},
+        "startTime": 1757062924474,
+        "endTime": 1757062983524,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "visible",
+            "see"
+          ]
+        }
+      },
+      "$previs-size.components.Understand": {
+        "identifier": "$previs-size.components.Understand_41",
+        "answer": {
+          "obvious": "3",
+          "represent": "7",
+          "understand": "7"
+        },
+        "trialOrder": "41",
+        "componentName": "$previs-size.components.Understand",
+        "incorrectAnswers": {},
+        "startTime": 1757062983584,
+        "endTime": 1757063008504,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "obvious",
+            "represent",
+            "understand"
+          ]
+        }
+      },
+      "$previs-size.components.ReadingData": {
+        "identifier": "$previs-size.components.ReadingData_42",
+        "answer": {
+          "find": "6",
+          "identify": "6",
+          "information": "6"
+        },
+        "trialOrder": "42",
+        "componentName": "$previs-size.components.ReadingData",
+        "incorrectAnswers": {},
+        "startTime": 1757063008566,
+        "endTime": 1757063027406,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "find",
+            "identify",
+            "information"
+          ]
+        }
+      },
+      "$previs-size.components.Layout": {
+        "answer": {
+          "messy": "6",
+          "crowd": "6",
+          "distract": "5"
+        },
+        "trialOrder": "43",
+        "componentName": "$previs-size.components.Layout",
+        "incorrectAnswers": {},
+        "startTime": 1757063027467,
+        "endTime": 1757063049052,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "messy",
+            "crowd",
+            "distract"
+          ]
+        }
+      }
+    },
+    "searchParams": {},
+    "metadata": {
+      "language": "es-ES",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "resolution": {
+        "width": 1680,
+        "height": 1050,
+        "availHeight": 1050,
+        "availWidth": 1680,
+        "colorDepth": 30,
+        "orientation": "landscape-primary",
+        "pixelDepth": 30
+      },
+      "ip": "79.116.27.4"
+    },
+    "completed": true,
+    "rejected": false,
+    "participantTags": [
+      "previs-4dimensions"
+    ],
+    "f1_scores": {
+      "adj": 1.0,
+      "adj_mean": 1.0,
+      "adj_var": 1.0,
+      "attr_comb": 1.0,
+      "attr_extremes": 1.0,
+      "adj_mean_extra": 1.0,
+      "adj_var_extra": 1.0,
+      "attr_comb_extra": 0.8,
+      "attr_extremes_extra": 1.0
+    }
+  },
+  {
+    "participantId": "a11a48b6-0c3e-4afd-ba20-5b0e013a9f2f",
+    "participantConfigHash": "c52cb893fd013681f3dbee2eca23eb07e87b04502a076154e59079bb6e9f23bc",
+    "sequence": {
+      "orderPath": "root",
+      "order": "fixed",
+      "components": [
+        "introduction",
+        "consent",
+        "data_description",
+        "list2num",
+        "num2list",
+        "connectivity_description",
+        "matrix2graph",
+        "graph2matrix",
+        "encoding_description",
+        {
+          "orderPath": "root-9",
+          "order": "fixed",
+          "components": [
+            "training_intro",
+            "training_interaction",
+            "training_selection",
+            "training_mean_adjacency",
+            "training_std_adjacency",
+            "training_path_estimation",
+            "training_cluster",
+            "training_ends"
+          ]
+        },
+        {
+          "orderPath": "root-10",
+          "order": "random",
+          "components": [
+            "classification_extra",
+            "adj_mean",
+            "cluster_mean_extra",
+            "adj_var",
+            "adj_var_extra",
+            "adj",
+            "attr_extremes",
+            "path_mean",
+            "attr_comb",
+            "attr_comb_extra",
+            "cluster_var_extra",
+            "attr_extremes_extra",
+            "cluster_mean",
+            "path_mean_extra",
+            "path_var_extra",
+            "adj_mean_extra",
+            "path_var",
+            "classification",
+            "path_estimation",
+            "cluster_var",
+            "path_estimation_extra"
+          ]
+        },
+        {
+          "orderPath": "root-11",
+          "order": "fixed",
+          "components": [
+            "tasks_end"
+          ]
+        },
+        {
+          "orderPath": "root-12",
+          "order": "random",
+          "components": [
+            "$beauvis.co.bivariate"
+          ]
+        },
+        {
+          "orderPath": "root-13",
+          "order": "random",
+          "components": [
+            {
+              "id": "previs-4dimensions",
+              "orderPath": "root-13-0",
+              "order": "latinSquare",
+              "components": [
+                "$previs-bivariate.components.Layout",
+                "$previs-bivariate.components.ReadingData",
+                "$previs-bivariate.components.ReadingFeatures",
+                "$previs-bivariate.components.Understand"
+              ]
+            }
+          ]
+        },
+        "end"
+      ]
+    },
+    "participantIndex": 11,
+    "answers": {
+      "classification_extra": {
+        "identifier": "classification_extra_17",
+        "answer": {
+          "stability": {
+            "Minnesota": "High Prices Variation",
+            "Pennsylvania": "Medium Prices Variation",
+            "Texas": "Low Prices Variation"
+          },
+          "answerNodes": []
+        },
+        "trialOrder": "17",
+        "componentName": "classification_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756967361583,
+        "endTime": 1756967417530,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate"
+        },
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {
+          "stability": [
+            "Minnesota",
+            "Pennsylvania",
+            "Texas"
+          ]
+        },
+        "formOrder": {
+          "response": [
+            "stability"
+          ]
+        }
+      },
+      "adj_mean": {
+        "identifier": "adj_mean_18",
+        "answer": {
+          "answerNodes": [
+            "Maryland",
+            "Massachusetts",
+            "New Jersey",
+            "New York",
+            "Virginia"
+          ]
+        },
+        "trialOrder": "18",
+        "componentName": "adj_mean",
+        "incorrectAnswers": {},
+        "startTime": 1756967417585,
+        "endTime": 1756967451161,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Maryland",
+              "Massachusetts",
+              "New Jersey",
+              "New York",
+              "Virginia"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "cluster_mean_extra": {
+        "identifier": "cluster_mean_extra_19",
+        "answer": {
+          "cluster": "A"
+        },
+        "trialOrder": "19",
+        "componentName": "cluster_mean_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756967451217,
+        "endTime": 1756967480935,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate",
+          "clusterMarks": [
+            {
+              "option": "A",
+              "origin": "Washington",
+              "destination": "Washington"
+            },
+            {
+              "option": "B",
+              "origin": "Tennessee",
+              "destination": "South Carolina"
+            },
+            {
+              "option": "C",
+              "origin": "New York",
+              "destination": "Tennessee"
+            },
+            {
+              "option": "D",
+              "origin": "Texas",
+              "destination": "New Jersey"
+            }
+          ],
+          "clusterMode": "pca",
+          "clusterVar": "mean"
+        },
+        "correctAnswer": [
+          {
+            "answer": "A",
+            "id": "cluster"
+          }
+        ],
+        "optionOrders": {
+          "cluster": [
+            {
+              "value": "A",
+              "label": "A"
+            },
+            {
+              "value": "B",
+              "label": "B"
+            },
+            {
+              "value": "C",
+              "label": "C"
+            },
+            {
+              "value": "D",
+              "label": "D"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "cluster"
+          ]
+        }
+      },
+      "adj_var": {
+        "identifier": "adj_var_20",
+        "answer": {
+          "answerNodes": [
+            "Georgia",
+            "Illinois",
+            "Massachusetts",
+            "Michigan",
+            "Minnesota",
+            "New Jersey",
+            "Tennessee",
+            "Oregon"
+          ]
+        },
+        "trialOrder": "20",
+        "componentName": "adj_var",
+        "incorrectAnswers": {},
+        "startTime": 1756967480978,
+        "endTime": 1756967540599,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Georgia",
+              "Illinois",
+              "Michigan",
+              "Massachusetts",
+              "Minnesota",
+              "New Jersey",
+              "North Carolina",
+              "Tennessee",
+              "Oregon"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "adj_var_extra": {
+        "identifier": "adj_var_extra_21",
+        "answer": {
+          "answerNodes": [
+            "Washington",
+            "Colorado",
+            "Florida",
+            "Georgia",
+            "Illinois",
+            "Louisiana",
+            "Massachusetts",
+            "North Carolina",
+            "South Carolina",
+            "Tennessee",
+            "Texas",
+            "Utah"
+          ]
+        },
+        "trialOrder": "21",
+        "componentName": "adj_var_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756967540659,
+        "endTime": 1756967578678,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Washington",
+              "Colorado",
+              "Florida",
+              "Illinois",
+              "Georgia",
+              "Louisiana",
+              "Massachusetts",
+              "North Carolina",
+              "South Carolina",
+              "Tennessee",
+              "Texas"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "adj": {
+        "identifier": "adj_22",
+        "answer": {
+          "answerNodes": [
+            "Florida",
+            "Georgia",
+            "Illinois",
+            "Maryland",
+            "Massachusetts",
+            "Michigan",
+            "New Jersey",
+            "New York",
+            "Ohio",
+            "Pennsylvania",
+            "Tennessee",
+            "Texas",
+            "Washington"
+          ]
+        },
+        "trialOrder": "22",
+        "componentName": "adj",
+        "incorrectAnswers": {},
+        "startTime": 1756967578730,
+        "endTime": 1756967597934,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Florida",
+              "Georgia",
+              "Illinois",
+              "Maryland",
+              "Massachusetts",
+              "Michigan",
+              "New Jersey",
+              "New York",
+              "Ohio",
+              "Pennsylvania",
+              "Tennessee",
+              "Texas",
+              "Washington"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "attr_extremes": {
+        "identifier": "attr_extremes_23",
+        "answer": {
+          "answerNodes": [
+            "Pennsylvania",
+            "Tennessee"
+          ]
+        },
+        "trialOrder": "23",
+        "componentName": "attr_extremes",
+        "incorrectAnswers": {},
+        "startTime": 1756967597994,
+        "endTime": 1756967639390,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Minnesota",
+              "Pennsylvania"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "path_mean": {
+        "identifier": "path_mean_24",
+        "answer": {
+          "path": "Utah \u2192 Colorado \u2192 New York",
+          "answerNodes": [
+            "Illinois"
+          ]
+        },
+        "trialOrder": "24",
+        "componentName": "path_mean",
+        "incorrectAnswers": {},
+        "startTime": 1756967639442,
+        "endTime": 1756967725061,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate"
+        },
+        "correctAnswer": [
+          {
+            "answer": "Utah \u2192 Colorado \u2192 New York",
+            "id": "path"
+          }
+        ],
+        "optionOrders": {
+          "path": [
+            {
+              "value": "Utah \u2192 Michigan \u2192 New York",
+              "label": "Utah \u2192 Michigan \u2192 New York"
+            },
+            {
+              "value": "Utah \u2192 Washington \u2192 New York",
+              "label": "Utah \u2192 Washington \u2192 New York"
+            },
+            {
+              "value": "Utah \u2192 Colorado \u2192 New York",
+              "label": "Utah \u2192 Colorado \u2192 New York"
+            },
+            {
+              "value": "Utah \u2192 Nevada \u2192 New York",
+              "label": "Utah \u2192 Nevada \u2192 New York"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "path"
+          ]
+        }
+      },
+      "attr_comb": {
+        "identifier": "attr_comb_25",
+        "answer": {
+          "answerNodes": [
+            "Georgia",
+            "Pennsylvania",
+            "Texas"
+          ]
+        },
+        "trialOrder": "25",
+        "componentName": "attr_comb",
+        "incorrectAnswers": {},
+        "startTime": 1756967725107,
+        "endTime": 1756967759497,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Georgia",
+              "Pennsylvania",
+              "Texas"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "attr_comb_extra": {
+        "identifier": "attr_comb_extra_26",
+        "answer": {
+          "answerNodes": [
+            "Missouri",
+            "Tennessee",
+            "Washington"
+          ]
+        },
+        "trialOrder": "26",
+        "componentName": "attr_comb_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756967759551,
+        "endTime": 1756967785330,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Tennessee",
+              "Washington"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "cluster_var_extra": {
+        "identifier": "cluster_var_extra_27",
+        "answer": {
+          "cluster": "B"
+        },
+        "trialOrder": "27",
+        "componentName": "cluster_var_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756967785395,
+        "endTime": 1756967800789,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate",
+          "clusterMarks": [
+            {
+              "option": "A",
+              "origin": "Pennsylvania",
+              "destination": "Illinois"
+            },
+            {
+              "option": "B",
+              "origin": "Nevada",
+              "destination": "Nevada"
+            },
+            {
+              "option": "C",
+              "origin": "Nevada",
+              "destination": "Tennessee"
+            },
+            {
+              "option": "D",
+              "origin": "Massachusetts",
+              "destination": "Ohio"
+            }
+          ],
+          "clusterMode": "pca",
+          "clusterVar": "snr"
+        },
+        "correctAnswer": [
+          {
+            "answer": "A",
+            "id": "cluster"
+          }
+        ],
+        "optionOrders": {
+          "cluster": [
+            {
+              "value": "A",
+              "label": "A"
+            },
+            {
+              "value": "B",
+              "label": "B"
+            },
+            {
+              "value": "C",
+              "label": "C"
+            },
+            {
+              "value": "D",
+              "label": "D"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "cluster"
+          ]
+        }
+      },
+      "attr_extremes_extra": {
+        "identifier": "attr_extremes_extra_28",
+        "answer": {
+          "answerNodes": [
+            "South Carolina",
+            "Minnesota"
+          ]
+        },
+        "trialOrder": "28",
+        "componentName": "attr_extremes_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756967800838,
+        "endTime": 1756967832283,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "South Carolina",
+              "Utah"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "cluster_mean": {
+        "identifier": "cluster_mean_29",
+        "answer": {
+          "cluster": "C"
+        },
+        "trialOrder": "29",
+        "componentName": "cluster_mean",
+        "incorrectAnswers": {},
+        "startTime": 1756967832332,
+        "endTime": 1756967843021,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate",
+          "clusterMarks": [
+            {
+              "option": "A",
+              "origin": "Virginia",
+              "destination": "Arizona"
+            },
+            {
+              "option": "B",
+              "origin": "Massachusetts",
+              "destination": "Utah"
+            },
+            {
+              "option": "C",
+              "origin": "Washington",
+              "destination": "Massachusetts"
+            },
+            {
+              "option": "D",
+              "origin": "Utah",
+              "destination": "Tennessee"
+            }
+          ],
+          "clusterMode": "optimal",
+          "clusterVar": "mean"
+        },
+        "correctAnswer": [
+          {
+            "answer": "C",
+            "id": "cluster"
+          }
+        ],
+        "optionOrders": {
+          "cluster": [
+            {
+              "value": "A",
+              "label": "A"
+            },
+            {
+              "value": "B",
+              "label": "B"
+            },
+            {
+              "value": "C",
+              "label": "C"
+            },
+            {
+              "value": "D",
+              "label": "D"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "cluster"
+          ]
+        }
+      },
+      "path_mean_extra": {
+        "identifier": "path_mean_extra_30",
+        "answer": {
+          "path": "Florida \u2192 Minnesota \u2192 North Carolina",
+          "answerNodes": [
+            "Minnesota"
+          ]
+        },
+        "trialOrder": "30",
+        "componentName": "path_mean_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756967843071,
+        "endTime": 1756967882991,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate"
+        },
+        "correctAnswer": [
+          {
+            "answer": "Florida \u2192 Minnesota \u2192 North Carolina",
+            "id": "path"
+          }
+        ],
+        "optionOrders": {
+          "path": [
+            {
+              "value": "Florida \u2192 Lousiana \u2192 North Carolina",
+              "label": "Florida \u2192 Lousiana \u2192 North Carolina"
+            },
+            {
+              "value": "Florida \u2192 Minnesota \u2192 North Carolina",
+              "label": "Florida \u2192 Minnesota \u2192 North Carolina"
+            },
+            {
+              "value": "Florida \u2192 Colorado \u2192 North Carolina",
+              "label": "Florida \u2192 Colorado \u2192 North Carolina"
+            },
+            {
+              "value": "Florida \u2192 Washington \u2192 North Carolina",
+              "label": "Florida \u2192 Washington \u2192 North Carolina"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "path"
+          ]
+        }
+      },
+      "path_var_extra": {
+        "identifier": "path_var_extra_31",
+        "answer": {
+          "path": "Missouri \u2192 Michigan \u2192 Utah"
+        },
+        "trialOrder": "31",
+        "componentName": "path_var_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756967883036,
+        "endTime": 1756967919476,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate"
+        },
+        "correctAnswer": [
+          {
+            "answer": "Missouri \u2192 Michigan \u2192 Utah",
+            "id": "path"
+          }
+        ],
+        "optionOrders": {
+          "path": [
+            {
+              "value": "Missouri \u2192 Michigan \u2192 Utah",
+              "label": "Missouri \u2192 Michigan \u2192 Utah"
+            },
+            {
+              "value": "Missouri \u2192 New York \u2192 Utah",
+              "label": "Missouri \u2192 New York \u2192 Utah"
+            },
+            {
+              "value": "Missouri \u2192 Georgia \u2192 Utah",
+              "label": "Missouri \u2192 Georgia \u2192 Utah"
+            },
+            {
+              "value": "Missouri \u2192 Virginia \u2192 Utah",
+              "label": "Missouri \u2192 Virginia \u2192 Utah"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "path"
+          ]
+        }
+      },
+      "adj_mean_extra": {
+        "identifier": "adj_mean_extra_32",
+        "answer": {
+          "answerNodes": [
+            "Louisiana",
+            "California",
+            "Colorado",
+            "Nevada",
+            "Utah"
+          ]
+        },
+        "trialOrder": "32",
+        "componentName": "adj_mean_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756967919521,
+        "endTime": 1756967942887,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "California",
+              "Colorado",
+              "Nevada",
+              "Utah"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "path_var": {
+        "identifier": "path_var_33",
+        "answer": {
+          "path": "California \u2192 Colorado \u2192 Michigan"
+        },
+        "trialOrder": "33",
+        "componentName": "path_var",
+        "incorrectAnswers": {},
+        "startTime": 1756967942950,
+        "endTime": 1756968061020,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate"
+        },
+        "correctAnswer": [
+          {
+            "answer": "California \u2192 Massachusetts \u2192 Michigan",
+            "id": "path"
+          }
+        ],
+        "optionOrders": {
+          "path": [
+            {
+              "value": "California \u2192 Colorado \u2192 Michigan",
+              "label": "California \u2192 Colorado \u2192 Michigan"
+            },
+            {
+              "value": "California \u2192 Minesota \u2192 Michigan",
+              "label": "California \u2192 Minesota \u2192 Michigan"
+            },
+            {
+              "value": "California \u2192 Utah \u2192 Michigan",
+              "label": "California \u2192 Utah \u2192 Michigan"
+            },
+            {
+              "value": "California \u2192 Massachusetts \u2192 Michigan",
+              "label": "California \u2192 Massachusetts \u2192 Michigan"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "path"
+          ]
+        }
+      },
+      "classification": {
+        "identifier": "classification_34",
+        "answer": {
+          "stability": {
+            "Oregon": "Medium Price Variation",
+            "Utah": "High Price Variation",
+            "Illinois": "Low Price Variation"
+          }
+        },
+        "trialOrder": "34",
+        "componentName": "classification",
+        "incorrectAnswers": {},
+        "startTime": 1756968061074,
+        "endTime": 1756968112568,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate"
+        },
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {
+          "stability": [
+            "Oregon",
+            "Utah",
+            "Illinois"
+          ]
+        },
+        "formOrder": {
+          "response": [
+            "stability"
+          ]
+        }
+      },
+      "path_estimation": {
+        "identifier": "path_estimation_35",
+        "answer": {
+          "mean": 350,
+          "std": 150
+        },
+        "trialOrder": "35",
+        "componentName": "path_estimation",
+        "incorrectAnswers": {},
+        "startTime": 1756968112634,
+        "endTime": 1756968199692,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate"
+        },
+        "correctAnswer": [
+          {
+            "answer": 300,
+            "id": "mean"
+          },
+          {
+            "answer": 140,
+            "id": "std"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "mean",
+            "std"
+          ]
+        }
+      },
+      "cluster_var": {
+        "identifier": "cluster_var_36",
+        "answer": {
+          "cluster": "C"
+        },
+        "trialOrder": "36",
+        "componentName": "cluster_var",
+        "incorrectAnswers": {},
+        "startTime": 1756968199730,
+        "endTime": 1756968223458,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate",
+          "clusterMarks": [
+            {
+              "option": "A",
+              "origin": "Missouri",
+              "destination": "Texas"
+            },
+            {
+              "option": "B",
+              "origin": "Maryland",
+              "destination": "New York"
+            },
+            {
+              "option": "C",
+              "origin": "Georgia",
+              "destination": "Minnesota"
+            },
+            {
+              "option": "D",
+              "origin": "Pennsylvania",
+              "destination": "North Carolina"
+            }
+          ],
+          "clusterMode": "optimal",
+          "clusterVar": "std"
+        },
+        "correctAnswer": [
+          {
+            "answer": "C",
+            "id": "cluster"
+          }
+        ],
+        "optionOrders": {
+          "cluster": [
+            {
+              "value": "A",
+              "label": "A"
+            },
+            {
+              "value": "B",
+              "label": "B"
+            },
+            {
+              "value": "C",
+              "label": "C"
+            },
+            {
+              "value": "D",
+              "label": "D"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "cluster"
+          ]
+        }
+      },
+      "path_estimation_extra": {
+        "identifier": "path_estimation_extra_37",
+        "answer": {
+          "mean": 250,
+          "std": 180
+        },
+        "trialOrder": "37",
+        "componentName": "path_estimation_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756968223514,
+        "endTime": 1756968312319,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Bivariate"
+        },
+        "correctAnswer": [
+          {
+            "answer": 0,
+            "id": "mean"
+          },
+          {
+            "answer": 0,
+            "id": "std"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "mean",
+            "std"
+          ]
+        }
+      },
+      "$beauvis.co.bivariate": {
+        "identifier": "$beauvis.co.bivariate_39",
+        "answer": {
+          "bivariate-response": {
+            "enjoyable": "Neutral",
+            "likable": "Neutral",
+            "pleasing": "Disagree",
+            "nice": "Slightly agree",
+            "appealing": "Agree"
+          }
+        },
+        "trialOrder": "39",
+        "componentName": "$beauvis.co.bivariate",
+        "incorrectAnswers": {},
+        "startTime": 1756968314788,
+        "endTime": 1756968349333,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {
+          "bivariate-response": [
+            "enjoyable",
+            "likable",
+            "pleasing",
+            "nice",
+            "appealing"
+          ]
+        },
+        "formOrder": {
+          "response": [
+            "bivariate-response"
+          ]
+        }
+      },
+      "$previs-bivariate.components.Layout": {
+        "identifier": "$previs-bivariate.components.Layout_40",
+        "answer": {
+          "messy": "7",
+          "crowd": "4",
+          "distract": "6"
+        },
+        "trialOrder": "40",
+        "componentName": "$previs-bivariate.components.Layout",
+        "incorrectAnswers": {},
+        "startTime": 1756968349403,
+        "endTime": 1756968363074,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "messy",
+            "crowd",
+            "distract"
+          ]
+        }
+      },
+      "$previs-bivariate.components.ReadingData": {
+        "identifier": "$previs-bivariate.components.ReadingData_41",
+        "answer": {
+          "find": "5",
+          "identify": "3",
+          "information": "4"
+        },
+        "trialOrder": "41",
+        "componentName": "$previs-bivariate.components.ReadingData",
+        "incorrectAnswers": {},
+        "startTime": 1756968363155,
+        "endTime": 1756968380134,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "find",
+            "identify",
+            "information"
+          ]
+        }
+      },
+      "$previs-bivariate.components.ReadingFeatures": {
+        "identifier": "$previs-bivariate.components.ReadingFeatures_42",
+        "answer": {
+          "visible": "6",
+          "see": "6"
+        },
+        "trialOrder": "42",
+        "componentName": "$previs-bivariate.components.ReadingFeatures",
+        "incorrectAnswers": {},
+        "startTime": 1756968380198,
+        "endTime": 1756968406816,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "visible",
+            "see"
+          ]
+        }
+      },
+      "$previs-bivariate.components.Understand": {
+        "answer": {
+          "obvious": "7",
+          "represent": "6",
+          "understand": "7"
+        },
+        "trialOrder": "43",
+        "componentName": "$previs-bivariate.components.Understand",
+        "incorrectAnswers": {},
+        "startTime": 1756968406886,
+        "endTime": 1756968425782,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "obvious",
+            "represent",
+            "understand"
+          ]
+        }
+      }
+    },
+    "searchParams": {},
+    "metadata": {
+      "language": "en-US",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Safari/605.1.15",
+      "resolution": {
+        "width": 1512,
+        "height": 982,
+        "availHeight": 944,
+        "availWidth": 1512,
+        "colorDepth": 24,
+        "orientation": "landscape-primary",
+        "pixelDepth": 24
+      },
+      "ip": "76.23.49.32"
+    },
+    "completed": true,
+    "rejected": false,
+    "participantTags": [
+      "previs-4dimensions"
+    ],
+    "f1_scores": {
+      "adj": 1.0,
+      "adj_mean": 1.0,
+      "adj_var": 0.9411764705882353,
+      "attr_comb": 1.0,
+      "attr_extremes": 0.5,
+      "adj_mean_extra": 0.888888888888889,
+      "adj_var_extra": 0.9565217391304348,
+      "attr_comb_extra": 0.8,
+      "attr_extremes_extra": 0.5
+    }
+  },
+  {
+    "participantId": "b0dcaf25-9bda-4886-ac08-d7c49c764a19",
+    "participantConfigHash": "efb65b6139a95c669b91e107db728fb4c80f8ab33fd052785d184fb010dbf546",
+    "sequence": {
+      "orderPath": "root",
+      "order": "fixed",
+      "components": [
+        "introduction",
+        "consent",
+        "data_description",
+        "list2num",
+        "num2list",
+        "connectivity_description",
+        "matrix2graph",
+        "graph2matrix",
+        "encoding_description",
+        {
+          "orderPath": "root-9",
+          "order": "fixed",
+          "components": [
+            "training_intro",
+            "training_interaction",
+            "training_selection",
+            "training_mean_adjacency",
+            "training_std_adjacency",
+            "training_path_estimation",
+            "training_cluster",
+            "training_ends"
+          ]
+        },
+        {
+          "orderPath": "root-10",
+          "order": "random",
+          "components": [
+            "attr_extremes",
+            "attr_comb_extra",
+            "adj_mean",
+            "attr_extremes_extra",
+            "adj_var_extra",
+            "adj",
+            "attr_comb",
+            "path_mean",
+            "adj_var",
+            "classification",
+            "path_estimation",
+            "path_var",
+            "path_estimation_extra",
+            "cluster_mean",
+            "path_mean_extra",
+            "adj_mean_extra",
+            "path_var_extra",
+            "cluster_var",
+            "cluster_var_extra",
+            "cluster_mean_extra",
+            "classification_extra"
+          ]
+        },
+        {
+          "orderPath": "root-11",
+          "order": "fixed",
+          "components": [
+            "tasks_end"
+          ]
+        },
+        {
+          "orderPath": "root-12",
+          "order": "random",
+          "components": [
+            "$beauvis.co.overlaid-angle"
+          ]
+        },
+        {
+          "orderPath": "root-13",
+          "order": "random",
+          "components": [
+            {
+              "id": "previs-4dimensions",
+              "orderPath": "root-13-0",
+              "order": "latinSquare",
+              "components": [
+                "$previs-angle.components.Layout",
+                "$previs-angle.components.Understand",
+                "$previs-angle.components.ReadingFeatures",
+                "$previs-angle.components.ReadingData"
+              ]
+            }
+          ]
+        },
+        "end"
+      ]
+    },
+    "participantIndex": 4,
+    "answers": {
+      "attr_extremes": {
+        "identifier": "attr_extremes_17",
+        "answer": {
+          "answerNodes": [
+            "Minnesota",
+            "Pennsylvania"
+          ]
+        },
+        "trialOrder": "17",
+        "componentName": "attr_extremes",
+        "incorrectAnswers": {},
+        "startTime": 1756970001058,
+        "endTime": 1756970057817,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Minnesota",
+              "Pennsylvania"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "attr_comb_extra": {
+        "identifier": "attr_comb_extra_18",
+        "answer": {
+          "answerNodes": [
+            "Colorado",
+            "Illinois",
+            "Tennessee"
+          ]
+        },
+        "trialOrder": "18",
+        "componentName": "attr_comb_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756970057851,
+        "endTime": 1756970127099,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Tennessee",
+              "Washington"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "adj_mean": {
+        "identifier": "adj_mean_19",
+        "answer": {
+          "answerNodes": [
+            "New Jersey",
+            "New York",
+            "Virginia",
+            "Maryland",
+            "Massachusetts"
+          ]
+        },
+        "trialOrder": "19",
+        "componentName": "adj_mean",
+        "incorrectAnswers": {},
+        "startTime": 1756970127139,
+        "endTime": 1756970144815,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Maryland",
+              "Massachusetts",
+              "New Jersey",
+              "New York",
+              "Virginia"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "attr_extremes_extra": {
+        "identifier": "attr_extremes_extra_20",
+        "answer": {
+          "answerNodes": [
+            "South Carolina",
+            "Utah"
+          ]
+        },
+        "trialOrder": "20",
+        "componentName": "attr_extremes_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756970144849,
+        "endTime": 1756970169474,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "South Carolina",
+              "Utah"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "adj_var_extra": {
+        "identifier": "adj_var_extra_21",
+        "answer": {
+          "answerNodes": [
+            "Louisiana",
+            "Missouri"
+          ]
+        },
+        "trialOrder": "21",
+        "componentName": "adj_var_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756970169519,
+        "endTime": 1756970185259,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Washington",
+              "Colorado",
+              "Florida",
+              "Illinois",
+              "Georgia",
+              "Louisiana",
+              "Massachusetts",
+              "North Carolina",
+              "South Carolina",
+              "Tennessee",
+              "Texas"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "adj": {
+        "identifier": "adj_22",
+        "answer": {
+          "answerNodes": [
+            "Florida",
+            "Georgia",
+            "Illinois",
+            "Maryland",
+            "Massachusetts",
+            "Michigan",
+            "New Jersey",
+            "New York",
+            "Ohio",
+            "Pennsylvania",
+            "Tennessee",
+            "Texas",
+            "Washington"
+          ]
+        },
+        "trialOrder": "22",
+        "componentName": "adj",
+        "incorrectAnswers": {},
+        "startTime": 1756970185297,
+        "endTime": 1756970205334,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Florida",
+              "Georgia",
+              "Illinois",
+              "Maryland",
+              "Massachusetts",
+              "Michigan",
+              "New Jersey",
+              "New York",
+              "Ohio",
+              "Pennsylvania",
+              "Tennessee",
+              "Texas",
+              "Washington"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "attr_comb": {
+        "identifier": "attr_comb_23",
+        "answer": {
+          "answerNodes": [
+            "Michigan",
+            "New York",
+            "North Carolina"
+          ]
+        },
+        "trialOrder": "23",
+        "componentName": "attr_comb",
+        "incorrectAnswers": {},
+        "startTime": 1756970205369,
+        "endTime": 1756970233925,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Georgia",
+              "Pennsylvania",
+              "Texas"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "path_mean": {
+        "identifier": "path_mean_24",
+        "answer": {
+          "path": "Utah \u2192 Washington \u2192 New York"
+        },
+        "trialOrder": "24",
+        "componentName": "path_mean",
+        "incorrectAnswers": {},
+        "startTime": 1756970233966,
+        "endTime": 1756970279399,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle"
+        },
+        "correctAnswer": [
+          {
+            "answer": "Utah \u2192 Colorado \u2192 New York",
+            "id": "path"
+          }
+        ],
+        "optionOrders": {
+          "path": [
+            {
+              "value": "Utah \u2192 Michigan \u2192 New York",
+              "label": "Utah \u2192 Michigan \u2192 New York"
+            },
+            {
+              "value": "Utah \u2192 Washington \u2192 New York",
+              "label": "Utah \u2192 Washington \u2192 New York"
+            },
+            {
+              "value": "Utah \u2192 Colorado \u2192 New York",
+              "label": "Utah \u2192 Colorado \u2192 New York"
+            },
+            {
+              "value": "Utah \u2192 Nevada \u2192 New York",
+              "label": "Utah \u2192 Nevada \u2192 New York"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "path"
+          ]
+        }
+      },
+      "adj_var": {
+        "identifier": "adj_var_25",
+        "answer": {
+          "answerNodes": [
+            "Georgia",
+            "Illinois",
+            "Massachusetts",
+            "Michigan",
+            "Minnesota",
+            "New Jersey",
+            "Oregon",
+            "Tennessee"
+          ]
+        },
+        "trialOrder": "25",
+        "componentName": "adj_var",
+        "incorrectAnswers": {},
+        "startTime": 1756970279443,
+        "endTime": 1756970311700,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "Georgia",
+              "Illinois",
+              "Michigan",
+              "Massachusetts",
+              "Minnesota",
+              "New Jersey",
+              "North Carolina",
+              "Tennessee",
+              "Oregon"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "classification": {
+        "identifier": "classification_26",
+        "answer": {
+          "stability": {
+            "Oregon": "Medium Price Variation",
+            "Utah": "High Price Variation",
+            "Illinois": "Low Price Variation"
+          }
+        },
+        "trialOrder": "26",
+        "componentName": "classification",
+        "incorrectAnswers": {},
+        "startTime": 1756970311738,
+        "endTime": 1756970352930,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle"
+        },
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {
+          "stability": [
+            "Oregon",
+            "Utah",
+            "Illinois"
+          ]
+        },
+        "formOrder": {
+          "response": [
+            "stability"
+          ]
+        }
+      },
+      "path_estimation": {
+        "identifier": "path_estimation_27",
+        "answer": {
+          "mean": 350,
+          "std": 180
+        },
+        "trialOrder": "27",
+        "componentName": "path_estimation",
+        "incorrectAnswers": {},
+        "startTime": 1756970352975,
+        "endTime": 1756970409854,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle"
+        },
+        "correctAnswer": [
+          {
+            "answer": 300,
+            "id": "mean"
+          },
+          {
+            "answer": 140,
+            "id": "std"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "mean",
+            "std"
+          ]
+        }
+      },
+      "path_var": {
+        "identifier": "path_var_28",
+        "answer": {
+          "path": "California \u2192 Minesota \u2192 Michigan"
+        },
+        "trialOrder": "28",
+        "componentName": "path_var",
+        "incorrectAnswers": {},
+        "startTime": 1756970409890,
+        "endTime": 1756970483540,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle"
+        },
+        "correctAnswer": [
+          {
+            "answer": "California \u2192 Massachusetts \u2192 Michigan",
+            "id": "path"
+          }
+        ],
+        "optionOrders": {
+          "path": [
+            {
+              "value": "California \u2192 Colorado \u2192 Michigan",
+              "label": "California \u2192 Colorado \u2192 Michigan"
+            },
+            {
+              "value": "California \u2192 Minesota \u2192 Michigan",
+              "label": "California \u2192 Minesota \u2192 Michigan"
+            },
+            {
+              "value": "California \u2192 Utah \u2192 Michigan",
+              "label": "California \u2192 Utah \u2192 Michigan"
+            },
+            {
+              "value": "California \u2192 Massachusetts \u2192 Michigan",
+              "label": "California \u2192 Massachusetts \u2192 Michigan"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "path"
+          ]
+        }
+      },
+      "path_estimation_extra": {
+        "identifier": "path_estimation_extra_29",
+        "answer": {
+          "mean": 200,
+          "std": 240
+        },
+        "trialOrder": "29",
+        "componentName": "path_estimation_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756970483582,
+        "endTime": 1756970566510,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle"
+        },
+        "correctAnswer": [
+          {
+            "answer": 0,
+            "id": "mean"
+          },
+          {
+            "answer": 0,
+            "id": "std"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "mean",
+            "std"
+          ]
+        }
+      },
+      "cluster_mean": {
+        "identifier": "cluster_mean_30",
+        "answer": {
+          "cluster": "C"
+        },
+        "trialOrder": "30",
+        "componentName": "cluster_mean",
+        "incorrectAnswers": {},
+        "startTime": 1756970566552,
+        "endTime": 1756970578572,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle",
+          "clusterMarks": [
+            {
+              "option": "A",
+              "origin": "Virginia",
+              "destination": "Arizona"
+            },
+            {
+              "option": "B",
+              "origin": "Massachusetts",
+              "destination": "Utah"
+            },
+            {
+              "option": "C",
+              "origin": "Washington",
+              "destination": "Massachusetts"
+            },
+            {
+              "option": "D",
+              "origin": "Utah",
+              "destination": "Tennessee"
+            }
+          ],
+          "clusterMode": "optimal",
+          "clusterVar": "mean"
+        },
+        "correctAnswer": [
+          {
+            "answer": "C",
+            "id": "cluster"
+          }
+        ],
+        "optionOrders": {
+          "cluster": [
+            {
+              "value": "A",
+              "label": "A"
+            },
+            {
+              "value": "B",
+              "label": "B"
+            },
+            {
+              "value": "C",
+              "label": "C"
+            },
+            {
+              "value": "D",
+              "label": "D"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "cluster"
+          ]
+        }
+      },
+      "path_mean_extra": {
+        "identifier": "path_mean_extra_31",
+        "answer": {
+          "path": "Florida \u2192 Washington \u2192 North Carolina"
+        },
+        "trialOrder": "31",
+        "componentName": "path_mean_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756970578603,
+        "endTime": 1756970657919,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle"
+        },
+        "correctAnswer": [
+          {
+            "answer": "Florida \u2192 Minnesota \u2192 North Carolina",
+            "id": "path"
+          }
+        ],
+        "optionOrders": {
+          "path": [
+            {
+              "value": "Florida \u2192 Lousiana \u2192 North Carolina",
+              "label": "Florida \u2192 Lousiana \u2192 North Carolina"
+            },
+            {
+              "value": "Florida \u2192 Minnesota \u2192 North Carolina",
+              "label": "Florida \u2192 Minnesota \u2192 North Carolina"
+            },
+            {
+              "value": "Florida \u2192 Colorado \u2192 North Carolina",
+              "label": "Florida \u2192 Colorado \u2192 North Carolina"
+            },
+            {
+              "value": "Florida \u2192 Washington \u2192 North Carolina",
+              "label": "Florida \u2192 Washington \u2192 North Carolina"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "path"
+          ]
+        }
+      },
+      "adj_mean_extra": {
+        "identifier": "adj_mean_extra_32",
+        "answer": {
+          "answerNodes": [
+            "California",
+            "Colorado",
+            "Nevada",
+            "Utah"
+          ]
+        },
+        "trialOrder": "32",
+        "componentName": "adj_mean_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756970657952,
+        "endTime": 1756970672795,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle"
+        },
+        "correctAnswer": [
+          {
+            "answer": [
+              "California",
+              "Colorado",
+              "Nevada",
+              "Utah"
+            ],
+            "id": "answerNodes"
+          }
+        ],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "answerNodes"
+          ]
+        }
+      },
+      "path_var_extra": {
+        "identifier": "path_var_extra_33",
+        "answer": {
+          "path": "Missouri \u2192 Michigan \u2192 Utah"
+        },
+        "trialOrder": "33",
+        "componentName": "path_var_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756970672831,
+        "endTime": 1756970768607,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle"
+        },
+        "correctAnswer": [
+          {
+            "answer": "Missouri \u2192 Michigan \u2192 Utah",
+            "id": "path"
+          }
+        ],
+        "optionOrders": {
+          "path": [
+            {
+              "value": "Missouri \u2192 Michigan \u2192 Utah",
+              "label": "Missouri \u2192 Michigan \u2192 Utah"
+            },
+            {
+              "value": "Missouri \u2192 New York \u2192 Utah",
+              "label": "Missouri \u2192 New York \u2192 Utah"
+            },
+            {
+              "value": "Missouri \u2192 Georgia \u2192 Utah",
+              "label": "Missouri \u2192 Georgia \u2192 Utah"
+            },
+            {
+              "value": "Missouri \u2192 Virginia \u2192 Utah",
+              "label": "Missouri \u2192 Virginia \u2192 Utah"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "path"
+          ]
+        }
+      },
+      "cluster_var": {
+        "identifier": "cluster_var_34",
+        "answer": {
+          "cluster": "C"
+        },
+        "trialOrder": "34",
+        "componentName": "cluster_var",
+        "incorrectAnswers": {},
+        "startTime": 1756970768644,
+        "endTime": 1756970798056,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle",
+          "clusterMarks": [
+            {
+              "option": "A",
+              "origin": "Missouri",
+              "destination": "Texas"
+            },
+            {
+              "option": "B",
+              "origin": "Maryland",
+              "destination": "New York"
+            },
+            {
+              "option": "C",
+              "origin": "Georgia",
+              "destination": "Minnesota"
+            },
+            {
+              "option": "D",
+              "origin": "Pennsylvania",
+              "destination": "North Carolina"
+            }
+          ],
+          "clusterMode": "optimal",
+          "clusterVar": "std"
+        },
+        "correctAnswer": [
+          {
+            "answer": "C",
+            "id": "cluster"
+          }
+        ],
+        "optionOrders": {
+          "cluster": [
+            {
+              "value": "A",
+              "label": "A"
+            },
+            {
+              "value": "B",
+              "label": "B"
+            },
+            {
+              "value": "C",
+              "label": "C"
+            },
+            {
+              "value": "D",
+              "label": "D"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "cluster"
+          ]
+        }
+      },
+      "cluster_var_extra": {
+        "identifier": "cluster_var_extra_35",
+        "answer": {
+          "cluster": "A"
+        },
+        "trialOrder": "35",
+        "componentName": "cluster_var_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756970798098,
+        "endTime": 1756970816294,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle",
+          "clusterMarks": [
+            {
+              "option": "A",
+              "origin": "Pennsylvania",
+              "destination": "Illinois"
+            },
+            {
+              "option": "B",
+              "origin": "Nevada",
+              "destination": "Nevada"
+            },
+            {
+              "option": "C",
+              "origin": "Nevada",
+              "destination": "Tennessee"
+            },
+            {
+              "option": "D",
+              "origin": "Massachusetts",
+              "destination": "Ohio"
+            }
+          ],
+          "clusterMode": "pca",
+          "clusterVar": "snr"
+        },
+        "correctAnswer": [
+          {
+            "answer": "A",
+            "id": "cluster"
+          }
+        ],
+        "optionOrders": {
+          "cluster": [
+            {
+              "value": "A",
+              "label": "A"
+            },
+            {
+              "value": "B",
+              "label": "B"
+            },
+            {
+              "value": "C",
+              "label": "C"
+            },
+            {
+              "value": "D",
+              "label": "D"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "cluster"
+          ]
+        }
+      },
+      "cluster_mean_extra": {
+        "identifier": "cluster_mean_extra_36",
+        "answer": {
+          "cluster": "A"
+        },
+        "trialOrder": "36",
+        "componentName": "cluster_mean_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756970816333,
+        "endTime": 1756970841634,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle",
+          "clusterMarks": [
+            {
+              "option": "A",
+              "origin": "Washington",
+              "destination": "Washington"
+            },
+            {
+              "option": "B",
+              "origin": "Tennessee",
+              "destination": "South Carolina"
+            },
+            {
+              "option": "C",
+              "origin": "New York",
+              "destination": "Tennessee"
+            },
+            {
+              "option": "D",
+              "origin": "Texas",
+              "destination": "New Jersey"
+            }
+          ],
+          "clusterMode": "pca",
+          "clusterVar": "mean"
+        },
+        "correctAnswer": [
+          {
+            "answer": "A",
+            "id": "cluster"
+          }
+        ],
+        "optionOrders": {
+          "cluster": [
+            {
+              "value": "A",
+              "label": "A"
+            },
+            {
+              "value": "B",
+              "label": "B"
+            },
+            {
+              "value": "C",
+              "label": "C"
+            },
+            {
+              "value": "D",
+              "label": "D"
+            }
+          ]
+        },
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "cluster"
+          ]
+        }
+      },
+      "classification_extra": {
+        "identifier": "classification_extra_37",
+        "answer": {
+          "stability": {
+            "Minnesota": "Low Prices Variation",
+            "Pennsylvania": "High Prices Variation",
+            "Texas": "Medium Prices Variation"
+          }
+        },
+        "trialOrder": "37",
+        "componentName": "classification_extra",
+        "incorrectAnswers": {},
+        "startTime": 1756970841676,
+        "endTime": 1756970895948,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {
+          "dataset": "../matrices/data/tasks_data.txt",
+          "encoding": "Overlaid Mark Angle"
+        },
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {
+          "stability": [
+            "Minnesota",
+            "Pennsylvania",
+            "Texas"
+          ]
+        },
+        "formOrder": {
+          "response": [
+            "stability"
+          ]
+        }
+      },
+      "$beauvis.co.overlaid-angle": {
+        "identifier": "$beauvis.co.overlaid-angle_39",
+        "answer": {
+          "overlaid-angle-response": {
+            "enjoyable": "Agree",
+            "likable": "Agree",
+            "pleasing": "Agree",
+            "nice": "Agree",
+            "appealing": "Agree"
+          }
+        },
+        "trialOrder": "39",
+        "componentName": "$beauvis.co.overlaid-angle",
+        "incorrectAnswers": {},
+        "startTime": 1756970900153,
+        "endTime": 1756970913850,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {
+          "overlaid-angle-response": [
+            "enjoyable",
+            "likable",
+            "pleasing",
+            "nice",
+            "appealing"
+          ]
+        },
+        "formOrder": {
+          "response": [
+            "overlaid-angle-response"
+          ]
+        }
+      },
+      "$previs-angle.components.Layout": {
+        "identifier": "$previs-angle.components.Layout_40",
+        "answer": {
+          "messy": "6",
+          "crowd": "6",
+          "distract": "6"
+        },
+        "trialOrder": "40",
+        "componentName": "$previs-angle.components.Layout",
+        "incorrectAnswers": {},
+        "startTime": 1756970913880,
+        "endTime": 1756970928056,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "messy",
+            "crowd",
+            "distract"
+          ]
+        }
+      },
+      "$previs-angle.components.Understand": {
+        "identifier": "$previs-angle.components.Understand_41",
+        "answer": {
+          "obvious": "5",
+          "represent": "6",
+          "understand": "6"
+        },
+        "trialOrder": "41",
+        "componentName": "$previs-angle.components.Understand",
+        "incorrectAnswers": {},
+        "startTime": 1756970928110,
+        "endTime": 1756970941887,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "obvious",
+            "represent",
+            "understand"
+          ]
+        }
+      },
+      "$previs-angle.components.ReadingFeatures": {
+        "identifier": "$previs-angle.components.ReadingFeatures_42",
+        "answer": {
+          "visible": "2",
+          "see": "2"
+        },
+        "trialOrder": "42",
+        "componentName": "$previs-angle.components.ReadingFeatures",
+        "incorrectAnswers": {},
+        "startTime": 1756970941955,
+        "endTime": 1756970953478,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "visible",
+            "see"
+          ]
+        }
+      },
+      "$previs-angle.components.ReadingData": {
+        "answer": {
+          "find": "3",
+          "identify": "2",
+          "information": "3"
+        },
+        "trialOrder": "43",
+        "componentName": "$previs-angle.components.ReadingData",
+        "incorrectAnswers": {},
+        "startTime": 1756970953515,
+        "endTime": 1756970964630,
+        "timedOut": false,
+        "helpButtonClickedCount": 0,
+        "parameters": {},
+        "correctAnswer": [],
+        "optionOrders": {},
+        "questionOrders": {},
+        "formOrder": {
+          "response": [
+            "find",
+            "identify",
+            "information"
+          ]
+        }
+      }
+    },
+    "searchParams": {},
+    "metadata": {
+      "language": "en-US",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",
+      "resolution": {
+        "width": 1512,
+        "height": 982,
+        "availHeight": 944,
+        "availWidth": 1441,
+        "colorDepth": 30,
+        "orientation": "landscape-primary",
+        "pixelDepth": 30
+      },
+      "ip": "136.36.118.59"
+    },
+    "completed": true,
+    "rejected": false,
+    "participantTags": [
+      "previs-4dimensions"
+    ],
+    "f1_scores": {
+      "adj": 1.0,
+      "adj_mean": 1.0,
+      "adj_var": 0.9411764705882353,
+      "attr_comb": 0.0,
+      "attr_extremes": 1.0,
+      "adj_mean_extra": 1.0,
+      "adj_var_extra": 0.15384615384615385,
+      "attr_comb_extra": 0.4,
+      "attr_extremes_extra": 1.0
+    }
+  }
+]

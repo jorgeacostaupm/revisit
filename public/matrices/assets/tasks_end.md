@@ -2,6 +2,6 @@
 
 You’ve completed the main tasks.
 
-Now we’d like to hear your thoughts and opinions on the encoding technique.
+Now we’d love to hear your thoughts and feedback on the encoding technique and the study.
 
 Click Next to continue.

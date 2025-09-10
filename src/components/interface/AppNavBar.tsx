@@ -26,16 +26,21 @@ export function AppNavBar() {
   const trialHasSideBarResponses = true;
 
   const instruction = currentConfig?.instruction || '';
-  const instructionLocation = useMemo(() => currentConfig?.instructionLocation ?? studyConfig.uiConfig.instructionLocation ?? 'sidebar', [currentConfig, studyConfig]);
+  const instructionLocation = useMemo(
+    () => currentConfig?.instructionLocation ?? studyConfig.uiConfig.instructionLocation ?? 'sidebar',
+    [currentConfig, studyConfig],
+  );
   const instructionInSideBar = instructionLocation === 'sidebar';
 
   return trialHasSideBar && currentConfig ? (
-    <AppShell.Navbar className="sidebar" bg="gray.1" display="block" style={{ zIndex: 0, overflowY: 'scroll' }}>
+    <AppShell.Navbar
+      className="sidebar"
+      bg="gray.1"
+      display="block"
+      style={{ zIndex: 0, overflowY: 'auto' }}
+    >
       {instructionInSideBar && instruction !== '' && (
-        <AppShell.Section
-          bg="gray.3"
-          p="md"
-        >
+        <AppShell.Section bg="gray.3" p="md">
           <Text span c="orange.8" fw={700} inherit>
             Task:
           </Text>
@@ -55,7 +60,7 @@ export function AppNavBar() {
       )}
     </AppShell.Navbar>
   ) : (
-    <AppShell.Navbar bg="gray.1" display="block" style={{ zIndex: 0, overflowY: 'scroll' }}>
+    <AppShell.Navbar bg="gray.1" display="block" style={{ zIndex: 0, overflowY: 'auto' }}>
       <ResponseBlock
         key={`${currentComponent}-sidebar-response-block`}
         status={status}

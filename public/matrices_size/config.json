@@ -11,10 +11,13 @@
           "location": "belowStimulus",
           "placeholder": "Prolific ID",
           "prompt": "Please enter your Prolific ID",
-          "type": "shortText"
+          "type": "shortText",
+          "style": { "margin": "0% 20% 0% 20%" }
         }
       ],
-      "type": "markdown"
+      "type": "markdown",
+      "style": { "width": "auto", "margin": "0% 20% 0% 20%" },
+      "nextButtonLocation": "belowStimulus"
     },
     "consent": {
       "correctAnswer": [],
@@ -36,29 +39,34 @@
           ],
           "prompt": "Do you consent to the study and wish to continue?",
           "requiredValue": "yes",
-          "type": "radio"
+          "type": "radio",
+          "style": { "margin": "0% 20% 0% 20%" }
         }
       ],
-      "type": "markdown"
+      "type": "markdown",
+      "style": { "width": "auto", "margin": "0% 20% 0% 20%" }
     },
     "data_description": {
       "correctAnswer": [],
       "path": "matrices/assets/data.md",
       "sidebarWidth": 0,
       "response": [],
-      "type": "markdown"
+      "type": "markdown",
+      "style": { "width": "auto", "margin": "0% 20% 0% 20%" }
     },
     "list2num": {
       "allowFailedTraining": false,
       "sidebarWidth": 0,
+      "nextButtonLocation": "belowStimulus",
+      "provideFeedback": true,
+      "trainingAttempts": 2.0,
+      "type": "questionnaire",
       "correctAnswer": [
         {
           "answer": "b",
           "id": "list2num"
         }
       ],
-      "nextButtonLocation": "belowStimulus",
-      "provideFeedback": true,
       "response": [
         {
           "id": "list2num",
@@ -82,11 +90,13 @@
             }
           ],
           "prompt": "Training: Which of the options showing mean and variation fits best to the list of flight prices.<br><br>Flight Prices: $200, $220, $205, $180",
-          "type": "radio"
+          "type": "radio",
+          "style": {
+            "width": "auto",
+            "margin": "0% 20% 0% 20%"
+          }
         }
-      ],
-      "trainingAttempts": 2.0,
-      "type": "questionnaire"
+      ]
     },
     "num2list": {
       "allowFailedTraining": false,
@@ -122,7 +132,11 @@
             }
           ],
           "prompt": "Training: Which list of prices fits best to the given route price mean\u00b1variation? <br><br>Route Price: $180 \u00b1 $20",
-          "type": "radio"
+          "type": "radio",
+          "style": {
+            "width": "auto",
+            "margin": "0% 20% 0% 20%"
+          }
         }
       ],
       "trainingAttempts": 2.0,
@@ -133,7 +147,11 @@
       "path": "matrices/assets/connectivity.md",
       "sidebarWidth": 0,
       "response": [],
-      "type": "markdown"
+      "type": "markdown",
+      "style": {
+        "width": "auto",
+        "margin": "0% 20% 0% 20%"
+      }
     },
     "matrix2graph": {
       "allowFailedTraining": false,
@@ -224,9 +242,13 @@
     "encoding_description": {
       "correctAnswer": [],
       "path": "matrices/assets/encoding_descriptions/mark_size.md",
-      "sidebarWidth": 0,
       "response": [],
-      "type": "markdown"
+      "type": "markdown",
+      "sidebarWidth": 0,
+      "style": {
+        "width": "auto",
+        "margin": "0% 20% 0% 20%"
+      }
     },
     "training_intro": {
       "allowFailedTraining": false,
@@ -306,7 +328,7 @@
           "id": "answerNodes",
           "location": "sidebar",
           "prompt": "Selected States:",
-          "secondaryText": "Tip: Clicking on the vertical labels will reorder the nodes, placing the connected ones first, followed by the disconnected ones in alphabetical order.",
+          "secondaryText": "",
           "type": "reactive"
         }
       ],
@@ -334,49 +356,8 @@
           "id": "answerNodes",
           "location": "sidebar",
           "prompt": "Selected States:",
-          "secondaryText": "Tip: Clicking on the vertical labels will reorder the nodes, placing the connected ones first, followed by the disconnected ones in alphabetical order.",
+          "secondaryText": "",
           "type": "reactive"
-        }
-      ],
-      "trainingAttempts": 4.0,
-      "type": "react-component"
-    },
-    "training_path_estimation": {
-      "allowFailedTraining": false,
-      "correctAnswer": [
-        {
-          "answer": 250,
-          "id": "mean"
-        },
-        {
-          "answer": 180,
-          "id": "std"
-        }
-      ],
-      "instruction": "Training: For the itinerary <br> Texas \u2192 Kentucky \u2192 New York <br> Assuming you buy flights in the middle of the ranges of means, and with maximum variation. Estimate total mean cost and variation.<br><br>1. Look at the range of means for each flight.<br>2. Take the middle value of each range.<br>3. Add those middle values together, this is the mean cost.<br>4. Look at the variation of each flight.<br>5. Take the maximun of each range<br>6. Add those maximum values together, this is the variation.<br>IMPORTANT: Round values up to the nearest clean boundary (e.g., 0–49 → 0–50, 119 → 120) so ranges, means and variation are simple. We don't seek for exact values.",
-      "nextButtonLocation": "sidebar",
-      "parameters": {
-        "dataset": "../matrices/data/training_data.txt",
-        "encoding": "Overlaid Mark Size"
-      },
-      "path": "matrices/Stimuli.tsx",
-      "provideFeedback": true,
-      "response": [
-        {
-          "id": "mean",
-          "location": "sidebar",
-          "max": 500.0,
-          "min": 0.0,
-          "prompt": "Mean:",
-          "type": "numerical"
-        },
-        {
-          "id": "std",
-          "location": "sidebar",
-          "max": 300.0,
-          "min": 0.0,
-          "prompt": "Variation:",
-          "type": "numerical"
         }
       ],
       "trainingAttempts": 4.0,
@@ -445,9 +426,13 @@
     "training_ends": {
       "correctAnswer": [],
       "path": "matrices/assets/training_ends.md",
-      "sidebarWidth": 0,
       "response": [],
-      "type": "markdown"
+      "type": "markdown",
+      "sidebarWidth": 0,
+      "style": {
+        "width": "auto",
+        "margin": "0% 20% 0% 20%"
+      }
     },
     "adj": {
       "correctAnswer": [
@@ -576,7 +561,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "When flying from Missouri, which destination states have the possible possible highest and lowest ticket prices? (Select two states)",
+      "instruction": "When flying from Missouri, which destination states have the possible highest and lowest ticket prices? (Select two states)",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -701,207 +686,20 @@
       ],
       "type": "react-component"
     },
-    "path_mean": {
-      "correctAnswer": [
-        {
-          "answer": "Utah \u2192 Colorado \u2192 New York",
-          "id": "path"
-        }
-      ],
-      "instruction": "Considering only the mean price, which layover results in the lowest total cost?<br><br>To show that you are paying attention select Illinois on the matrix.(This is the attention check question) ",
-      "nextButtonLocation": "sidebar",
-      "parameters": {
-        "dataset": "../matrices/data/tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
-      },
-      "path": "matrices/Stimuli.tsx",
-      "response": [
-        {
-          "id": "path",
-          "location": "sidebar",
-          "options": [
-            "Utah \u2192 Michigan \u2192 New York",
-            "Utah \u2192 Washington \u2192 New York",
-            "Utah \u2192 Colorado \u2192 New York",
-            "Utah \u2192 Nevada \u2192 New York"
-          ],
-          "prompt": "Select a layover:",
-          "type": "radio"
-        }
-      ],
-      "type": "react-component"
-    },
-    "path_var": {
-      "correctAnswer": [
-        {
-          "answer": "California \u2192 Massachusetts \u2192 Michigan",
-          "id": "path"
-        }
-      ],
-      "instruction": "Considering only the price variation, which layover results in the highest price variation?",
-      "nextButtonLocation": "sidebar",
-      "parameters": {
-        "dataset": "../matrices/data/tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
-      },
-      "path": "matrices/Stimuli.tsx",
-      "response": [
-        {
-          "id": "path",
-          "location": "sidebar",
-          "options": [
-            "California \u2192 Colorado \u2192 Michigan",
-            "California \u2192 Minesota \u2192 Michigan",
-            "California \u2192 Utah \u2192 Michigan",
-            "California \u2192 Massachusetts \u2192 Michigan"
-          ],
-          "prompt": "Select a layover:",
-          "type": "radio"
-        }
-      ],
-      "type": "react-component"
-    },
-    "path_estimation": {
-      "correctAnswer": [
-        {
-          "answer": 300,
-          "id": "mean"
-        },
-        {
-          "answer": 140,
-          "id": "std"
-        }
-      ],
-      "instruction": "For the itinerary <br> Georgia \u2192 California \u2192 New York <br><br>Assuming you buy flights in the middle of the ranges of means, and with maximum variation. Estimate total mean cost and variation.",
-      "nextButtonLocation": "sidebar",
-      "parameters": {
-        "dataset": "../matrices/data/tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
-      },
-      "path": "matrices/Stimuli.tsx",
-      "response": [
-        {
-          "id": "mean",
-          "location": "sidebar",
-          "max": 500.0,
-          "min": 0.0,
-          "prompt": "Mean:",
-          "type": "numerical"
-        },
-        {
-          "id": "std",
-          "location": "sidebar",
-          "max": 300.0,
-          "min": 0.0,
-          "prompt": "Variation:",
-          "type": "numerical"
-        }
-      ],
-      "type": "react-component"
-    },
-    "path_mean_extra": {
-      "correctAnswer": [
-        {
-          "answer": "Florida \u2192 Minnesota \u2192 North Carolina",
-          "id": "path"
-        }
-      ],
-      "instruction": "Considering only the mean price, which layover results in the lowest total cost?",
-      "nextButtonLocation": "sidebar",
-      "parameters": {
-        "dataset": "../matrices/data/tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
-      },
-      "path": "matrices/Stimuli.tsx",
-      "response": [
-        {
-          "id": "path",
-          "location": "sidebar",
-          "options": [
-            "Florida \u2192 Lousiana \u2192 North Carolina",
-            "Florida \u2192 Minnesota \u2192 North Carolina",
-            "Florida \u2192 Colorado \u2192 North Carolina",
-            "Florida \u2192 Washington \u2192 North Carolina"
-          ],
-          "prompt": "Select a layover:",
-          "type": "radio"
-        }
-      ],
-      "type": "react-component"
-    },
-    "path_var_extra": {
-      "correctAnswer": [
-        {
-          "answer": "Missouri \u2192 Michigan \u2192 Utah",
-          "id": "path"
-        }
-      ],
-      "instruction": "Considering only the price variation, which layover results in the highest price variation?",
-      "nextButtonLocation": "sidebar",
-      "parameters": {
-        "dataset": "../matrices/data/tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
-      },
-      "path": "matrices/Stimuli.tsx",
-      "response": [
-        {
-          "id": "path",
-          "location": "sidebar",
-          "options": [
-            "Missouri \u2192 Michigan \u2192 Utah",
-            "Missouri \u2192 New York \u2192 Utah",
-            "Missouri \u2192 Georgia \u2192 Utah",
-            "Missouri \u2192 Virginia \u2192 Utah"
-          ],
-          "prompt": "Select a layover:",
-          "type": "radio"
-        }
-      ],
-      "type": "react-component"
-    },
-    "path_estimation_extra": {
-      "correctAnswer": [
-        {
-          "answer": 0,
-          "id": "mean"
-        },
-        {
-          "answer": 0,
-          "id": "std"
-        }
-      ],
-      "instruction": "For the itinerary <br> Pennsylvania \u2192 Missouri \u2192 Minnesota <br> Assuming you buy flights in the middle of the ranges of means, and with maximum variation. Estimate total mean cost and variation.",
-      "nextButtonLocation": "sidebar",
-      "parameters": {
-        "dataset": "../matrices/data/tasks_data.txt",
-        "encoding": "Overlaid Mark Size"
-      },
-      "path": "matrices/Stimuli.tsx",
-      "response": [
-        {
-          "id": "mean",
-          "location": "sidebar",
-          "max": 500.0,
-          "min": 0.0,
-          "prompt": "Mean:",
-          "type": "numerical"
-        },
-        {
-          "id": "std",
-          "location": "sidebar",
-          "max": 350.0,
-          "min": 0.0,
-          "prompt": "Variation:",
-          "type": "numerical"
-        }
-      ],
-      "type": "react-component"
-    },
     "classification": {
-      "correctAnswer": [],
+      "sidebarWidth": 400,
+      "correctAnswer": [
+        {
+          "answer": {
+            "Utah": "High Prices Variation",
+            "California": "Medium Prices Variation",
+            "Illinois": "Low Prices Variation"
+          },
+          "id": "stability"
+        }
+      ],
       "instruction": "Observe the flight prices from each of these three states to all their connected states. Rank the states by their price variation, from highest to lowest, and assign each state to a category based on its price variation.",
       "nextButtonLocation": "sidebar",
-      "sidebarWidth": 400,
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
         "encoding": "Overlaid Mark Size"
@@ -910,14 +708,14 @@
       "response": [
         {
           "answerOptions": [
-            "High Price Variation",
-            "Medium Price Variation",
-            "Low Price Variation"
+            "High Prices Variation",
+            "Medium Prices Variation",
+            "Low Prices Variation"
           ],
           "id": "stability",
           "location": "sidebar",
           "prompt": "",
-          "questionOptions": ["Oregon", "Utah", "Illinois"],
+          "questionOptions": ["California", "Utah", "Illinois"],
           "type": "matrix-radio"
         }
       ],
@@ -1022,7 +820,17 @@
       "type": "react-component"
     },
     "classification_extra": {
-      "correctAnswer": [],
+      "sidebarWidth": 400,
+      "correctAnswer": [
+        {
+          "answer": {
+            "Oregon": "High Prices Variation",
+            "Pennsylvania": "Medium Prices Variation",
+            "Texas": "Low Prices Variation"
+          },
+          "id": "stability"
+        }
+      ],
       "instruction": "Observe the flight prices from each of these three states to all their connected states. Rank the states by their price variation, from highest to lowest, and assign each state to a category based on its price variation.",
       "nextButtonLocation": "sidebar",
       "parameters": {
@@ -1030,7 +838,6 @@
         "encoding": "Overlaid Mark Size"
       },
       "path": "matrices/Stimuli.tsx",
-      "sidebarWidth": 400,
       "response": [
         {
           "answerOptions": [
@@ -1041,7 +848,7 @@
           "id": "stability",
           "location": "sidebar",
           "prompt": "",
-          "questionOptions": ["Minnesota", "Pennsylvania", "Texas"],
+          "questionOptions": ["Oregon", "Pennsylvania", "Texas"],
           "type": "matrix-radio"
         }
       ],
@@ -1148,9 +955,13 @@
     "tasks_end": {
       "correctAnswer": [],
       "path": "matrices/assets/tasks_end.md",
-      "sidebarWidth": 0,
       "response": [],
-      "type": "markdown"
+      "type": "markdown",
+      "sidebarWidth": 0,
+      "style": {
+        "width": "auto",
+        "margin": "0% 20% 0% 20%"
+      }
     },
     "$beauvis.co.overlaid-size": {
       "correctAnswer": [],
@@ -1163,6 +974,74 @@
       "path": "",
       "response": [],
       "type": "react-component"
+    },
+    "education": {
+      "correctAnswer": [],
+      "response": [
+        {
+          "id": "education",
+          "location": "belowStimulus",
+          "options": [
+            "Less than high school",
+            "High school diploma or equivalent",
+            "Bachelor's degree or equivalent",
+            "Master's degree or equivalent",
+            "Doctoral degree or equivalent"
+          ],
+          "prompt": "What is the **highest degree or level of education** you have completed?",
+          "type": "radio",
+          "style": {
+            "width": "auto",
+            "margin": "0% 20% 0% 20%"
+          }
+        }
+      ],
+      "type": "questionnaire",
+      "sidebarWidth": 0
+    },
+    "matrices-experience": {
+      "correctAnswer": [],
+      "response": [
+        {
+          "id": "education",
+          "leftLabel": "Not familiar at all",
+          "location": "belowStimulus",
+          "numItems": 5.0,
+          "prompt": "Before this study, how familiar were you with adjacency matrices (a type of visualization like the ones shown here)?",
+          "rightLabel": "Very familiar",
+          "secondaryText": "1 (Not familiar at all) - 5 (Very familiar)",
+          "type": "likert",
+          "style": {
+            "width": "auto",
+            "margin": "0% 20% 0% 20%"
+          }
+        }
+      ],
+      "type": "questionnaire",
+      "sidebarWidth": 0
+    },
+    "feedback": {
+      "correctAnswer": [],
+      "response": [
+        {
+          "id": "feedback",
+          "location": "aboveStimulus",
+          "placeholder": "Enter your feedback",
+          "prompt": "We'd love to hear your thoughts. Please share any feedback about your experience in this study.",
+          "required": false,
+          "type": "longText",
+          "style": {
+            "width": "auto",
+            "margin": "0% 20% 0% 20%"
+          }
+        }
+      ],
+      "type": "questionnaire",
+      "sidebarWidth": 0,
+      "style": {
+        "width": "auto",
+        "margin": "0% 20% 0% 20%"
+      }
     }
   },
   "importedLibraries": ["previs-size", "beauvis"],
@@ -1184,7 +1063,6 @@
           "training_selection",
           "training_mean_adjacency",
           "training_std_adjacency",
-          "training_path_estimation",
           "training_cluster",
           "training_ends"
         ],
@@ -1200,11 +1078,6 @@
           "adj_var_extra",
           "attr_comb_extra",
           "attr_extremes_extra",
-          "path_var",
-          "path_estimation",
-          "path_mean_extra",
-          "path_var_extra",
-          "path_estimation_extra",
           "classification",
           "cluster_mean",
           "cluster_var",
@@ -1216,11 +1089,6 @@
         "interruptions": [
           {
             "firstLocation": 7,
-            "spacing": 0,
-            "components": ["path_mean"]
-          },
-          {
-            "firstLocation": 15,
             "spacing": 0,
             "components": ["adj_mean_extra"]
           }
@@ -1237,6 +1105,10 @@
       {
         "components": ["$previs-size.se.4dimensions"],
         "order": "random"
+      },
+      {
+        "components": ["education", "matrices-experience", "feedback"],
+        "order": "fixed"
       }
     ],
     "order": "fixed"
