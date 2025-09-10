@@ -56,7 +56,7 @@ Finally, the upper‑ (above the diagonal) and lower‑triangle (below the diago
 
 # THIRD KEY CONCEPT: Attribute Encoding
 
-As you might notice, if the network grows it will be very difficult to read the values on a graph or on the presented adjacency matrices. We use a way of encoding mean and variation to visualize this kind of networks.
+As you might notice, if the network grows it will be very difficult to read the values on a graph or on the presented adjacency matrices. We encode mean and variation to visualize these kinds of networks..
 
 ##### Color encodes the mean price:
 

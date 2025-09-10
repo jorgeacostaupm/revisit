@@ -299,7 +299,7 @@
           "id": "answerNodes",
           "location": "sidebar",
           "prompt": "Selected States:",
-          "secondaryText": "Tip: Clicking on the vertical labels will reorder the nodes, placing the connected ones first, followed by the disconnected ones in alphabetical order.",
+          "secondaryText": "",
           "type": "reactive"
         }
       ],
@@ -327,7 +327,7 @@
           "id": "answerNodes",
           "location": "sidebar",
           "prompt": "Selected States:",
-          "secondaryText": "Tip: Clicking on the vertical labels will reorder the nodes, placing the connected ones first, followed by the disconnected ones in alphabetical order.",
+          "secondaryText": "",
           "type": "reactive"
         }
       ],
@@ -934,7 +934,7 @@
           "id": "stability",
           "location": "sidebar",
           "prompt": "",
-          "questionOptions": ["Oregon", "Utah", "Illinois"],
+          "questionOptions": ["California", "Utah", "Illinois"],
           "type": "matrix-radio"
         }
       ],
@@ -1057,7 +1057,7 @@
           "id": "stability",
           "location": "sidebar",
           "prompt": "",
-          "questionOptions": ["Minnesota", "Pennsylvania", "Texas"],
+          "questionOptions": ["Oregon", "Pennsylvania", "Texas"],
           "type": "matrix-radio"
         }
       ],
