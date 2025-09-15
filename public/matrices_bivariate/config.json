@@ -587,7 +587,31 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "Which states are connected to Arizona with a mean price lower than $100?<br><br>To show that you are paying attention add Louisiana to your answer to the question above. (This is the attention check question) ",
+      "instruction": "Which states are connected to Arizona with a mean price lower than $100?",
+      "nextButtonLocation": "sidebar",
+      "parameters": {
+        "dataset": "../matrices/data/tasks_data.txt",
+        "encoding": "Bivariate"
+      },
+      "path": "matrices/Stimuli.tsx",
+      "response": [
+        {
+          "id": "answerNodes",
+          "location": "sidebar",
+          "prompt": "Selected States:",
+          "type": "reactive"
+        }
+      ],
+      "type": "react-component"
+    },
+    "attention_check": {
+      "correctAnswer": [
+        {
+          "answer": ["Louisiana"],
+          "id": "answerNodes"
+        }
+      ],
+      "instruction": "Which states are connected to California with a mean price higher than $150? (For this question only, please ignore the content and simply answer “Louisiana” to show you are paying attention).",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -643,7 +667,7 @@
     "attr_comb_extra": {
       "correctAnswer": [
         {
-          "answer": ["Tennessee", "Washington"],
+          "answer": ["Tennessee", "Washington", "Missouri"],
           "id": "answerNodes"
         }
       ],
@@ -1086,14 +1110,15 @@
           "cluster_var",
           "classification_extra",
           "cluster_mean_extra",
-          "cluster_var_extra"
+          "cluster_var_extra",
+          "adj_mean_extra"
         ],
         "order": "random",
         "interruptions": [
           {
-            "firstLocation": 7,
+            "firstLocation": 8,
             "spacing": 0,
-            "components": ["adj_mean_extra"]
+            "components": ["attention_check"]
           }
         ]
       },

@@ -602,7 +602,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "ADJACENCY BY MEAN. Select adjacent nodes to one given constrained by attribute values.<br>GOAL: Assess the effectiveness of the encoding to filter links when focusing on mean values.<br>QUESTION. Which states are connected to Arizona with a mean price lower than $100?<br>ANSWER: List of nodes.<br><br>To show that you are paying attention add Louisiana to your answer to the question above. (This is the attention check question) ",
+      "instruction": "ADJACENCY BY MEAN. Select adjacent nodes to one given constrained by attribute values.<br>GOAL: Assess the effectiveness of the encoding to filter links when focusing on mean values.<br>QUESTION. Which states are connected to Arizona with a mean price lower than $100?<br>ANSWER: List of nodes.<br><br>To show that you are paying attention add Louisiana to your answer to the question above.  ",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
@@ -711,7 +711,7 @@
           "id": "path"
         }
       ],
-      "instruction": "PATH MEAN. Select between 4 paths the one that better fits for a given mean price criteria.<br>GOAL: Assess the effectiveness of the encoding when estimating mean on a path.<br>QUESTION. Considering only the mean price, which layover results in the lowest total cost?<br>ANSWER: Single selection (radio button).<br><br>To show that you are paying attention select Illinois on the matrix.(This is the attention check question) ",
+      "instruction": "PATH MEAN. Select between 4 paths the one that better fits for a given mean price criteria.<br>GOAL: Assess the effectiveness of the encoding when estimating mean on a path.<br>QUESTION. Considering only the mean price, which layover results in the lowest total cost?<br>ANSWER: Single selection (radio button).<br><br>To show that you are paying attention select Illinois on the matrix. ",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
