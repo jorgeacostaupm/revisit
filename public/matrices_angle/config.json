@@ -1146,7 +1146,7 @@
     "date": "2025-01-13",
     "description": "This study aims to evaluate the Overlaid Mark Angle encoding technique for visualizing the mean and variation of flight prices in the U.S.",
     "organizations": ["Visualization Design Lab"],
-    "title": "Mean & Variation Overlaid Mark Angle Encoding on AM's (Pre-Pilot)",
+    "title": "Mean & Variation Overlaid Mark Angle Encoding on AM's ",
     "version": "1.0"
   },
   "uiConfig": {
@@ -1158,6 +1158,6 @@
     "minHeightSize": 800,
     "minWidthSize": 1400,
     "urlParticipantIdParam": "PROLIFIC_PID",
-    "studyEndMsg": "**Thank you for completing the study. You may click this link and return to Prolific**: [yourProlificLink](yourProlificLink)"
+    "studyEndMsg": "**Thank you for completing the study. You may click this link and return to Prolific**: https://app.prolific.com/submissions/complete?cc=C9E656HE"
   }
 }
