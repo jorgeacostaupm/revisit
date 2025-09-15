@@ -1146,7 +1146,7 @@
     "date": "2025-01-13",
     "description": "This study aims to evaluate the Bar Chart encoding technique for visualizing the mean and variation of flight prices in the U.S.",
     "organizations": ["Visualization Design Lab"],
-    "title": "Mean & Variation Bar Chart Encoding on AM's (Pre-Pilot)",
+    "title": "Mean & Variation Bar Chart Encoding on AM's ",
     "version": "1.0"
   },
   "uiConfig": {
