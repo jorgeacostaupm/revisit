@@ -270,7 +270,7 @@
     "training_interaction": {
       "allowFailedTraining": false,
       "correctAnswer": [],
-      "instruction": "<b>Move your mouse over the cells:</b> this will highlight the corresponding row and column.<br><br><b>Click on the top labels (states at the top): </b>that state column will be highlighted.<br><br><b>Click on the left-side labels (states written horizontally): </b>to answer some questions you'll need to select states by clicking on the names on the left side. Click once to select a state. Click again to unselect it, or use the Clear States Selection button if you want to start fresh.<br><br><b>Click on the cells to mark a connection: </b>this is not an answer but it can help you in certain tasks. Click again to undo cell selection or use the Clear Flights Selection button if you want to start fresh.",
+      "instruction": "<b>Move your mouse over the cells:</b> this will highlight the corresponding row and column.<br><br><b>Click on the top labels (states at the top): </b>Click once to highlight that column. Click again to remove the highlight.<br><br><b>Click on the left-side labels (states written horizontally): </b>to answer some questions you'll need to select states by clicking on the names on the left side. Click once to select a state. Click again to unselect it, or use the Clear States Selection button if you want to start fresh.<br><br><b>Click on the cells to mark a connection: </b>this is not an answer but it can help you in certain tasks. Click again to undo cell selection or use the Clear Flights Selection button if you want to start fresh.",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/training_data.txt",
@@ -539,7 +539,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "Which states are connected to Washington with flight prices of $170\u00b1$40?",
+      "instruction": "Which states could be connected to Washington with flight prices of $170\u00b1$40?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -563,7 +563,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "When flying from Missouri, which destination states have the possible highest and lowest ticket prices? (Select two states)",
+      "instruction": "When flying from Missouri, which destination states have the possible highest and lowest ticket prices? (Select two states).",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -647,7 +647,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "Which states are connected to Maryland with flight prices of $120\u00b1$70?",
+      "instruction": "Which states could be connected to Maryland with flight prices of $120\u00b1$70?",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -671,7 +671,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "When flying from Illinois, which destination states have the possible highest and lowest ticket prices?",
+      "instruction": "When flying from Illinois, which destination states have the possible highest and lowest ticket prices? (Select two states).",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "../matrices/data/tasks_data.txt",
@@ -982,6 +982,7 @@
       "response": [
         {
           "id": "education",
+          "withOther": true,
           "location": "belowStimulus",
           "options": [
             "Less than high school",

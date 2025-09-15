@@ -561,7 +561,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "ATTRIBUTE COMBINATION. Select adjacent nodes connected to a given node based on combined link attributes.<br>GOAL: Assess the performance of the encoding when combining attributes to filter links.<br>QUESTION. Which states are connected to Washington with flight prices of $150\u00b1$50?<br>ANSWER: List of nodes.",
+      "instruction": "ATTRIBUTE COMBINATION. Select adjacent nodes connected to a given node based on combined link attributes.<br>GOAL: Assess the performance of the encoding when combining attributes to filter links.<br>QUESTION. Which states could be connected to Washington with flight prices of $150\u00b1$50?<br>ANSWER: List of nodes.",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
@@ -585,7 +585,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "ATTRIBUTE EXTREMES. Identify adjacent nodes connected to a given node based on a combination of extreme link attributes.<br>GOAL. Assess how well the encoding enables users to detect extreme attribute values and integrate them simultaneously.<br>QUESTION. When flying from Missouri, which destination states have the possible highest and lowest ticket prices? (Select two states)<br>ANSWER. List of nodes.",
+      "instruction": "ATTRIBUTE EXTREMES. Identify adjacent nodes connected to a given node based on a combination of extreme link attributes.<br>GOAL. Assess how well the encoding enables users to detect extreme attribute values and integrate them simultaneously.<br>QUESTION. When flying from Missouri, which destination states have the possible highest and lowest ticket prices? (Select two states).<br>ANSWER. List of nodes.",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
@@ -675,7 +675,7 @@
           "id": "answerNodes"
         }
       ],
-      "instruction": "ATTRIBUTE COMBINATION. Select adjacent nodes connected to a given node based on combined link attributes.<br>GOAL: Assess the performance of the encoding when combining attributes to filter links.<br>QUESTION. Which states are connected to Maryland with flight prices of $100\u00b1$70?<br>ANSWER: List of nodes.",
+      "instruction": "ATTRIBUTE COMBINATION. Select adjacent nodes connected to a given node based on combined link attributes.<br>GOAL: Assess the performance of the encoding when combining attributes to filter links.<br>QUESTION. Which states could be connected to Maryland with flight prices of $100\u00b1$70?<br>ANSWER: List of nodes.",
       "nextButtonLocation": "sidebar",
       "parameters": {
         "dataset": "tasks_data.txt",
