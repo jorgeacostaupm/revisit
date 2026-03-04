@@ -163,7 +163,7 @@
   "sequences": {
     "4dimensions": {
       "id": "previs-4dimensions",
-      "order": "latinSquare",
+      "order": "fixed",
       "components": ["Understand", "Layout", "ReadingData", "ReadingFeatures"]
     }
   }
