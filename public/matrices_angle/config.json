@@ -477,7 +477,13 @@
     "adj_mean": {
       "correctAnswer": [
         {
-          "answer": ["Maryland", "Massachusetts", "New Jersey", "New York", "Virginia"],
+          "answer": [
+            "Maryland",
+            "Massachusetts",
+            "New Jersey",
+            "New York",
+            "Virginia"
+          ],
           "id": "answerNodes"
         }
       ],

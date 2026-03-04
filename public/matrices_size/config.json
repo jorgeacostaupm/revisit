@@ -477,7 +477,13 @@
     "adj_mean": {
       "correctAnswer": [
         {
-          "answer": ["Maryland", "Massachusetts", "New Jersey", "New York", "Virginia"],
+          "answer": [
+            "Maryland",
+            "Massachusetts",
+            "New Jersey",
+            "New York",
+            "Virginia"
+          ],
           "id": "answerNodes"
         }
       ],
@@ -1113,7 +1119,7 @@
           "cluster_var_extra",
           "adj_mean_extra"
         ],
-        "order": "random",
+        "order": "fixed",
         "interruptions": [
           {
             "firstLocation": 8,
@@ -1132,7 +1138,7 @@
       },
       {
         "components": ["$previs-size.se.4dimensions"],
-        "order": "random"
+        "order": "fixed"
       },
       {
         "components": ["education", "matrices-experience", "feedback"],
