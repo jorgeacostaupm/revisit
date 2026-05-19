@@ -1,48 +1,33 @@
 /* eslint-disable react/no-unstable-nested-components */
 import {
-  Text,
-  Flex,
-  Button,
-  Group,
-  Space,
-  Modal,
-  TextInput,
-  Tooltip,
-  Badge,
-  RingProgress,
-  Stack,
+  Text, Flex, Group, Space, Tooltip, Badge, RingProgress, Stack, ActionIcon,
 } from '@mantine/core';
-import React, {
-  JSX, useCallback, useMemo, useState,
+import {
+  JSX, useCallback, useEffect, useMemo, useState,
 } from 'react';
 import { useParams } from 'react-router';
 import {
-  MantineReactTable,
-  MRT_Cell as MrtCell,
-  MRT_ColumnDef as MrtColumnDef,
-  MRT_RowSelectionState as MrtRowSelectionState,
-  useMantineReactTable,
+  MantineReactTable, MRT_Cell as MrtCell, MRT_ColumnDef as MrtColumnDef, MRT_RowSelectionState as MrtRowSelectionState, useMantineReactTable,
 } from 'mantine-react-table';
-import { IconCheck, IconHourglassEmpty, IconX } from '@tabler/icons-react';
+import {
+  IconCheck, IconHourglassEmpty, IconX, IconCopy,
+} from '@tabler/icons-react';
 
-import { ParticipantData, StoredAnswer, StudyConfig } from '../../../parser/types';
-import { useStorageEngine } from '../../../storage/storageEngineHooks';
-import { useAuth } from '../../../store/hooks/useAuth';
+import { StudyConfig } from '../../../parser/types';
+import { ParticipantDataWithStatus } from '../../../storage/types';
+import { StoredAnswer } from '../../../store/types';
+import { ParticipantRejectModal } from '../ParticipantRejectModal';
 import { participantName } from '../../../utils/participantName';
 import { AllTasksTimeline } from '../replay/AllTasksTimeline';
-import { checkAnswerCorrect } from '../../../store/hooks/useNextStep';
-import { humanReadableDuration } from '../../../utils/humanReadableDuration';
+import { youtubeReadableDuration } from '../../../utils/humanReadableDuration';
 import { getSequenceFlatMap } from '../../../utils/getSequenceFlatMap';
 import { MetaCell } from './MetaCell';
-import { DownloadButtons } from '../../../components/downloader/DownloadButtons';
+import { componentAnswersAreCorrect } from '../../../utils/correctAnswer';
+import { studyComponentToIndividualComponent } from '../../../utils/handleComponentInheritance';
 
 function formatDate(date: Date): string | JSX.Element {
   if (date.valueOf() === 0 || Number.isNaN(date.valueOf())) {
-    return (
-      <Text size="sm" c="dimmed">
-        None
-      </Text>
-    );
+    return <Text size="sm" c="dimmed">None</Text>;
   }
 
   return date.toLocaleDateString([], { hour: '2-digit', minute: '2-digit' });
@@ -51,173 +36,196 @@ function formatDate(date: Date): string | JSX.Element {
 export function TableView({
   visibleParticipants,
   studyConfig,
+  allConfigs,
   refresh,
   width,
+  stageColors,
+  selectedParticipants,
+  onSelectionChange,
 }: {
-  visibleParticipants: ParticipantData[];
+  visibleParticipants: ParticipantDataWithStatus[];
   studyConfig: StudyConfig;
-  refresh: () => Promise<Record<number, ParticipantData>>;
+  allConfigs: Record<string, StudyConfig>;
+  refresh: () => Promise<ParticipantDataWithStatus[]>;
   width: number;
+  stageColors: Record<string, string>;
+  selectedParticipants: ParticipantDataWithStatus[];
+  onSelectionChange: (participants: ParticipantDataWithStatus[]) => void;
 }) {
-  const { storageEngine } = useStorageEngine();
   const { studyId } = useParams();
-  const { user } = useAuth();
   const [checked, setChecked] = useState<MrtRowSelectionState>({});
 
-  const rejectParticipant = useCallback(
-    async (participantId: string, reason: string) => {
-      if (storageEngine && studyId) {
-        if (user.isAdmin) {
-          const finalReason = reason === '' ? 'Rejected by admin' : reason;
-          await storageEngine.rejectParticipant(participantId, finalReason, studyId);
-          await refresh();
-        } else {
-          console.warn('You are not authorized to perform this action.');
-        }
-      }
-    },
-    [refresh, storageEngine, studyId, user.isAdmin],
-  );
-
-  const [modalRejectParticipantsOpened, setModalRejectParticipantsOpened] = useState<boolean>(false);
-  const [rejectParticipantsMessage, setRejectParticipantsMessage] = useState<string>('');
-
-  const handleRejectParticipants = useCallback(async () => {
-    setModalRejectParticipantsOpened(false);
-    const promises = Object.keys(checked)
-      .filter((v) => checked[v])
-      .map(
-        async (participantId) => await rejectParticipant(participantId, rejectParticipantsMessage),
-      );
-    await Promise.all(promises);
-    setChecked({});
-    await refresh();
-  }, [checked, refresh, rejectParticipant, rejectParticipantsMessage]);
-
-  const selectedData = useMemo(() => {
-    const selected = Object.keys(checked)
-      .filter((v) => checked[v])
+  useEffect(() => {
+    const newSelectedParticipants = Object.keys(checked).filter((v) => checked[v])
       .map((participantId) => visibleParticipants.find((p) => p.participantId === participantId))
-      .filter((p) => p !== undefined) as ParticipantData[];
+      .filter((p) => p !== undefined) as ParticipantDataWithStatus[];
+    onSelectionChange(newSelectedParticipants);
+  }, [checked, visibleParticipants, onSelectionChange]);
 
-    return selected.length > 0 ? selected : visibleParticipants;
-  }, [checked, visibleParticipants]);
+  const handleRefresh = useCallback(async () => {
+    await refresh();
+  }, [refresh]);
 
-  const columns = useMemo<MrtColumnDef<ParticipantData>[]>(
-    () => [
+  const [copied, setCopied] = useState<string | null>(null);
+
+  const handleCopyParticipantId = (participantId: string) => {
+    navigator.clipboard.writeText(participantId);
+    setCopied(participantId);
+    setTimeout(() => setCopied(null), 2000);
+  };
+
+  const columns = useMemo<MrtColumnDef<ParticipantDataWithStatus>[]>(() => {
+    const hasCondition = visibleParticipants.some((participant) => participant.conditions ?? participant.searchParams?.condition);
+
+    return [
       {
-        accessorFn: (row: ParticipantData) => {
-          const incompleteEntries = Object.entries(row.answers || {}).filter(
-            (e) => e[1].startTime === 0,
-          );
+        accessorFn: (row: ParticipantDataWithStatus) => {
+          const incompleteEntries = Object.entries(row.answers || {}).filter((e) => e[1].startTime === 0);
 
-          return {
-            percent:
-              (Object.entries(row.answers).length - incompleteEntries.length)
-              / (getSequenceFlatMap(row.sequence).length - 1),
-            completed: row.completed,
-            rejected: row.rejected,
-          };
+          return { percent: (Object.entries(row.answers).length - incompleteEntries.length) / (getSequenceFlatMap(row.sequence).length - 1), completed: row.completed, rejected: row.rejected };
         },
         header: 'Status',
-        size: 50,
-        Cell: ({
-          cell,
-        }: {
-          cell: MrtCell<
-            ParticipantData,
-            { percent: number; completed: boolean; rejected: ParticipantData['rejected'] }
-          >;
-        }) => {
+        size: 100,
+        Cell: ({ cell }: { cell: MrtCell<ParticipantDataWithStatus, { percent: number, completed: boolean, rejected: ParticipantDataWithStatus['rejected'] }> }) => {
           const cellValue = cell.getValue();
-          return cellValue.completed ? (
-            <Group align="center" justify="center" w="100%">
-              <Tooltip label="Completed">
-                <IconCheck size={30} color="teal" style={{ marginBottom: -3 }} />
-              </Tooltip>
-            </Group>
-          ) : cellValue.rejected ? (
-            <Stack align="center" justify="center" gap={4} w="100%">
-              <Tooltip label="Rejected">
-                <IconX size={30} color="red" style={{ marginBottom: -3 }} />
-              </Tooltip>
-              <Text size="xs" c="dimmed" ta="center">
-                {cellValue.rejected.reason}
-              </Text>
-            </Stack>
-          ) : (
-            <Group align="center" justify="center" w="100%">
-              <Tooltip label="In Progress">
-                <RingProgress
-                  size={30}
-                  thickness={4}
-                  sections={[{ value: cellValue.percent * 100, color: 'blue' }]}
-                />
-              </Tooltip>
-            </Group>
+          return (
+            cellValue.rejected ? (
+              <Stack align="center" justify="center" gap={4} w="100%">
+                <Tooltip label="Rejected"><IconX size={30} color="red" style={{ marginBottom: -3 }} /></Tooltip>
+                <Text size="xs" c="dimmed" ta="center">{cellValue.rejected.reason}</Text>
+              </Stack>
+            )
+              : cellValue.completed ? (
+                <Group align="center" justify="center" w="100%">
+                  <Tooltip label="Completed"><IconCheck size={30} color="teal" style={{ marginBottom: -3 }} /></Tooltip>
+                </Group>
+              )
+                : (
+                  <Group align="center" justify="center" w="100%">
+                    <Tooltip label="In Progress">
+                      <RingProgress
+                        size={30}
+                        thickness={4}
+                        sections={[{ value: cellValue.percent * 100, color: 'blue' }]}
+                      />
+                    </Tooltip>
+                  </Group>
+                ));
+        },
+      },
+      {
+        accessorKey: 'participantIndex',
+        header: '#',
+        size: 80,
+      },
+      {
+        accessorKey: 'stage',
+        header: 'Stage',
+        size: 100,
+        Cell: ({ cell }: { cell: MrtCell<ParticipantDataWithStatus, string> }) => {
+          const stageName = cell.getValue();
+          if (!stageName || stageName === '') {
+            return (
+              <Badge
+                color="gray"
+                size="md"
+                variant="light"
+              >
+                N/A
+              </Badge>
+            );
+          }
+          const stageColor = stageColors[stageName] || '#F05A30';
+          return (
+            <Badge
+              color={stageColor}
+              size="md"
+              variant="filled"
+            >
+              {stageName}
+            </Badge>
           );
         },
       },
-      { accessorKey: 'participantIndex', header: '#', size: 50 },
-      { accessorKey: 'participantId', header: 'ID' },
-      ...(studyConfig.uiConfig.participantNameField
-        ? [
-          {
-            accessorFn: (row: ParticipantData) => participantName(row, studyConfig),
-            header: 'Name',
+      {
+        accessorKey: 'participantId',
+        header: 'ID',
+        Cell: ({ row }: { row: { original: ParticipantDataWithStatus } }) => (
+          <Flex align="center">
+            <Text size="sm">{row.original.participantId}</Text>
+            <Tooltip label={copied === row.original.participantId ? 'Copied' : 'Copy ID'}>
+              <ActionIcon
+                variant="subtle"
+                onClick={() => handleCopyParticipantId(row.original.participantId)}
+                color="gray"
+              >
+                <IconCopy size={16} />
+              </ActionIcon>
+            </Tooltip>
+          </Flex>
+        ),
+      },
+      ...(studyConfig.uiConfig.participantNameField ? [
+        {
+          accessorFn: (row: ParticipantDataWithStatus) => participantName(row, studyConfig),
+          header: 'Name',
+          size: 100,
+        },
+      ] : []),
+      ...(hasCondition ? [
+        {
+          accessorFn: (row: ParticipantDataWithStatus) => {
+            const { conditions } = row;
+            if (Array.isArray(conditions) && conditions.length > 0) {
+              return conditions.join(',');
+            }
+            return conditions ?? row.searchParams?.condition ?? 'default';
           },
-        ]
-        : []),
+          header: 'Condition',
+          size: 130,
+        },
+      ] : []),
       {
-        accessorFn: (row: ParticipantData) => new Date(
-          Math.max(
-            ...Object.values<StoredAnswer>(row.answers)
-              .filter((data) => data.endTime > 0)
-              .map((s) => s.endTime),
-          )
-              - Math.min(
-                ...Object.values<StoredAnswer>(row.answers)
-                  .filter((data) => data.startTime > 0)
-                  .map((s) => s.startTime),
-              ),
-        ),
+        accessorFn: (row: ParticipantDataWithStatus) => new Date(Math.max(...Object.values<StoredAnswer>(row.answers).filter((data) => data.endTime > 0).map((s) => s.endTime)) - Math.min(...Object.values<StoredAnswer>(row.answers).filter((data) => data.startTime > 0).map((s) => s.startTime))),
         header: 'Duration',
-        Cell: ({ cell }: { cell: MrtCell<ParticipantData, Date> }) => (!Number.isNaN(cell.getValue()) ? (
-          <Badge
-            variant="light"
-            size="lg"
-            color="gray"
-            leftSection={<IconHourglassEmpty width={18} height={18} style={{ paddingTop: 1 }} />}
-            pb={1}
-          >
-            {`${humanReadableDuration(+cell.getValue()) || 'N/A'}`}
-          </Badge>
-        ) : (
-          'Incomplete'
-        )),
-      },
-
-      {
-        accessorFn: (row: ParticipantData) => new Date(
-          Math.min(
-            ...Object.values<StoredAnswer>(row.answers)
-              .filter((data) => data.startTime > 0)
-              .map((s) => s.startTime),
-          ),
-        ),
-        Cell: ({ cell }) => formatDate(cell.getValue() as Date),
-        header: 'Start Time',
-      },
-      {
-        accessorFn: (row: ParticipantData) => Object.values(row.answers)
-          .filter((answer) => answer.correctAnswer.length > 0 && answer.endTime > 0)
-          .map((answer) => checkAnswerCorrect(answer.answer, answer.correctAnswer)),
-        header: 'Correct Answers',
-        Cell: ({ cell }: { cell: MrtCell<ParticipantData, boolean[]> }) => (
-          <>
+        size: 120,
+        Cell: ({ cell }: { cell: MrtCell<ParticipantDataWithStatus, Date> }) => (
+          !Number.isNaN(cell.getValue()) ? (
             <Badge
               variant="light"
-              size="lg"
+              size="md"
+              color="gray"
+              leftSection={<IconHourglassEmpty width={18} height={18} style={{ paddingTop: 1 }} />}
+              pb={1}
+            >
+              {`${youtubeReadableDuration(+cell.getValue()) || 'N/A'}`}
+            </Badge>
+          ) : 'Incomplete'
+        ),
+
+      },
+      {
+        accessorFn: (row: ParticipantDataWithStatus) => new Date(Math.min(...Object.values<StoredAnswer>(row.answers).filter((data) => data.startTime > 0).map((s) => s.startTime))),
+        header: 'Start Time',
+        size: 150,
+        Cell: ({ cell }: { cell: MrtCell<ParticipantDataWithStatus, Date> }) => (formatDate(cell.getValue() as Date)),
+      },
+      {
+        accessorFn: (row: ParticipantDataWithStatus) => Object.values(row.answers)
+          .filter((answer) => answer.correctAnswer.length > 0 && answer.endTime > 0)
+          .map((answer) => {
+            const componentConfig = studyConfig.components[answer.componentName];
+            const component = componentConfig ? studyComponentToIndividualComponent(componentConfig, studyConfig) : undefined;
+
+            return componentAnswersAreCorrect(answer.answer, answer.correctAnswer, component?.response);
+          }),
+        header: 'Correct Answers',
+        size: 160,
+        Cell: ({ cell }: { cell: MrtCell<ParticipantDataWithStatus, boolean[]> }) => (
+          <Group gap={4}>
+            <Badge
+              variant="light"
+              size="md"
               color="green"
               leftSection={<IconCheck width={18} height={18} style={{ paddingTop: 1 }} />}
               pb={1}
@@ -226,26 +234,25 @@ export function TableView({
             </Badge>
             <Badge
               variant="light"
-              size="lg"
+              size="md"
               color="red"
               leftSection={<IconX width={18} height={18} style={{ paddingTop: 1 }} />}
               pb={1}
             >
+
               {cell.getValue().length - cell.getValue().filter((b) => b).length}
             </Badge>
-          </>
+          </Group>
         ),
       },
       {
         accessorKey: 'metadata',
         header: 'Metadata',
-        Cell: ({ cell }: { cell: MrtCell<ParticipantData, ParticipantData['metadata']> }) => (
-          <MetaCell metaData={cell.getValue()} />
-        ),
+        size: 200,
+        Cell: ({ cell }: { cell: MrtCell<ParticipantDataWithStatus, ParticipantDataWithStatus['metadata']> }) => <MetaCell metaData={cell.getValue()} />,
       },
-    ],
-    [studyConfig],
-  );
+    ];
+  }, [studyConfig, stageColors, copied, visibleParticipants]);
 
   const table = useMantineReactTable({
     columns,
@@ -264,14 +271,13 @@ export function TableView({
     layoutMode: 'grid',
     renderDetailPanel: ({ row }) => {
       const r = row.original;
+
+      if (!r.participantId) {
+        return null;
+      }
+
       return (
-        <AllTasksTimeline
-          maxLength={undefined}
-          studyConfig={studyConfig}
-          studyId={studyId || ''}
-          participantData={r}
-          width={width - 60}
-        />
+        <AllTasksTimeline maxLength={undefined} studyConfig={allConfigs[r.participantConfigHash] ?? studyConfig} studyId={studyId || ''} participantData={r} width={width - 60} />
       );
     },
     defaultColumn: {
@@ -282,65 +288,24 @@ export function TableView({
     enableDensityToggle: false,
     positionToolbarAlertBanner: 'none',
     renderTopToolbarCustomActions: () => (
-      <>
-        <Flex justify="space-between" mb={8} p={8}>
-          <Group>
-            <Button
-              disabled={Object.keys(checked).length === 0 || !user.isAdmin}
-              onClick={() => setModalRejectParticipantsOpened(true)}
-              color="red"
-            >
-              Reject Participants (
-              {Object.keys(checked).length}
-              )
-            </Button>
-            <DownloadButtons visibleParticipants={selectedData} studyId={studyId || ''} />
-          </Group>
-        </Flex>
-        <Modal
-          opened={modalRejectParticipantsOpened}
-          onClose={() => setModalRejectParticipantsOpened(false)}
-          title={(
-            <Text>
-              Reject Participants (
-              {Object.keys(checked).length}
-              )
-            </Text>
-)}
-        >
-          <TextInput
-            label="Please enter the reason for rejection."
-            onChange={(event) => setRejectParticipantsMessage(event.target.value)}
-          />
-          <Flex mt="sm" justify="right">
-            <Button
-              mr={5}
-              variant="subtle"
-              color="dark"
-              onClick={() => {
-                setModalRejectParticipantsOpened(false);
-                setRejectParticipantsMessage('');
-              }}
-            >
-              Cancel
-            </Button>
-            <Button color="red" onClick={() => handleRejectParticipants()}>
-              Reject Participants
-            </Button>
-          </Flex>
-        </Modal>
-      </>
+      <Flex mb={8} p={8}>
+        <ParticipantRejectModal selectedParticipants={selectedParticipants} refresh={handleRefresh} />
+      </Flex>
     ),
   });
 
-  return visibleParticipants.length > 0 ? (
-    <MantineReactTable table={table} />
-  ) : (
-    <>
-      <Space h="xl" />
-      <Flex justify="center" align="center">
-        <Text>No data available</Text>
-      </Flex>
-    </>
+  return (
+    visibleParticipants.length > 0 ? (
+      <MantineReactTable
+        table={table}
+      />
+    ) : (
+      <>
+        <Space h="xl" />
+        <Flex justify="center" align="center">
+          <Text>No data available</Text>
+        </Flex>
+      </>
+    )
   );
 }

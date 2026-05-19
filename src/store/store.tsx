@@ -4,7 +4,7 @@ import {
 import { createContext, useContext } from 'react';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import {
-  ResponseBlockLocation, StudyConfig, StringOption, ValueOf, Answer, ParticipantData,
+  ParsedStringOption, ResponseBlockLocation, StudyConfig, ValueOf, Answer, ParticipantData,
 } from '../parser/types';
 import {
   StoredAnswer, TrialValidation, TrrackedProvenance, StoreState, Sequence, ParticipantMetadata,
@@ -22,6 +22,9 @@ export async function studyStoreCreator(
   answers: ParticipantData['answers'],
   modes: Record<REVISIT_MODE, boolean>,
   participantId: string,
+  completed: boolean,
+  storageEngineFailedToConnect: boolean,
+  isStalledConfig: boolean = false,
 ) {
   const flatSequence = getSequenceFlatMap(sequence);
 
@@ -38,6 +41,7 @@ export async function studyStoreCreator(
         `${id}_${idx}`,
         {
           answer: {},
+          identifier: `${id}_${idx}`,
           trialOrder: `${idx}`,
           componentName: id,
           incorrectAnswers: {},
@@ -102,13 +106,12 @@ export async function studyStoreCreator(
 
   const initialState: StoreState = {
     studyId,
-    isRecording: false,
     answers: Object.keys(answers).length > 0 ? answers : emptyAnswers,
     sequence,
     config,
     showStudyBrowser: true,
     showHelpText: false,
-    alertModal: { show: false, message: '' },
+    alertModal: { show: false, message: '', title: '' },
     trialValidation: Object.keys(answers).length > 0 ? allValid : emptyValidation,
     reactiveAnswers: {},
     metadata,
@@ -117,15 +120,23 @@ export async function studyStoreCreator(
       belowStimulus: undefined,
       stimulus: undefined,
       sidebar: undefined,
-
     },
     analysisIsPlaying: false,
     analysisHasAudio: false,
+    analysisHasScreenRecording: false,
+    analysisCanPlayScreenRecording: true,
     analysisHasProvenance: false,
+    provenanceJumpTime: 0,
     modes,
     matrixAnswers: {},
+    rankingAnswers: {},
     participantId,
     funcSequence: {},
+    completed,
+    isSubmittingFinal: false,
+    clickedPrevious: false,
+    storageEngineFailedToConnect,
+    isStalledConfig,
   };
 
   const storeSlice = createSlice({
@@ -134,9 +145,6 @@ export async function studyStoreCreator(
     reducers: {
       setConfig(state, { payload }: PayloadAction<StudyConfig>) {
         state.config = payload;
-      },
-      setIsRecording(state, { payload }: PayloadAction<boolean>) {
-        state.isRecording = payload;
       },
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       pushToFuncSequence(state, { payload }: PayloadAction<{ component: string, funcName: string, index: number, funcIndex: number, parameters: Record<string, any> | undefined, correctAnswer: Answer[] | undefined }>) {
@@ -155,6 +163,7 @@ export async function studyStoreCreator(
         state.funcSequence[payload.funcName].push(payload.component);
         state.answers[identifier] = {
           answer: {},
+          identifier,
           incorrectAnswers: {},
           componentName: payload.component,
           trialOrder: `${payload.index}_${payload.funcIndex}`,
@@ -195,7 +204,7 @@ export async function studyStoreCreator(
       toggleShowHelpText: (state) => {
         state.showHelpText = !state.showHelpText;
       },
-      setAlertModal: (state, action: PayloadAction<{ show: boolean; message: string }>) => {
+      setAlertModal: (state, action: PayloadAction<{ show: boolean; message: string; title: string }>) => {
         state.alertModal = action.payload;
       },
       setReactiveAnswers: (state, action: PayloadAction<Record<string, ValueOf<StoredAnswer['answer']>>>) => {
@@ -211,8 +220,17 @@ export async function studyStoreCreator(
       setAnalysisHasAudio(state, { payload }: PayloadAction<boolean>) {
         state.analysisHasAudio = payload;
       },
+      setAnalysisHasScreenRecording(state, { payload }: PayloadAction<boolean>) {
+        state.analysisHasScreenRecording = payload;
+      },
+      setAnalysisCanPlayScreenRecording(state, { payload }: PayloadAction<boolean>) {
+        state.analysisCanPlayScreenRecording = payload;
+      },
       setAnalysisHasProvenance(state, { payload }: PayloadAction<boolean>) {
         state.analysisHasProvenance = payload;
+      },
+      setProvenanceJumpTime(state, { payload }: PayloadAction<number>) {
+        state.provenanceJumpTime = payload;
       },
       setMatrixAnswersRadio: (state, action: PayloadAction<{ questionKey: string, responseId: string, val: string } | null>) => {
         if (action.payload) {
@@ -230,7 +248,7 @@ export async function studyStoreCreator(
           state.matrixAnswers = {};
         }
       },
-      setMatrixAnswersCheckbox: (state, action: PayloadAction<{ questionKey: string, responseId: string, value: string, label: string, isChecked: boolean, choiceOptions: StringOption[] } | null>) => {
+      setMatrixAnswersCheckbox: (state, action: PayloadAction<{ questionKey: string, responseId: string, value: string, label: string, isChecked: boolean, choiceOptions: ParsedStringOption[] } | null>) => {
         if (action.payload) {
           const {
             responseId, questionKey, value, isChecked, choiceOptions,
@@ -259,6 +277,14 @@ export async function studyStoreCreator(
           };
         } else {
           state.matrixAnswers = {};
+        }
+      },
+      setRankingAnswers: (state, action: PayloadAction<{ responseId: string, values: Record<string, string> } | null>) => {
+        if (action.payload) {
+          const { responseId, values } = action.payload;
+          state.rankingAnswers = { ...state.rankingAnswers, [responseId]: { ...values } };
+        } else {
+          state.rankingAnswers = {};
         }
       },
       updateResponseBlockValidation: (
@@ -340,6 +366,15 @@ export async function studyStoreCreator(
         if (state.funcSequence[funcName]?.length === 0) {
           delete state.funcSequence[funcName];
         }
+      },
+      setParticipantCompleted(state, { payload }: PayloadAction<boolean>) {
+        state.completed = payload;
+      },
+      setIsSubmittingFinal(state, { payload }: PayloadAction<boolean>) {
+        state.isSubmittingFinal = payload;
+      },
+      setClickedPrevious(state, { payload }: PayloadAction<boolean>) {
+        state.clickedPrevious = payload;
       },
     },
   });

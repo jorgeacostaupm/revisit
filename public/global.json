@@ -1,6 +1,11 @@
 {
-  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/dev/src/parser/GlobalConfigSchema.json",
-  "configsList": ["matrices_size", "matrices_angle", "matrices_bivariate", "matrices_barchart"],
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.4.2/src/parser/GlobalConfigSchema.json",
+  "configsList": [
+    "matrices_size",
+    "matrices_angle",
+    "matrices_bivariate",
+    "matrices_barchart"
+  ],
   "configs": {
     "matrices": {
       "path": "matrices/config.json"
